@@ -1,0 +1,18 @@
+{
+  "managed_root_entries": [
+    ".nojekyll",
+    "index.html",
+    "robots.txt",
+    "water-transport"
+  ],
+  "studies": [
+    {
+      "href": "water-transport/",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
+      "slug": "water-transport",
+      "summary": "Full 2D and 3D water-transport toy-problem suite.",
+      "tier": "full",
+      "title": "Water Transport"
+    }
+  ]
+}
