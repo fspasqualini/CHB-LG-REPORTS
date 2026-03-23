@@ -8,7 +8,7 @@
   "studies": [
     {
       "href": "water-transport/",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/canonical-sphere-coarsening/studies/water_transport/manifest.toml",
       "slug": "water-transport",
       "summary": "Full 2D and 3D water-transport toy-problem suite.",
       "tier": "full",
