@@ -1,14 +1,23 @@
 {
   "managed_root_entries": [
     ".nojekyll",
+    "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
     "water-transport"
   ],
   "studies": [
     {
+      "href": "canonical-sphere-coarsening/",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
+      "slug": "canonical-sphere-coarsening",
+      "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
+      "tier": "full",
+      "title": "Canonical Sphere Coarsening"
+    },
+    {
       "href": "water-transport/",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/canonical-sphere-coarsening/studies/water_transport/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
       "slug": "water-transport",
       "summary": "Full 2D and 3D water-transport toy-problem suite.",
       "tier": "full",
