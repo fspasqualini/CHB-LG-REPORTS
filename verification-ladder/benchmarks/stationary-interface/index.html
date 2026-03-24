@@ -127,6 +127,34 @@ ul.clean {
   display: grid;
   gap: 0.15rem;
 }
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -155,6 +183,51 @@ ul.clean {
       <p>This benchmark measures how the diffuse stationary interface tracks the analytic tanh profile under refinement.</p>
     </section>
 
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>A classical CH-only diffuse interface on a rectangular strip is initialized from the closed-form tanh profile and advanced one CH-only step while mechanics, pressure, and storage remain inactive.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the closed-form stationary interface with zero chemical-potential defect. The achieved profile should remain nearly unchanged after one step, and the refinement diagnostics should improve as h decreases.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The setup schematic shows the strip problem, the finest-profile overlay is a raw example of the simulated state after one CH step, the profile-error curve shows what is extracted pointwise from that run, and the refinement/drift plots summarize comparison against the analytic stationary target.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>Monotone improvement and a positive last refinement slope indicate the CH discretization is converging toward the analytic interface. Stalled profile error with small mu/drift points to resolution limits rather than broken physics wiring.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>The target profile and equilibrium conditions come directly from the stationary-interface harness and its associated VV test, which enforce monotone defect reduction.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This page isolates the CH sector on an auxiliary strip and does not exercise the coupled mechanics or hydraulic pieces.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
     <section class="cards-3">
       
             <div class="card">
@@ -173,8 +246,46 @@ ul.clean {
             
     </section>
 
+    
     <section class="card">
-      <h2>Primary Plots</h2>
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the stationary-interface strip and its analytic tanh target profile.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the stationary-interface strip and its analytic tanh target profile.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/finest-profile-overlay.png" alt="Raw finest-mesh profile overlay showing the achieved interface against the analytic target after one step.">
+              <div class="plot-copy">
+                <p><strong>Raw finest-mesh profile overlay showing the achieved interface against the analytic target after one step.</strong></p>
+                <p class="muted">plots/finest-profile-overlay.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
       <div class="plot-grid">
         
             <div class="card plot-visual">
@@ -188,13 +299,34 @@ ul.clean {
             
       </div>
     </section>
-
+    
     <section class="card">
-      <h2>Figures and Media</h2>
-      <div class="media-grid">
-        <p class="muted">No media artifacts provided.</p>
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/mu-and-drift-vs-h.png" alt="Chemical-potential defect and normalized phase-field drift across refinement levels.">
+              <div class="plot-copy">
+                <p><strong>Chemical-potential defect and normalized phase-field drift across refinement levels.</strong></p>
+                <p class="muted">plots/mu-and-drift-vs-h.png</p>
+              </div>
+            </div>
+            
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/finest-profile-error.png" alt="Pointwise absolute profile error on the finest-mesh stationary-interface sample line.">
+              <div class="plot-copy">
+                <p><strong>Pointwise absolute profile error on the finest-mesh stationary-interface sample line.</strong></p>
+                <p class="muted">plots/finest-profile-error.png</p>
+              </div>
+            </div>
+            
       </div>
     </section>
+    
+    
+    
 
     <section class="card">
       <h2>Scalar Summary</h2>

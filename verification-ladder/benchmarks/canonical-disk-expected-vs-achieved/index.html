@@ -127,6 +127,34 @@ ul.clean {
   display: grid;
   gap: 0.15rem;
 }
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -155,8 +183,53 @@ ul.clean {
 
     <section class="card">
       <h2>What This Benchmark Verifies</h2>
-      <p>This benchmark exposes the canonical fixed-mesh baseline as an expected-versus-achieved comparison so regressions read with the same grammar as analytic target pages.</p>
+      <p>This benchmark is a fixture-backed advisory regression anchor for the fixed-mesh canonical disk smoke lane. It is not an analytic target and not a live achieved-versus-expected rerun.</p>
     </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>Canonical disk geometry with four equal-radius lumens at the cardinal positions, no-growth startup, and hydration enabled is run on a 2-step fixed-mesh schedule from `configs/vnv/canonical_disk_fixed2.toml`.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the committed fixed-mesh baseline fixture in `tests/fixtures/vnv/canonical_disk_fixed2_baseline`. This page compares against that expected surface for regression review, not to set physics truth or replace the deeper fixed-mesh validation gates.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The setup schematic explains the four-lumen toy problem, the accepted-step history gives a raw example of how the main observables evolve during the run, and the grouped expected-versus-achieved plus delta plots show exactly which extracted metrics are being compared against the committed baseline.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>For each observed metric, near-zero deltas indicate agreement with the committed baseline. Large shifts are flagged via advisory severity and should be reviewed before accepting drift. Because this page currently projects the committed target directly, expected and achieved can be identical until the runtime achieved source is decoupled from the fixture.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>This baseline is a committed fixture-backed advisory surface for this benchmark and is tied to committed summary/metric fixtures plus fixed-mesh runtime smoke checks in `tests/integration/test_lean_runtime_smokes.py` for invariant and convergence behavior.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This is a short fixed-mesh advisory checkpoint, not an adaptive-mesh study and not a full physical validation campaign. Use it for regression trend review only and interpret with the stated configuration context.</p>
+            </div>
+            
+      </div>
+    </section>
+    
 
     <section class="cards-3">
       
@@ -169,28 +242,78 @@ ul.clean {
             
     </section>
 
+    
     <section class="card">
-      <h2>Primary Plots</h2>
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the canonical four-lumen fixed-mesh baseline and the observables extracted from it.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the canonical four-lumen fixed-mesh baseline and the observables extracted from it.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/accepted-step-history.png" alt="Accepted-step history for mass, area ratio, max_u, min_J, and min_Je.">
+              <div class="plot-copy">
+                <p><strong>Accepted-step history for mass, area ratio, max_u, min_J, and min_Je.</strong></p>
+                <p class="muted">plots/accepted-step-history.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
       <div class="plot-grid">
         
             <div class="card plot-visual">
               <p class="eyebrow">plot</p>
-              <img src="plots/expected-vs-achieved.png" alt="Baseline summary rendered in expected-versus-achieved format.">
+              <img src="plots/expected-vs-achieved.png" alt="Expected-versus-achieved baseline summary for the canonical disk fixture observables.">
               <div class="plot-copy">
-                <p><strong>Baseline summary rendered in expected-versus-achieved format.</strong></p>
+                <p><strong>Expected-versus-achieved baseline summary for the canonical disk fixture observables.</strong></p>
                 <p class="muted">plots/expected-vs-achieved.png</p>
               </div>
             </div>
             
       </div>
     </section>
-
+    
     <section class="card">
-      <h2>Figures and Media</h2>
-      <div class="media-grid">
-        <p class="muted">No media artifacts provided.</p>
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/expected-vs-achieved-delta.png" alt="Achieved-minus-expected deltas for the canonical disk baseline observables.">
+              <div class="plot-copy">
+                <p><strong>Achieved-minus-expected deltas for the canonical disk baseline observables.</strong></p>
+                <p class="muted">plots/expected-vs-achieved-delta.png</p>
+              </div>
+            </div>
+            
       </div>
     </section>
+    
+    
+    
 
     <section class="card">
       <h2>Scalar Summary</h2>
@@ -199,12 +322,12 @@ ul.clean {
 
     <section class="card">
       <h2>Evidence Table</h2>
-      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>mass_final</td><td>mass_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>area_ratio_final</td><td>area_ratio_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>min_J</td><td>min_J</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>max_u_final</td><td>max_u_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr></tbody></table>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>mass_final</td><td>mass_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>area_ratio_final</td><td>area_ratio_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>max_u_final</td><td>max_u_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>min_J</td><td>min_J</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>min_Je</td><td>min_Je</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr></tbody></table>
     </section>
 
     <section class="card">
       <h2>Series Overview</h2>
-      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>mass_final</td><td>expected_vs_achieved</td><td>mass final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>area_ratio_final</td><td>expected_vs_achieved</td><td>area ratio final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>min_J</td><td>expected_vs_achieved</td><td>min J</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>max_u_final</td><td>expected_vs_achieved</td><td>max u final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr></tbody></table>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>mass_final</td><td>expected_vs_achieved</td><td>mass final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>area_ratio_final</td><td>expected_vs_achieved</td><td>area ratio final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>max_u_final</td><td>expected_vs_achieved</td><td>max u final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>min_J</td><td>expected_vs_achieved</td><td>min J</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>min_Je</td><td>expected_vs_achieved</td><td>min Je</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr></tbody></table>
     </section>
 
     <section class="card">
@@ -213,14 +336,14 @@ ul.clean {
         
             <div class="card">
               <p class="eyebrow">Case</p>
-              <h3>expected</h3>
-              <p>Committed fixed-mesh baseline fixture.</p>
+              <h3>achieved</h3>
+              <p>Fixture values mirrored into expected-versus-achieved grammar for advisory regression review.</p>
             </div>
             
             <div class="card">
               <p class="eyebrow">Case</p>
-              <h3>achieved</h3>
-              <p>Current achieved values rendered with expected-versus-achieved grammar.</p>
+              <h3>expected</h3>
+              <p>Committed fixed-mesh baseline fixture.</p>
             </div>
             
       </div>

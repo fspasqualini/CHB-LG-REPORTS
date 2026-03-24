@@ -127,6 +127,34 @@ ul.clean {
   display: grid;
   gap: 0.15rem;
 }
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -141,7 +169,7 @@ ul.clean {
       </div>
       <div class="card">
         <h2>Target and Success Criteria</h2>
-        <p><strong>target_kind:</strong> Analytic</p>
+        <p><strong>target_kind:</strong> Exact contract</p>
         <p><strong>Tier:</strong> full</p>
         <p><strong>Unknowns active:</strong> symbolic and constitutive identities</p>
         <p><strong>Frozen terms:</strong> runtime solver and spatial discretization</p>
@@ -152,8 +180,53 @@ ul.clean {
 
     <section class="card">
       <h2>What This Benchmark Verifies</h2>
-      <p>This exact benchmark confirms algebraic and constitutive identities before coupled dynamics are exercised.</p>
+      <p>This exact-contract benchmark confirms algebraic and constitutive identities before coupled dynamics are exercised.</p>
     </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>Tier-zero local identities exercise the symbolic and constitutive contracts that later VV pages assume are exact before any PDE solve or mesh-discretization question begins.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is exact contract satisfaction at machine precision for the identity families covered in `tests/vv/test_local_identities.py`.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The abstract contract schematic shows what later VV pages depend on, the pytest status plots expose the raw exact-contract outcomes, and the grouped category status summarizes which identity families are being exercised.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>Any failure is a contract break or harness issue, not discretization noise. These pages should be read as exact prerequisites for every later verification family.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>The benchmark is backed directly by the repo&#x27;s local-identity pytest module, which is the authoritative exact-contract surface for these constitutive checks.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This page does not test time integration, mesh refinement, or coupled dynamics. It only certifies exact upstream identities.</p>
+            </div>
+            
+      </div>
+    </section>
+    
 
     <section class="cards-3">
       
@@ -173,10 +246,30 @@ ul.clean {
             
     </section>
 
+    
     <section class="card">
-      <h2>Primary Plots</h2>
+      <h2>Setup Schematic</h2>
       <div class="plot-grid">
         
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Abstract map of the exact identity families that must hold before coupled verification is trusted.">
+              <div class="plot-copy">
+                <p><strong>Abstract map of the exact identity families that must hold before coupled verification is trusted.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
             <div class="card plot-visual">
               <p class="eyebrow">plot</p>
               <img src="plots/pytest-status.png" alt="Pass/fail status for the exact identity module.">
@@ -186,15 +279,38 @@ ul.clean {
               </div>
             </div>
             
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/identity-case-status.png" alt="Per-case exact-contract status across the local identity module.">
+              <div class="plot-copy">
+                <p><strong>Per-case exact-contract status across the local identity module.</strong></p>
+                <p class="muted">plots/identity-case-status.png</p>
+              </div>
+            </div>
+            
+        </div>
       </div>
+    
     </section>
-
+    
     <section class="card">
-      <h2>Figures and Media</h2>
-      <div class="media-grid">
-        <p class="muted">No media artifacts provided.</p>
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/identity-category-status.png" alt="Grouped pass-count summary across the identity families exercised by the exact-contract surface.">
+              <div class="plot-copy">
+                <p><strong>Grouped pass-count summary across the identity families exercised by the exact-contract surface.</strong></p>
+                <p class="muted">plots/identity-category-status.png</p>
+              </div>
+            </div>
+            
       </div>
     </section>
+    
+    
+    
 
     <section class="card">
       <h2>Scalar Summary</h2>
@@ -208,7 +324,7 @@ ul.clean {
 
     <section class="card">
       <h2>Series Overview</h2>
-      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>pytest_pass_counts</td><td>analytic_target</td><td>Passed exact checks</td><td>module</td><td>exact</td><td>all tests</td></tr></tbody></table>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>pytest_pass_counts</td><td>exact_contract_target</td><td>Passed exact checks</td><td>module</td><td>exact</td><td>all tests</td></tr></tbody></table>
     </section>
 
     <section class="card">

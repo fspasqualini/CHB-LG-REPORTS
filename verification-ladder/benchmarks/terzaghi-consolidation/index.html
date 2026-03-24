@@ -127,6 +127,34 @@ ul.clean {
   display: grid;
   gap: 0.15rem;
 }
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
 </style>
 </head>
 <body>
@@ -155,6 +183,51 @@ ul.clean {
       <p>This coupled benchmark checks that pressure and settlement histories follow the Terzaghi semianalytic target.</p>
     </section>
 
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>Classical Terzaghi one-dimensional consolidation: a compressed porous column drains at one boundary, so the initial excess pore pressure relaxes with depth-dependent transient dissipation while the specimen settles toward its final compacted state.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the semianalytic Terzaghi solution: pore-pressure profiles should flatten and decay toward zero over time, while settlement should monotonically approach the final consolidated value.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The setup schematic shows the toy problem, the settlement history is the raw compaction response, the pressure-history and pressure-isochrone plots show what probe values are extracted from the run, and the heatmap summarizes where the numerical solution is furthest from the semianalytic target across time and depth.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>Correct behavior means the achieved pressure curves track the semianalytic target at each depth, the isochrones collapse toward lower pressure as time increases, and settlement rises toward its final plateau. RMS/combined errors quantify that agreement in one number.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>Target fields are computed from the classical series-form Terzaghi semianalytic solution used at the same sample times and probe depths as the numerical run.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>Single specimen geometry, fixed loading law, and probe-based pressure extraction only. This page still uses a schematic rather than a rendered field visualization.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
     <section class="cards-3">
       
             <div class="card">
@@ -180,8 +253,46 @@ ul.clean {
             
     </section>
 
+    
     <section class="card">
-      <h2>Primary Plots</h2>
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the Terzaghi consolidation benchmark, including drained boundary, load, and pressure probe depths.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the Terzaghi consolidation benchmark, including drained boundary, load, and pressure probe depths.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/pressure-isochrones.png" alt="Pressure isochrones through depth at selected times, comparing the achieved solution against the semianalytic target.">
+              <div class="plot-copy">
+                <p><strong>Pressure isochrones through depth at selected times, comparing the achieved solution against the semianalytic target.</strong></p>
+                <p class="muted">plots/pressure-isochrones.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
       <div class="plot-grid">
         
             <div class="card plot-visual">
@@ -193,15 +304,36 @@ ul.clean {
               </div>
             </div>
             
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/pressure-history.png" alt="Fine pressure history against the semianalytic Terzaghi target.">
+              <div class="plot-copy">
+                <p><strong>Fine pressure history against the semianalytic Terzaghi target.</strong></p>
+                <p class="muted">plots/pressure-history.png</p>
+              </div>
+            </div>
+            
       </div>
     </section>
-
+    
     <section class="card">
-      <h2>Figures and Media</h2>
-      <div class="media-grid">
-        <p class="muted">No media artifacts provided.</p>
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/pressure-error-heatmap.png" alt="Absolute pressure error across the sampled depth-time grid used for Terzaghi accuracy assessment.">
+              <div class="plot-copy">
+                <p><strong>Absolute pressure error across the sampled depth-time grid used for Terzaghi accuracy assessment.</strong></p>
+                <p class="muted">plots/pressure-error-heatmap.png</p>
+              </div>
+            </div>
+            
       </div>
     </section>
+    
+    
+    
 
     <section class="card">
       <h2>Scalar Summary</h2>
@@ -215,7 +347,7 @@ ul.clean {
 
     <section class="card">
       <h2>Series Overview</h2>
-      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr></tbody></table>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.2</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.5</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr><tr><td>pressure_history</td><td>semianalytic_target</td><td>Pressure history</td><td>depth=0.8</td><td>0.05</td><td>semianalytic target</td></tr></tbody></table>
     </section>
 
     <section class="card">
