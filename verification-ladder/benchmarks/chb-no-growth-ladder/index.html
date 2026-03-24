@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>CHB No-Growth Ladder - reference-ladders</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+</style>
+</head>
+<body>
+  <main>
+    
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>CHB No-Growth Ladder</h1>
+        <p class="muted">Family: reference-ladders</p>
+        <p>Coarse and medium retained-accuracy ladder against an overkill no-growth reference.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Overkill reference</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> pf, u, p, theta</p>
+        <p><strong>Frozen terms:</strong> benchmark geometry and no-growth physics</p>
+        <p><strong>Comparison grammar:</strong> Achieved / Target</p>
+        <p><strong>Tickets:</strong> None</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This ladder measures retained accuracy against an overkill reference so the public page reads like an analytic target page, but with the reference explicitly labeled.</p>
+    </section>
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">coarse_max_merge_time_error</p>
+              <div class="kpi">0.00025</div>
+              <p class="muted">s</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">medium_max_merge_time_error</p>
+              <div class="kpi">0.00075</div>
+              <p class="muted">s</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    <section class="card">
+      <h2>Primary Plots</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/medium-scalar-errors.png" alt="Medium-lane scalar errors measured against the overkill reference target.">
+              <div class="plot-copy">
+                <p><strong>Medium-lane scalar errors measured against the overkill reference target.</strong></p>
+                <p class="muted">plots/medium-scalar-errors.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Figures and Media</h2>
+      <div class="media-grid">
+        <p class="muted">No media artifacts provided.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>coarse_max_merge_time_error</td><td>0.00025</td><td>s</td><td>0</td><td>0</td><td>pass</td></tr><tr><td>medium_max_merge_time_error</td><td>0.00075</td><td>s</td><td>0</td><td>0</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>reference_levels</td><td>levels</td><td>coarse, medium</td><td>coarse, medium</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>coarse_mass</td><td>reference_target</td><td>mass</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_max_u</td><td>reference_target</td><td>max u</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_min_J</td><td>reference_target</td><td>min J</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_min_Je</td><td>reference_target</td><td>min Je</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_p_eff_range</td><td>reference_target</td><td>p eff range</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_flow_potential_range</td><td>reference_target</td><td>flow potential range</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_lumen_n_components</td><td>reference_target</td><td>lumen n components</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_lumen_total_volume_def</td><td>reference_target</td><td>lumen total volume def</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_lumen_largest_fraction</td><td>reference_target</td><td>lumen largest fraction</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_pf_field</td><td>field_error</td><td>pf field error</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_u_field</td><td>field_error</td><td>u field error</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_p_field</td><td>field_error</td><td>p field error</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_theta_field</td><td>field_error</td><td>theta field error</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>medium_mass</td><td>reference_target</td><td>mass</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_max_u</td><td>reference_target</td><td>max u</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_min_J</td><td>reference_target</td><td>min J</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_min_Je</td><td>reference_target</td><td>min Je</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_p_eff_range</td><td>reference_target</td><td>p eff range</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_flow_potential_range</td><td>reference_target</td><td>flow potential range</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_lumen_n_components</td><td>reference_target</td><td>lumen n components</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_lumen_total_volume_def</td><td>reference_target</td><td>lumen total volume def</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_lumen_largest_fraction</td><td>reference_target</td><td>lumen largest fraction</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_pf_field</td><td>field_error</td><td>pf field error</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_u_field</td><td>field_error</td><td>u field error</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_p_field</td><td>field_error</td><td>p field error</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_theta_field</td><td>field_error</td><td>theta field error</td><td>medium</td><td>medium</td><td>overkill reference</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>coarse</h3>
+              <p>Coarse candidate compared against the reference lane.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>medium</h3>
+              <p>Medium candidate compared against the reference lane.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>reference</h3>
+              <p>Overkill reference lane used as the target for accuracy calculations.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

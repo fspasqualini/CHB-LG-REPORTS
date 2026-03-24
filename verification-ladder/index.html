@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Verification Ladder</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+</style>
+</head>
+<body>
+  <main>
+    
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Verification Study</p>
+        <h1>Verification Ladder</h1>
+        <p>This portal organizes verification benchmarks by scientific family so the page stands on its own without opening JSON.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Families</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <h3>Foundations</h3>
+              <p>Exact contracts and invariants that should hold before any coupled solve is trusted.</p>
+              <p><span class="tag">exact</span><span class="tag">tier0</span></p>
+              <p><a href="families/foundations/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Analytic Benchmarks</h3>
+              <p>Closed-form targets that show the expected-versus-achieved accuracy story directly.</p>
+              <p><span class="tag">analytic</span></p>
+              <p><a href="families/analytic-benchmarks/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Coupled Benchmarks</h3>
+              <p>Semianalytic poromechanics targets used to verify coupled history tracking.</p>
+              <p><span class="tag">semianalytic</span></p>
+              <p><a href="families/coupled-benchmarks/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Reference Ladders</h3>
+              <p>Overkill-reference ladders rendered with the same target-versus-achieved grammar as analytic pages.</p>
+              <p><span class="tag">reference</span></p>
+              <p><a href="families/reference-ladders/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Fixed-Mesh Baselines</h3>
+              <p>Canonical fixture-backed expected-versus-achieved pages for the active medium validation surface.</p>
+              <p><span class="tag">baseline</span></p>
+              <p><a href="families/fixed-mesh-baselines/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Mechanism Validation</h3>
+              <p>Scenario-comparison signatures that confirm the intended hydraulic and swelling mechanisms are present.</p>
+              <p><span class="tag">mechanism</span></p>
+              <p><a href="families/mechanism-validation/index.html">Open</a></p>
+            </div>
+            
+            <div class="card">
+              <h3>Workflow and Provenance</h3>
+              <p>Restart equivalence, packaging completeness, and report provenance checks.</p>
+              <p><span class="tag">workflow</span></p>
+              <p><a href="families/workflow-provenance/index.html">Open</a></p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

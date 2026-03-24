@@ -4,11 +4,12 @@
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
+    "verification-ladder",
     "water-transport"
   ],
   "studies": [
     {
-      "href": "canonical-sphere-coarsening/",
+      "href": "canonical-sphere-coarsening/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
       "slug": "canonical-sphere-coarsening",
       "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
@@ -16,7 +17,15 @@
       "title": "Canonical Sphere Coarsening"
     },
     {
-      "href": "water-transport/",
+      "href": "verification-ladder/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/verification_ladder/manifest.toml",
+      "slug": "verification-ladder",
+      "summary": "Current full verification-study slice. Later tiers can expand this manifest family by family.",
+      "tier": "full",
+      "title": "Verification Ladder"
+    },
+    {
+      "href": "water-transport/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
       "slug": "water-transport",
       "summary": "Full 2D and 3D water-transport toy-problem suite.",
