@@ -4,6 +4,7 @@
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
+    "snes-vs-newton-solver-backend-investigation",
     "verification-ladder",
     "water-transport"
   ],
@@ -15,6 +16,14 @@
       "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
       "tier": "full",
       "title": "Canonical Sphere Coarsening"
+    },
+    {
+      "href": "snes-vs-newton-solver-backend-investigation/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
+      "slug": "snes-vs-newton-solver-backend-investigation",
+      "summary": "Tracked solver-backend investigation bundle covering fixed2, Task 2, and the current SNES-family timing refinement.",
+      "tier": "core",
+      "title": "SNES vs Newton Solver Backend Investigation"
     },
     {
       "href": "verification-ladder/index.html",

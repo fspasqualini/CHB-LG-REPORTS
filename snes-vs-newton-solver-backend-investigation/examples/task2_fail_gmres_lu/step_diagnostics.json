@@ -1,0 +1,311 @@
+{
+  "error": {
+    "message": "CH+transport strip ladder failed at t=0.000100 for level medium.",
+    "type": "RuntimeError"
+  },
+  "expected_records": 8,
+  "mismatch": true,
+  "model_signatures": [
+    {
+      "biot": {
+        "ksp_type": "gmres",
+        "linesearch_type": "bt",
+        "pc_type": "lu",
+        "snes_type": "newtonls"
+      },
+      "ch": {
+        "ksp_type": "preonly",
+        "linesearch_type": "bt",
+        "pc_type": "lu",
+        "snes_type": "newtonls"
+      }
+    }
+  ],
+  "ok": false,
+  "records": [
+    {
+      "biot_converged": true,
+      "biot_iterations": 0,
+      "biot_iterations_tp": null,
+      "biot_iterations_u": null,
+      "biot_ksp_its": 1,
+      "biot_ksp_reason": 2,
+      "biot_snes_its": 0,
+      "biot_snes_reason": 2,
+      "biot_tp_ksp_its": null,
+      "biot_tp_ksp_reason": null,
+      "biot_tp_snes_its": null,
+      "biot_tp_snes_reason": null,
+      "biot_u_ksp_its": null,
+      "biot_u_ksp_reason": null,
+      "biot_u_snes_its": null,
+      "biot_u_snes_reason": null,
+      "ch_converged": true,
+      "ch_iterations": 0,
+      "ch_ksp_its": 1,
+      "ch_ksp_reason": 4,
+      "ch_snes_its": 0,
+      "ch_snes_reason": 2,
+      "monitor_trace": {
+        "biot": {
+          "ksp": [
+            {
+              "its": 0,
+              "norm": 0.30533168390947524
+            },
+            {
+              "its": 1,
+              "norm": 1.1654460017878041e-15
+            },
+            {
+              "its": 0,
+              "norm": 0.00010298015443300152
+            },
+            {
+              "its": 1,
+              "norm": 5.455253116135832e-19
+            },
+            {
+              "its": 0,
+              "norm": 6.524332699021852e-09
+            },
+            {
+              "its": 1,
+              "norm": 2.1427963856533664e-19
+            }
+          ],
+          "snes": [
+            {
+              "its": 0,
+              "norm": 0.2537318938835249
+            },
+            {
+              "its": 1,
+              "norm": 0.0009259841032819322
+            },
+            {
+              "its": 2,
+              "norm": 1.234372675096948e-08
+            },
+            {
+              "its": 0,
+              "norm": 1.5853506724948777e-08
+            },
+            {
+              "its": 1,
+              "norm": 1.2971463866886327e-09
+            },
+            {
+              "its": 0,
+              "norm": 1.2971463866886327e-09
+            }
+          ]
+        },
+        "ch": {
+          "ksp": [
+            {
+              "its": 0,
+              "norm": 0.0011916065122581593
+            },
+            {
+              "its": 1,
+              "norm": 3.4697620112430223e-19
+            },
+            {
+              "its": 0,
+              "norm": 1.3728534679429226e-05
+            },
+            {
+              "its": 1,
+              "norm": 3.5428681190915676e-21
+            }
+          ],
+          "snes": [
+            {
+              "its": 0,
+              "norm": 0.0011916065122581593
+            },
+            {
+              "its": 1,
+              "norm": 2.5221158624287893e-14
+            },
+            {
+              "its": 0,
+              "norm": 1.3728534679429226e-05
+            },
+            {
+              "its": 1,
+              "norm": 2.4977060737765933e-18
+            },
+            {
+              "its": 0,
+              "norm": 8.765937633067116e-13
+            }
+          ]
+        }
+      }
+    },
+    {
+      "biot_converged": false,
+      "biot_iterations": 0,
+      "biot_iterations_tp": null,
+      "biot_iterations_u": null,
+      "biot_ksp_its": 1,
+      "biot_ksp_reason": 2,
+      "biot_snes_its": 0,
+      "biot_snes_reason": -6,
+      "biot_tp_ksp_its": null,
+      "biot_tp_ksp_reason": null,
+      "biot_tp_snes_its": null,
+      "biot_tp_snes_reason": null,
+      "biot_u_ksp_its": null,
+      "biot_u_ksp_reason": null,
+      "biot_u_snes_its": null,
+      "biot_u_snes_reason": null,
+      "ch_converged": true,
+      "ch_iterations": 0,
+      "ch_ksp_its": 1,
+      "ch_ksp_reason": 4,
+      "ch_snes_its": 0,
+      "ch_snes_reason": 2,
+      "monitor_trace": {
+        "biot": {
+          "ksp": [
+            {
+              "its": 0,
+              "norm": 1.2344131331366308e-05
+            },
+            {
+              "its": 1,
+              "norm": 1.5795511027040406e-17
+            },
+            {
+              "its": 0,
+              "norm": 5.5246658216346e-05
+            },
+            {
+              "its": 1,
+              "norm": 5.088427207262044e-16
+            },
+            {
+              "its": 0,
+              "norm": 5.5246658216346e-05
+            },
+            {
+              "its": 1,
+              "norm": 5.088427207262044e-16
+            }
+          ],
+          "snes": [
+            {
+              "its": 0,
+              "norm": 8.232720032088833e-07
+            },
+            {
+              "its": 1,
+              "norm": 1.4694322743686402e-07
+            },
+            {
+              "its": 0,
+              "norm": 1.4694322743686402e-07
+            }
+          ]
+        },
+        "ch": {
+          "ksp": [
+            {
+              "its": 0,
+              "norm": 1.6707400329251493e-07
+            },
+            {
+              "its": 1,
+              "norm": 7.510218348041474e-22
+            }
+          ],
+          "snes": [
+            {
+              "its": 0,
+              "norm": 1.6707400329251493e-07
+            },
+            {
+              "its": 1,
+              "norm": 1.8850166587791227e-14
+            },
+            {
+              "its": 0,
+              "norm": 6.166297461527849e-11
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "convergence": {
+      "biot": false,
+      "ch": true
+    },
+    "iterations": {
+      "biot_iterations": {
+        "count": 2,
+        "final": 0,
+        "max": 0,
+        "min": 0
+      },
+      "biot_ksp_its": {
+        "count": 2,
+        "final": 1,
+        "max": 1,
+        "min": 1
+      },
+      "biot_snes_its": {
+        "count": 2,
+        "final": 0,
+        "max": 0,
+        "min": 0
+      },
+      "biot_tp_ksp_its": {},
+      "biot_tp_snes_its": {},
+      "biot_u_ksp_its": {},
+      "biot_u_snes_its": {},
+      "ch_iterations": {
+        "count": 2,
+        "final": 0,
+        "max": 0,
+        "min": 0
+      },
+      "ch_ksp_its": {
+        "count": 2,
+        "final": 1,
+        "max": 1,
+        "min": 1
+      },
+      "ch_snes_its": {
+        "count": 2,
+        "final": 0,
+        "max": 0,
+        "min": 0
+      }
+    },
+    "reasons": {
+      "biot_ksp_reason": {
+        "2": 2
+      },
+      "biot_snes_reason": {
+        "-6": 1,
+        "2": 1
+      },
+      "biot_tp_ksp_reason": {},
+      "biot_tp_snes_reason": {},
+      "biot_u_ksp_reason": {},
+      "biot_u_snes_reason": {},
+      "ch_ksp_reason": {
+        "4": 2
+      },
+      "ch_snes_reason": {
+        "2": 2
+      }
+    },
+    "step_count": 2
+  }
+}

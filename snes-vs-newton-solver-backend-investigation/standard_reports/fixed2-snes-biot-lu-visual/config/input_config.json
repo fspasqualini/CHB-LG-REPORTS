@@ -1,0 +1,147 @@
+{
+  "boundary_conditions": {
+    "hydraulic": {
+      "kappa": 0.0,
+      "mode": "closed",
+      "p_ext": 0.0,
+      "pressure": 0.0,
+      "tag": 2,
+      "use_effective_potential": false
+    },
+    "wall_pref": -1.0,
+    "wall_strength": 8.0
+  },
+  "geometry": {
+    "geometry": "disk",
+    "radius": 1.0
+  },
+  "initial_conditions": {
+    "lumen_centers": [
+      [
+        -0.45,
+        0.0
+      ],
+      [
+        0.45,
+        0.0
+      ],
+      [
+        0.0,
+        0.45
+      ],
+      [
+        0.0,
+        -0.45
+      ]
+    ],
+    "lumen_radii": [
+      0.15,
+      0.15,
+      0.15,
+      0.15
+    ],
+    "lumen_radius": 0.15,
+    "p_offset": 0.0,
+    "p_offset_lumen": false,
+    "startup": {
+      "growth_mode": "no-growth",
+      "mode": "algebraic_consistent",
+      "pressure_gauge": "keep_offset",
+      "relax_dt": 0.001,
+      "relax_pf_frozen": false,
+      "relax_steps": 0
+    }
+  },
+  "mesh": {
+    "form_quadrature_degree": 4,
+    "mesh_h": 0.05,
+    "scalar_degree": 1,
+    "u_degree": 2
+  },
+  "output": {
+    "disable_xdmf_output": false,
+    "frames": true,
+    "make_movie": true,
+    "montage_frames": 5,
+    "output_dir": "output",
+    "run_name": "canonical_disk_fixed2",
+    "write_every": 1
+  },
+  "physics": {
+    "M0": 1.0,
+    "M1": 0.1,
+    "alpha0": 1.0,
+    "alpha1": 0.1,
+    "ch_config": "current",
+    "closure_mode": "thermo_consistent",
+    "ell": 0.15,
+    "fs_lumen": 0.0,
+    "fs_power": 1.0,
+    "fs_tissue": 0.0,
+    "g": 1.0,
+    "g_max": 1.2,
+    "g_rate": 2.5,
+    "gamma": 1.0,
+    "growth_phase": "tissue",
+    "hydration_on": true,
+    "lag_phase_coeffs": false,
+    "mobility": 0.5,
+    "mu_bias": 0.0,
+    "mu_elastic_coupling": 1.0,
+    "mu_osmotic_coupling": 1.0,
+    "mu_storage_coupling": 1.0,
+    "osmotic_on": false,
+    "permeability": 0.5,
+    "pi0": 0.0,
+    "pi_power": 1.0,
+    "s_pf": 0.0,
+    "s_theta": 0.0,
+    "solid_prestretch_on": false,
+    "theta_eq_lumen": 0.02,
+    "theta_eq_power": 1.0,
+    "theta_eq_tissue": 0.03
+  },
+  "restart": {
+    "checkpoint_at_end": true,
+    "checkpoint_interval_steps": 0,
+    "restart_from": null
+  },
+  "run": {
+    "dt": 0.001,
+    "lumen_threshold": 0.5,
+    "t_end": 0.002,
+    "units": "nondim"
+  },
+  "solver": {
+    "amr_enable": false,
+    "amr_every": 2,
+    "amr_mass_correction": false,
+    "amr_max_events": 2,
+    "amr_mode": "reference",
+    "amr_threshold": 0.05,
+    "biot_split": "monolithic",
+    "dt_max_retries": 5,
+    "dt_min": 1e-06,
+    "dt_recovery_enable": true,
+    "dt_recovery_grid_tol": 1e-10,
+    "dt_recovery_snap_mode": "nearest-grid",
+    "dt_recovery_window_blocks": 2,
+    "dt_retry": true,
+    "dt_scale": 0.5,
+    "newton_atol": 1e-08,
+    "newton_max_it": 25,
+    "newton_rtol": 1e-06,
+    "outer_relaxation": 0.2,
+    "outer_relaxation_method": "aitken",
+    "outer_relaxation_scope": "biot",
+    "petsc_biot": [
+      "snes_type=newtonls",
+      "snes_linesearch_type=bt",
+      "snes_max_it=40"
+    ],
+    "require_convergence": true,
+    "solver_backend": "snes",
+    "split_iters": 12,
+    "split_tol": 5e-06
+  }
+}
