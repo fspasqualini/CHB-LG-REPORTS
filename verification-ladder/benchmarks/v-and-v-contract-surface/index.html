@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>V&amp;V Contract Surface - foundations</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+</style>
+</head>
+<body>
+  <main>
+    
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>V&amp;V Contract Surface</h1>
+        <p class="muted">Family: foundations</p>
+        <p>Public contract-surface smoke for the exact V&amp;V entry checks.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Exact contract</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> symbolic and constitutive identities</p>
+        <p><strong>Frozen terms:</strong> runtime solver and spatial discretization</p>
+        <p><strong>Comparison grammar:</strong> Achieved / Target</p>
+        <p><strong>Tickets:</strong> VV-000</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This exact-contract benchmark confirms algebraic and constitutive identities before coupled dynamics are exercised.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>This foundation page checks that the public verification entry surface itself is present: pytest modules, benchmark references, and the named V&amp;V touchpoints that later pages assume already exist.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is exact pass/fail contract compliance for the public V&amp;V surface described by `tests/vv/test_vv_contract_surface.py`.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The abstract schematic explains which contract layers are being checked, the raw pytest status plot shows individual cases, and the grouped category view summarizes the public V&amp;V surface by responsibility.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>Failures here usually mean a missing benchmark surface, bad manifest glue, or a broken public-facing V&amp;V entry point rather than a numerical issue.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>This benchmark is tied directly to the pytest contract module that defines the public verification-study surface.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>It is an exact contract page, not a numerical benchmark. It only verifies that the expected V&amp;V surface exists and is internally coherent.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">tests_passed</p>
+              <div class="kpi">1</div>
+              <p class="muted">count</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">tests_failed</p>
+              <div class="kpi">0</div>
+              <p class="muted">count</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Abstract map of the exact identity families that must hold before coupled verification is trusted.">
+              <div class="plot-copy">
+                <p><strong>Abstract map of the exact identity families that must hold before coupled verification is trusted.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/pytest-status.png" alt="Pass/fail status for the exact identity module.">
+              <div class="plot-copy">
+                <p><strong>Pass/fail status for the exact identity module.</strong></p>
+                <p class="muted">plots/pytest-status.png</p>
+              </div>
+            </div>
+            
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/identity-case-status.png" alt="Per-case exact-contract status across the local identity module.">
+              <div class="plot-copy">
+                <p><strong>Per-case exact-contract status across the local identity module.</strong></p>
+                <p class="muted">plots/identity-case-status.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/identity-category-status.png" alt="Grouped pass-count summary across the identity families exercised by the exact-contract surface.">
+              <div class="plot-copy">
+                <p><strong>Grouped pass-count summary across the identity families exercised by the exact-contract surface.</strong></p>
+                <p class="muted">plots/identity-category-status.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>tests_passed</td><td>1</td><td>count</td><td>1</td><td>1</td><td>pass</td></tr><tr><td>tests_failed</td><td>0</td><td>count</td><td>0</td><td>0</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>test_vv_surface_scaffolding_and_policy_contract</td><td>pytest_outcome</td><td>passed</td><td>passed</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>pytest_pass_counts</td><td>exact_contract_target</td><td>Passed exact checks</td><td>module</td><td>exact</td><td>all tests</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>module</h3>
+              <p>Collected pytest verification cases from test_vv_contract_surface.py.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

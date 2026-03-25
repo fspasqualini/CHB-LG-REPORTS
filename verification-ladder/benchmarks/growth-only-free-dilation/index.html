@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Growth-Only Free Dilation - analytic-benchmarks</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+</style>
+</head>
+<body>
+  <main>
+    
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>Growth-Only Free Dilation</h1>
+        <p class="muted">Family: analytic-benchmarks</p>
+        <p>Pure-growth free-dilation exact-state check across 2D/3D and both pure phases.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Analytic</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> u, growth kinematics</p>
+        <p><strong>Frozen terms:</strong> CH transport, hydraulic storage, external loading</p>
+        <p><strong>Comparison grammar:</strong> Achieved / Target</p>
+        <p><strong>Tickets:</strong> VV-007</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This benchmark checks the exact homogeneous free-dilation state in pure phases, after removing rigid-body gauge motion.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>A pure-phase body in 2D and 3D is initialized with the exact homogeneous growth-driven free-dilation displacement, then advanced one mechanics step with transport inactive.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the exact free-dilation state: after removing the fitted rigid gauge, displacement error and elastic strain invariants should remain near machine zero.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The schematic explains the exact-state setup, the displacement-error plot shows the raw per-case state error, the invariant plot summarizes Je and elastic-energy diagnostics, and the gauge plot makes the rigid-fit subtraction explicit.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>These are exact-state checks. Non-zero displacement or Je errors indicate growth kinematics or gauge handling drift, not a simple refinement issue.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>The exact displacement field and rigid-fit removal are defined directly in the benchmark harness, which computes the remaining error after subtracting rigid motion.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This page covers homogeneous pure-phase free dilation only. It does not exercise coupled transport or geometry-change dynamics.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">worst_displacement_error</p>
+              <div class="kpi">1.94435e-16</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the 2D/3D pure-phase free-dilation exact-state checks.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the 2D/3D pure-phase free-dilation exact-state checks.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/displacement-error-by-case.png" alt="Raw free-dilation displacement error by dimension and phase.">
+              <div class="plot-copy">
+                <p><strong>Raw free-dilation displacement error by dimension and phase.</strong></p>
+                <p class="muted">plots/displacement-error-by-case.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/invariant-errors-by-case.png" alt="Extracted Je and elastic-energy diagnostics for the free-dilation cases.">
+              <div class="plot-copy">
+                <p><strong>Extracted Je and elastic-energy diagnostics for the free-dilation cases.</strong></p>
+                <p class="muted">plots/invariant-errors-by-case.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/rigid-fit-gauge-by-case.png" alt="Maximum fitted rigid-motion gauge coefficient removed from each case.">
+              <div class="plot-copy">
+                <p><strong>Maximum fitted rigid-motion gauge coefficient removed from each case.</strong></p>
+                <p class="muted">plots/rigid-fit-gauge-by-case.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>worst_displacement_error</td><td>1.94435e-16</td><td></td><td>0</td><td>0</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>worst_displacement_error</td><td>displacement_error</td><td>1.94435e-16</td><td>small</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>free_dilation_0</td><td>analytic_target</td><td>2D pf=-1</td><td>2D</td><td>-1</td><td>exact state</td></tr><tr><td>free_dilation_1</td><td>analytic_target</td><td>2D pf=1</td><td>2D</td><td>1</td><td>exact state</td></tr><tr><td>free_dilation_2</td><td>analytic_target</td><td>3D pf=-1</td><td>3D</td><td>-1</td><td>exact state</td></tr><tr><td>free_dilation_3</td><td>analytic_target</td><td>3D pf=1</td><td>3D</td><td>1</td><td>exact state</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>case_1</h3>
+              <p>2D pure phase -1.0 with growth 1.2.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>case_2</h3>
+              <p>2D pure phase 1.0 with growth 1.2.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>case_3</h3>
+              <p>3D pure phase -1.0 with growth 1.2.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>case_4</h3>
+              <p>3D pure phase 1.0 with growth 1.2.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>
