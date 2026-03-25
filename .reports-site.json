@@ -21,7 +21,7 @@
       "href": "snes-vs-newton-solver-backend-investigation/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
       "slug": "snes-vs-newton-solver-backend-investigation",
-      "summary": "Tracked solver-backend investigation bundle covering fixed2, Task 2, and the current SNES-family timing refinement.",
+      "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
       "tier": "core",
       "title": "SNES vs Newton Solver Backend Investigation"
     },

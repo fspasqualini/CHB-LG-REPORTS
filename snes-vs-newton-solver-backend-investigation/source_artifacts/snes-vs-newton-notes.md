@@ -39,12 +39,22 @@ The branch investigation isolates why coupled CH-Biot runs diverge from expectat
   - `newton_biot_lu`: fails with `Nonconvergence at step 1 (ch=False, biot=False, split=nan)`.
 - The rerun logs for `newton_max_it_40` and `newton_relax_0p5_max_it_40` contain repeated `Newton solver did not converge.` warnings before the dt-retry ladder starts, which means the slow Newton cases are active inner-solve failures rather than silent hangs.
 
+## 4b) Public Canonical-Disk and Growth-Only Confirmation Evidence
+- `output/canonical-disk-solver-matrix/2026-03-25/canonical_disk_phase1.json`: longer public `canonical_disk.toml` sweep on a hydration-coupled four-seed disk shows
+  - Passing: `snes_default` (~98.36 s), `snes_biot_gmres_ilu_explicit` (~96.79 s), `snes_biot_gmres_ilu_restart50` (~91.51 s), `snes_biot_newtontr_gmres_ilu` (~88.93 s).
+  - Failing with no advancement: `snes_biot_preonly_ilu` (~42.87 s), `snes_biot_gmres_lu` (~104.58 s).
+  - All passing cases reached `t = 0.025` with 41 accepted evolved steps; both failing cases stayed at `final_time = 0.0` and exhausted the dt-retry ladder.
+- `output/chb-growth-only-solver-matrix/2026-03-25/medium_confirmation.json`: medium growth-only four-seed confirmation round on `configs/vv_reference/chb_growth_only_canonical_disk_medium.toml` shows
+  - Passing: `snes_default` (~155.30 s), `snes_biot_gmres_ilu_explicit` (~158.14 s), `snes_biot_gmres_ilu_restart50` (~154.60 s), `snes_biot_newtontr_gmres_ilu` (~161.80 s).
+  - Every case reached `t = 0.01` with 30 accepted evolved steps and zero `step_failed` rows.
+  - Wall-time spread is small inside the surviving family: `restart50` is fastest, `snes_default` is only ~0.69 s slower (~0.4%), explicit `gmres+ilu` is ~2.3% slower, and `newtontr+gmres+ilu` is ~4.7% slower.
+
 ## 5) Working Hypotheses
 - The observed divergence is less likely a pure “Newton vs SNES math” difference and more likely backend/config plumbing and solver stack effects, especially option packages applied to Biot/CH subsolvers.
 - In current evidence, Biot-only LU forcing is a repeated failure pattern (`snes_biot_lu`, `snes_biot_demo_like`, `snes_biot_newtontr_lu`, `newton_biot_lu`) while default SNES and GMRES+ILU variants are robust.
 - Across both Task 2 and fixed2, LU is the most consistent failure ingredient in the Biot stack. `preonly` without LU passes on Task 2 (`preonly+ilu`) but still fails on fixed2, so `preonly` is not universally toxic in the way LU appears to be.
 - The fixed2 evidence now also shows that increasing Newton iterations to 40 and damping Newton (`biot_relaxation=0.5`) do not recover the coupled run.
-- Within the surviving SNES family, modest GMRES+ILU variations do not change correctness on fixed2; they mainly move runtime by a small amount, with tighter inner tolerances costing more.
+- Within the surviving SNES family, modest GMRES+ILU variations do not change correctness on fixed2, canonical disk, or the medium growth-only confirmation lane; they mainly move runtime by a small amount, with tighter or alternative choices not yet showing a compelling correctness advantage.
 - The CH-only exact fix aligns with an initialization/default-injection gap rather than a model-equation change: adding explicit CH linear defaults restored SNES convergence behavior in exact-limit harnesses.
 
 ## 6) Fact vs Inference
@@ -53,10 +63,17 @@ The branch investigation isolates why coupled CH-Biot runs diverge from expectat
 - Fact: CH SNES linear defaults now include `preonly+lu` in core model setup.
 - Inference: The coupled regression is primarily caused by Biot-stack option combinations and nonlinear trajectory differences, not by a deliberate physics equation change.
 - Inference: The most robust tested family is still SNES with Biot on a non-LU iterative stack, especially GMRES+ILU. Fixed2 suggests that `preonly` may also matter on the stricter coupled disk probe, but Task 2 shows LU is the clearer cross-probe red flag.
+- Inference: On current evidence, the narrowest “strong default” choice is still PETSc SNES with the public `newtonls + bt` nonlinear path and an explicit non-LU Biot iterative stack. `ksp_gmres_restart=50` is the fastest tested member of that family, but the canonical growth-only confirmation suggests the speed gain over the current public default is small enough that supportability and simplicity still matter.
 - Inference: “hybrid” remains present in core code but is not part of public lean normalization and should be treated as non-default/legacy.
 
 ## 7) Next Steps
 - Re-run `Task 2` and `fixed2` with a narrow option sweep that isolates only Biot SNES linear-stack knobs (KSP/PC vs globalization) while keeping startup/mesh/restart fixed.
+- Extend the matrix to the public `configs/canonical_disk.toml` lane as the next 2D four-seed growth-adjacent probe.
+  - Rationale: it is the public hydration-coupled disk lane, it already emits the default visual artifacts we use elsewhere (`frames`, montage, movie), and it is closer to the runs we actually want to support than `fixed2`.
+  - Caveat: startup still uses `growth_mode = "no-growth"` here, so growth is neutral during bootstrap and then advances during the runtime solve via `g_rate`; this is “growth-capable after startup”, not “growth active from the very first bootstrap state.”
+- Use the `chb_growth_only_reference` ladder as the later confirmation lane once the canonical-disk wall-time winner is known.
+  - Rationale: it is the only tracked 2D four-seed reference surface that is explicitly about retained growth and symmetry observables.
+  - Caveat: `hydration_on = false`, so it is growth-rich but not the closest water-coupled public lane.
 - Add one more SNES-only refinement round around the passing non-LU family before broadening again: compare explicit GMRES restart/relative tolerance and, if needed, neighboring Krylov choices rather than jumping back to LU/direct stacks.
 - Promote the current evidence into a study-ready comparison bundle under `studies/` once the final report shape is decided; the fixed2 and Task 2 artifacts now support a coherent “LU vs non-LU iterative Biot stack” narrative.
 - Add explicit diagnostics for final convergence signatures (`ch`/`biot` convergence reasons) into a small, reproducible diff report so future regressions can distinguish “true fail” vs “did not advance.”
