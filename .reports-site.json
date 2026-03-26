@@ -37,8 +37,8 @@
       "href": "water-transport/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
       "slug": "water-transport",
-      "summary": "Full 2D and 3D water-transport toy-problem suite.",
-      "tier": "full",
+      "summary": "Gap-2 water-transport slice: full 2D suite plus 3D hydration/osmotic packages.",
+      "tier": "gap2",
       "title": "Water Transport"
     }
   ]
