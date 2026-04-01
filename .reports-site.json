@@ -1,6 +1,7 @@
 {
   "managed_root_entries": [
     ".nojekyll",
+    "canonical-disk-growth-campaign",
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
@@ -9,6 +10,14 @@
     "water-transport"
   ],
   "studies": [
+    {
+      "href": "canonical-disk-growth-campaign/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_campaign/manifest.toml",
+      "slug": "canonical-disk-growth-campaign",
+      "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
+      "tier": "full",
+      "title": "Canonical Disk Growth Campaign"
+    },
     {
       "href": "canonical-sphere-coarsening/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
@@ -22,7 +31,7 @@
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
       "slug": "snes-vs-newton-solver-backend-investigation",
       "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
-      "tier": "core",
+      "tier": "full",
       "title": "SNES vs Newton Solver Backend Investigation"
     },
     {
@@ -37,8 +46,8 @@
       "href": "water-transport/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
       "slug": "water-transport",
-      "summary": "Gap-2 water-transport slice: full 2D suite plus 3D hydration/osmotic packages.",
-      "tier": "gap2",
+      "summary": "Full 2D and 3D water-transport toy-problem suite.",
+      "tier": "full",
       "title": "Water Transport"
     }
   ]
