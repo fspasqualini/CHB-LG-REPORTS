@@ -1,0 +1,7 @@
+probe,case,backend,ok,status,mismatch,expected_records,actual_records,final_ch_converged,final_biot_converged,final_ch_snes_reason,final_biot_snes_reason,final_biot_iterations,biot_snes_type,biot_linesearch_type,biot_ksp_type,biot_pc_type,has_lu,has_ilu,has_preonly,has_gmres,error
+task2_coupled_strip,snes_default,snes,True,pass,False,8,8,True,True,2,2,0,newtonls,bt,gmres,ilu,False,True,False,True,
+task2_coupled_strip,snes_biot_bt_only,snes,True,pass,False,8,8,True,True,2,2,0,newtonls,bt,gmres,ilu,False,True,False,True,
+task2_coupled_strip,snes_biot_gmres_ilu_explicit,snes,True,pass,False,8,8,True,True,2,2,0,newtonls,bt,gmres,ilu,False,True,False,True,
+task2_coupled_strip,snes_biot_gmres_lu,snes,False,fail,True,8,2,True,False,2,-6,0,newtonls,bt,gmres,lu,True,False,False,True,CH+transport strip ladder failed at t=0.000100 for level medium.
+task2_coupled_strip,snes_biot_preonly_ilu,snes,True,pass,False,8,8,True,True,2,4,1,newtonls,bt,preonly,ilu,False,True,True,False,
+task2_coupled_strip,snes_biot_lu,snes,False,fail,True,8,2,True,False,2,-6,0,newtonls,bt,preonly,lu,True,False,True,False,CH+transport strip ladder failed at t=0.000100 for level medium.

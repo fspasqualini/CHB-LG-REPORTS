@@ -1,18 +1,54 @@
 {
   "managed_root_entries": [
     ".nojekyll",
-    "canonical-disk-growth-mechanism-decomposition",
+    "canonical-disk-growth-campaign",
+    "canonical-sphere-coarsening",
     "index.html",
-    "robots.txt"
+    "robots.txt",
+    "snes-vs-newton-solver-backend-investigation",
+    "verification-ladder",
+    "water-transport"
   ],
   "studies": [
     {
-      "href": "canonical-disk-growth-mechanism-decomposition/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/lumen-growth-microlumen-resolution/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
-      "slug": "canonical-disk-growth-mechanism-decomposition",
-      "summary": "Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.",
+      "href": "canonical-disk-growth-campaign/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_campaign/manifest.toml",
+      "slug": "canonical-disk-growth-campaign",
+      "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
       "tier": "full",
-      "title": "Canonical Disk Growth Mechanism Decomposition"
+      "title": "Canonical Disk Growth Campaign"
+    },
+    {
+      "href": "canonical-sphere-coarsening/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
+      "slug": "canonical-sphere-coarsening",
+      "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
+      "tier": "full",
+      "title": "Canonical Sphere Coarsening"
+    },
+    {
+      "href": "snes-vs-newton-solver-backend-investigation/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
+      "slug": "snes-vs-newton-solver-backend-investigation",
+      "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
+      "tier": "full",
+      "title": "SNES vs Newton Solver Backend Investigation"
+    },
+    {
+      "href": "verification-ladder/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/verification_ladder/manifest.toml",
+      "slug": "verification-ladder",
+      "summary": "Expanded verification-study slice through Task 8, covering the current VV ladder family by family.",
+      "tier": "full",
+      "title": "Verification Ladder"
+    },
+    {
+      "href": "water-transport/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
+      "slug": "water-transport",
+      "summary": "Full 2D and 3D water-transport toy-problem suite.",
+      "tier": "full",
+      "title": "Water Transport"
     }
   ]
 }
