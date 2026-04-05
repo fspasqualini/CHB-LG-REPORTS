@@ -1,205 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow, noarchive">
   <title>Canonical Disk Growth Mechanism Decomposition</title>
   <style>
-:root {
-  --bg: #f4f1ea;
-  --panel: #fffdf8;
-  --ink: #1f1d18;
-  --muted: #605b53;
-  --line: #d2c8b6;
-  --accent: #8a3b12;
-}
-body {
-  margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", serif;
-  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
-  color: var(--ink);
-}
-main {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem 1.25rem 4rem;
-}
-h1, h2, h3 {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-bottom: 0.4rem;
-}
-p, li {
-  line-height: 1.45;
-}
-a {
-  color: var(--accent);
-}
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.hero {
-  margin-bottom: 1.5rem;
-}
-.card {
-  background: color-mix(in oklab, var(--panel) 94%, white 6%);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
-  padding: 1rem 1.1rem;
-}
-.eyebrow {
-  color: var(--muted);
-  font-size: 0.92rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.tag {
-  display: inline-block;
-  margin: 0 0.35rem 0.35rem 0;
-  padding: 0.18rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(138, 59, 18, 0.08);
-  color: var(--accent);
-  font-size: 0.88rem;
-}
-.return-links {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-.return-link {
-  display: inline-block;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 253, 248, 0.92);
-  text-decoration: none;
-}
-</style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f6f1;
+      --panel: #ffffff;
+      --ink: #172021;
+      --muted: #556063;
+      --line: #d3d9d4;
+      --accent: #0f6d73;
+      --accent-soft: #dff2f0;
+    }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    h1, h2 {
+      margin: 0 0 0.75rem;
+      font-family: "IBM Plex Serif", Georgia, serif;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+    .kickers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0 0;
+    }
+    .kickers span {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 0.65rem 0.5rem;
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+    th {
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    code {
+      font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+      font-size: 0.92em;
+    }
+    a {
+      color: var(--accent);
+    }
+    ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+    }
+    p {
+      margin: 0.4rem 0 0;
+    }
+    .media-slice + .media-slice {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    .media-slice-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .media-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.8rem;
+      background: color-mix(in srgb, var(--accent-soft) 18%, white 82%);
+    }
+    .media-card h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .media-family {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .media-card img,
+    .media-card video {
+      width: 100%;
+      display: block;
+      margin-top: 0.7rem;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
   <main>
-    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="index.html">Study Index</a></nav>
-    <section class="hero">
-      <div class="card">
-        <p class="eyebrow">Study</p>
-        <h1>Canonical Disk Growth Mechanism Decomposition</h1>
-        <p>Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.</p>
+    <section class="panel">
+      <h1>Canonical Disk Growth Mechanism Decomposition</h1>
+      <p>Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.</p>
+      <div class="kickers">
+        <span>Tier: full</span>
+        <span>Water mechanisms deferred</span>
+        <span>Microlumen proxy geometry retained</span>
       </div>
+      <p>This promoted root reuses the exploratory packaged outputs from <code>output/canonical-disk-growth-modality-pilot/packages</code> rather than rerunning the solver.</p>
     </section>
-    <section>
-      <h2>Comparisons</h2>
-      <div class="grid">
-        
-            <div class="card">
-              <p class="eyebrow">Comparison</p>
-              <h3>Canonical Disk Growth Modality Pilot Gmax2P0 Grate2P5 Tend1P0 Comparison</h3>
-              <p>Mechanism comparison slice at g_max = 2.0, g_rate = 2.5, t_end = 1.0.</p>
-              <p><span class="tag">comparison</span></p>
-              <p><a href="comparisons/canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Comparison</p>
-              <h3>Canonical Disk Growth Modality Pilot Gmax4P0 Grate2P5 Tend1P2 Comparison</h3>
-              <p>Mechanism comparison slice at g_max = 4.0, g_rate = 2.5, t_end = 1.2.</p>
-              <p><span class="tag">comparison</span></p>
-              <p><a href="comparisons/canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Comparison</p>
-              <h3>Canonical Disk Growth Modality Pilot Gmax8P0 Grate2P5 Tend2P8 Comparison</h3>
-              <p>Mechanism comparison slice at g_max = 8.0, g_rate = 2.5, t_end = 2.8.</p>
-              <p><span class="tag">comparison</span></p>
-              <p><a href="comparisons/canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison/index.html">Open report</a></p>
-            </div>
-            
-      </div>
+    <section class="panel">
+      <h2>Comparison Slices</h2>
+      <ul>
+        <li><a href="canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison/report/canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison_index.html">Mechanism comparison slice at g_max = 2.0, g_rate = 2.5, t_end = 1.0.</a> <code>canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison</code></li>
+<li><a href="canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison/report/canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison_index.html">Mechanism comparison slice at g_max = 4.0, g_rate = 2.5, t_end = 1.2.</a> <code>canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison</code></li>
+<li><a href="canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison/report/canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison_index.html">Mechanism comparison slice at g_max = 8.0, g_rate = 2.5, t_end = 2.8.</a> <code>canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison</code></li>
+      </ul>
+      <p><a href="study_case_metrics.csv">study_case_metrics.csv</a> and <a href="study_case_metrics.json">study_case_metrics.json</a> summarize the promoted matrix.</p>
     </section>
-    <section>
-      <h2>Simulations</h2>
-      <div class="grid">
-        
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Tissue Growth g_max=2.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as tissue-side precursor pockets that should shrink, merge, or disappear first.</p>
-              <p><span class="tag">2D</span><span class="tag">tissue</span></p>
-              <p><a href="simulations/canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Linked Growth g_max=2.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens remain the reference structure, while the inboard microlumen family is interpreted as linked bridge pockets that should merge into the nearest canonical lumen pairings first.</p>
-              <p><span class="tag">2D</span><span class="tag">linked</span></p>
-              <p><a href="simulations/canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Lumen-Only Growth g_max=2.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four canonical lumens remain the reference family, while the outer diagonal microlumens are interpreted as lumen-side pockets that should remain isolated only briefly before coarsening back into the main set.</p>
-              <p><span class="tag">2D</span><span class="tag">lumen-only</span></p>
-              <p><a href="simulations/canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Tissue Growth g_max=4.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as tissue-side precursor pockets that should shrink, merge, or disappear first.</p>
-              <p><span class="tag">2D</span><span class="tag">tissue</span></p>
-              <p><a href="simulations/canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Linked Growth g_max=4.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as detached precursor pockets under linked tissue-and-lumen growth.</p>
-              <p><span class="tag">2D</span><span class="tag">linked</span></p>
-              <p><a href="simulations/canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Lumen-Only Growth g_max=4.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as detached lumen-side precursor pockets that may persist, merge, or vanish depending on cavity-driven growth alone.</p>
-              <p><span class="tag">2D</span><span class="tag">lumen-only</span></p>
-              <p><a href="simulations/canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Tissue Growth g_max=8.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as tissue-side precursor pockets that should shrink, merge, or disappear first.</p>
-              <p><span class="tag">2D</span><span class="tag">tissue</span></p>
-              <p><a href="simulations/canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Linked Growth g_max=8.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as detached precursor pockets under linked tissue-and-lumen growth.</p>
-              <p><span class="tag">2D</span><span class="tag">linked</span></p>
-              <p><a href="simulations/canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8/index.html">Open report</a></p>
-            </div>
-            
-            <div class="card">
-              <p class="eyebrow">Simulation</p>
-              <h3>Lumen-Only Growth g_max=8.0</h3>
-              <p>Contains the single-simulation report, trend plots, status checks, and selected media for The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as detached lumen-side precursor pockets that may persist, merge, or vanish depending on cavity-driven growth alone.</p>
-              <p><span class="tag">2D</span><span class="tag">lumen-only</span></p>
-              <p><a href="simulations/canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8/index.html">Open report</a></p>
-            </div>
-            
+    <section class="panel">
+      <h2>Mechanism Media Comparison</h2>
+      <p>Each slice places the three growth mechanisms side by side using the promoted montage and grid-video assets already carried by the packaged runs.</p>
+      
+      <div class="media-slice">
+        <div class="media-slice-header">
+          <h3>g_max = 2.0</h3>
+          <p><a href="canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison/report/canonical-disk-growth-modality-pilot-gmax2p0-grate2p5-tend1p0-comparison_index.html">Mechanism comparison report</a></p>
+        </div>
+        <div class="media-grid">
+          
+          <article class="media-card">
+            <h4>Tissue Growth g_max=2.0</h4>
+            <p class="media-family">tissue</p>
+            <img src="canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0/run/toy_montage_norm.png" alt="Tissue Growth g_max=2.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Linked Growth g_max=2.0</h4>
+            <p class="media-family">linked</p>
+            <img src="canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0/run/toy_montage_norm.png" alt="Linked Growth g_max=2.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Lumen-Only Growth g_max=2.0</h4>
+            <p class="media-family">lumen-only</p>
+            <img src="canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0/run/toy_montage_norm.png" alt="Lumen-Only Growth g_max=2.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0_index.html">Case report</a></p>
+          </article>
+                
+        </div>
       </div>
+        
+
+      <div class="media-slice">
+        <div class="media-slice-header">
+          <h3>g_max = 4.0</h3>
+          <p><a href="canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison/report/canonical-disk-growth-modality-pilot-gmax4p0-grate2p5-tend1p2-comparison_index.html">Mechanism comparison report</a></p>
+        </div>
+        <div class="media-grid">
+          
+          <article class="media-card">
+            <h4>Tissue Growth g_max=4.0</h4>
+            <p class="media-family">tissue</p>
+            <img src="canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2/run/toy_montage_norm.png" alt="Tissue Growth g_max=4.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Linked Growth g_max=4.0</h4>
+            <p class="media-family">linked</p>
+            <img src="canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2/run/toy_montage_norm.png" alt="Linked Growth g_max=4.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Lumen-Only Growth g_max=4.0</h4>
+            <p class="media-family">lumen-only</p>
+            <img src="canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2/run/toy_montage_norm.png" alt="Lumen-Only Growth g_max=4.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2_index.html">Case report</a></p>
+          </article>
+                
+        </div>
+      </div>
+        
+
+      <div class="media-slice">
+        <div class="media-slice-header">
+          <h3>g_max = 8.0</h3>
+          <p><a href="canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison/report/canonical-disk-growth-modality-pilot-gmax8p0-grate2p5-tend2p8-comparison_index.html">Mechanism comparison report</a></p>
+        </div>
+        <div class="media-grid">
+          
+          <article class="media-card">
+            <h4>Tissue Growth g_max=8.0</h4>
+            <p class="media-family">tissue</p>
+            <img src="canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8/run/toy_montage_norm.png" alt="Tissue Growth g_max=8.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Linked Growth g_max=8.0</h4>
+            <p class="media-family">linked</p>
+            <img src="canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8/run/toy_montage_norm.png" alt="Linked Growth g_max=8.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8_index.html">Case report</a></p>
+          </article>
+                
+          <article class="media-card">
+            <h4>Lumen-Only Growth g_max=8.0</h4>
+            <p class="media-family">lumen-only</p>
+            <img src="canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8/run/toy_montage_norm.png" alt="Lumen-Only Growth g_max=8.0 montage">
+            <video controls muted playsinline preload="metadata" src="canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8/run/fields_grid5_norm.mp4"></video>
+            <p><a href="canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8_index.html">Case report</a></p>
+          </article>
+                
+        </div>
+      </div>
+        
+    </section>
+    <section class="panel">
+      <h2>Promotion Notes</h2>
+      <ul>
+        <li>This promoted study copies only the already packaged per-case and per-slice reporting artifacts from the exploratory modality pilot root.</li>
+<li>Water-mechanism variation remains deferred to the separate water-transport study; this promotion isolates growth-allocation effects under the current hydration-coupled baseline.</li>
+<li>The current microlumen family is a resolved proxy geometry retained from the prerequisite iteration. Shape, size, and location may be revisited in a later study revision if the current diagonal seeds are judged too artificial.</li>
+      </ul>
+    </section>
+    <section class="panel">
+      <h2>Case Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Mechanism</th>
+            <th>g_max</th>
+            <th>t_end</th>
+            <th>Area Ratio</th>
+            <th>Max u</th>
+            <th>Lumen Volume</th>
+            <th>Max p</th>
+            <th>Status</th>
+            <th>Package</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Linked Growth g_max=2.0</td><td>linked</td><td>2.0</td><td>1.0</td><td>1.9441</td><td>0.3952</td><td>1.0522</td><td>0.0076</td><td>pass</td><td><a href="canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-linked-microlumens-gmax2p0-grate2p5-tend1p0_index.html">report</a></td></tr>
+<tr><td>Lumen-Only Growth g_max=2.0</td><td>lumen-only</td><td>2.0</td><td>1.0</td><td>1.0081</td><td>0.0425</td><td>0.5399</td><td>0.0105</td><td>pass</td><td><a href="canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-lumen-only-microlumens-gmax2p0-grate2p5-tend1p0_index.html">report</a></td></tr>
+<tr><td>Tissue Growth g_max=2.0</td><td>tissue</td><td>2.0</td><td>1.0</td><td>1.8926</td><td>0.3766</td><td>1.0405</td><td>0.0037</td><td>pass</td><td><a href="canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0/canonical-disk-growth-tissue-microlumens-gmax2p0-grate2p5-tend1p0_index.html">report</a></td></tr>
+<tr><td>Linked Growth g_max=4.0</td><td>linked</td><td>4.0</td><td>1.2</td><td>3.8401</td><td>0.9616</td><td>2.1755</td><td>0.0092</td><td>pass</td><td><a href="canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2_index.html">report</a></td></tr>
+<tr><td>Lumen-Only Growth g_max=4.0</td><td>lumen-only</td><td>4.0</td><td>1.2</td><td>1.0202</td><td>0.0682</td><td>0.6237</td><td>0.0178</td><td>pass</td><td><a href="canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-lumen-only-microlumens-gmax4p0-grate2p5-tend1p2_index.html">report</a></td></tr>
+<tr><td>Tissue Growth g_max=4.0</td><td>tissue</td><td>4.0</td><td>1.2</td><td>3.6693</td><td>0.9180</td><td>2.1278</td><td>0.0071</td><td>pass</td><td><a href="canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2/canonical-disk-growth-tissue-microlumens-gmax4p0-grate2p5-tend1p2_index.html">report</a></td></tr>
+<tr><td>Linked Growth g_max=8.0</td><td>linked</td><td>8.0</td><td>2.8</td><td>7.5476</td><td>1.7525</td><td>4.3417</td><td>0.0109</td><td>pass</td><td><a href="canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-linked-microlumens-gmax8p0-grate2p5-tend2p8_index.html">report</a></td></tr>
+<tr><td>Lumen-Only Growth g_max=8.0</td><td>lumen-only</td><td>8.0</td><td>2.8</td><td>1.0204</td><td>0.0960</td><td>0.6505</td><td>0.0257</td><td>pass</td><td><a href="canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-lumen-only-microlumens-gmax8p0-grate2p5-tend2p8_index.html">report</a></td></tr>
+<tr><td>Tissue Growth g_max=8.0</td><td>tissue</td><td>8.0</td><td>2.8</td><td>7.0734</td><td>1.6657</td><td>3.9778</td><td>0.0043</td><td>pass</td><td><a href="canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8/canonical-disk-growth-tissue-microlumens-gmax8p0-grate2p5-tend2p8_index.html">report</a></td></tr>
+        </tbody>
+      </table>
     </section>
   </main>
 </body>
