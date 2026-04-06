@@ -3,6 +3,7 @@
     ".nojekyll",
     "canonical-disk-growth-campaign",
     "canonical-disk-growth-mechanism-decomposition",
+    "canonical-disk-mass-increasing-deformation",
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
@@ -13,7 +14,7 @@
   "studies": [
     {
       "href": "canonical-disk-growth-campaign/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_campaign/manifest.toml",
+      "manifest_path": "studies/canonical_disk_growth_campaign/manifest.toml",
       "slug": "canonical-disk-growth-campaign",
       "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
       "tier": "full",
@@ -21,15 +22,23 @@
     },
     {
       "href": "canonical-disk-growth-mechanism-decomposition/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/lumen-growth-microlumen-resolution/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
+      "manifest_path": "studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
       "slug": "canonical-disk-growth-mechanism-decomposition",
       "summary": "Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.",
       "tier": "full",
       "title": "Canonical Disk Growth Mechanism Decomposition"
     },
     {
+      "href": "canonical-disk-mass-increasing-deformation/index.html",
+      "manifest_path": "studies/canonical_disk_mass_increasing_deformation/manifest.toml",
+      "slug": "canonical-disk-mass-increasing-deformation",
+      "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Increasing Deformation"
+    },
+    {
       "href": "canonical-sphere-coarsening/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
+      "manifest_path": "studies/canonical_sphere_coarsening/manifest.toml",
       "slug": "canonical-sphere-coarsening",
       "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
       "tier": "full",
@@ -37,7 +46,7 @@
     },
     {
       "href": "snes-vs-newton-solver-backend-investigation/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
+      "manifest_path": "studies/solver_backend_investigation/manifest.toml",
       "slug": "snes-vs-newton-solver-backend-investigation",
       "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
       "tier": "full",
@@ -45,7 +54,7 @@
     },
     {
       "href": "verification-ladder/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/verification_ladder/manifest.toml",
+      "manifest_path": "studies/verification_ladder/manifest.toml",
       "slug": "verification-ladder",
       "summary": "Expanded verification-study slice through Task 8, covering the current VV ladder family by family.",
       "tier": "full",
@@ -53,7 +62,7 @@
     },
     {
       "href": "water-transport/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/water_transport/manifest.toml",
+      "manifest_path": "studies/water_transport/manifest.toml",
       "slug": "water-transport",
       "summary": "Full 2D and 3D water-transport toy-problem suite.",
       "tier": "full",
