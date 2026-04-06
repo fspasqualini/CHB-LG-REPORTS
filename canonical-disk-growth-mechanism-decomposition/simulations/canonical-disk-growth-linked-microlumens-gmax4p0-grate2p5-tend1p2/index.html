@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow, noarchive">
   <title>Simulation Report: canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2</title>
   <style>
 :root {
@@ -115,12 +114,12 @@ code {
 </head>
 <body>
   <main>
-    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../index.html">Study Index</a></nav>
     <section class="hero">
       <div class="card">
         <h1>Simulation Report: canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2</h1>
-        <p class="muted">Generated 2026-04-05T07:00:27.805233+00:00 from commit 2ca5908.</p>
-<p>This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.</p>
+        <p class="muted">Generated 2026-04-06T08:03:28.372861+00:00 from commit 163e95a.</p>
+        <p class="muted">Machine-readable truth: <a href="report.json">report.json</a> | <a href="runs.csv">runs.csv</a></p>
+        <p>This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.</p>
       </div>
       <div class="card">
         <h2>Status</h2>
@@ -167,14 +166,14 @@ code {
       <h2>Scenario Reading</h2>
       
             <div class="card">
-              <h3>Canonical Disk Linked Microlumen Modality Pilot <span class="muted">(achieved)</span></h3>
-              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">growth:prereq</span><span class="tag">microlumen:linked</span><span class="tag">geometry:disk</span><span class="tag">canonical:disk</span><span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span></p>
-              <p>The four main cardinal lumens are preserved, while a second diagonal microlumen family is interpreted as detached precursor pockets under linked tissue-and-lumen growth.</p>
-              <p><strong>Model setup.</strong> Canonical disk geometry with four main lumens of radius 0.15 at the cardinal directions and four detached diagonal microlumens of radius 0.14 at +/-0.22 in the shared interstitial core as the common additive lumen seed family across all mechanism cases.</p>
-              <p><strong>Expected dynamics.</strong> Longer-horizon modality run using the resolved proxy microlumen family at g_max=4.0 and g_rate=2.5; revisit seed shape/location if the coarsening path looks artificial.</p>
-              <p class="muted"><strong>Read first:</strong> lumen_n_components, lumen_total_volume_def, lumen_largest_fraction, area_ratio, max_u</p>
+              <h3>Canonical Disk Linked Mass-Preserving Deformation g_max=4.0 <span class="muted">(achieved)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span></p>
+              <p>The four main cardinal lumens are preserved while a second diagonal microlumen family is interpreted as detached precursor pockets under linked tissue-and-lumen mass-preserving deformation; this setup injects no tissue or lumen source mass.</p>
+              <p><strong>Model setup.</strong> geometry=disk, hydraulic=closed, fixed_mesh, dimensionless, hydration_on</p>
+              <p><strong>Expected dynamics.</strong> Use this tracked scenario to reproduce the promoted linked mass-preserving deformation slice at g_max = 4.0.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
               <p class="muted"><strong>Where to observe it.</strong></p>
-              <ul class="clean"><li>Use plots/lumen_n_components.png and plots/lumen_total_volume_def.png to compare how long the shared diagonal microlumens stay distinct relative to the tissue-only case.</li><li>Use plots/lumen_largest_fraction.png and plots/area_ratio.png to compare dominant-lumen growth under uniform growth allocation.</li><li>Use frames_norm/geometry and videos_norm/fields_grid5_norm.mp4 to verify that the shared microlumen layout is identical across the three mechanism cases.</li></ul>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li></ul>
             </div>
             
     </section>
@@ -183,7 +182,7 @@ code {
 
     <section class="card">
       <h2>Run Table</h2>
-      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Mass</th><th>Ratio</th><th>min_J</th></tr></thead><tbody><tr><td>canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2</td><td>achieved</td><td>Canonical Disk Linked Microlumen Modality Pilot</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>8658.65</td><td>18342</td><td>2972</td><td>0.734056</td><td>1.00779</td><td>3.06619</td></tr></tbody></table>
+      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Mass</th><th>Ratio</th><th>min_J</th></tr></thead><tbody><tr><td>canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2</td><td>achieved</td><td>Canonical Disk Linked Mass-Preserving Deformation g_max=4.0</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>8658.65</td><td>18342</td><td>2972</td><td>0.734056</td><td>1.00779</td><td>3.06619</td></tr></tbody></table>
     </section>
 
     <section class="cards-3">
@@ -210,7 +209,7 @@ code {
             <div class="card">
               <h3>canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2</h3>
               <img src="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/montages/toy_montage_norm.png" alt="canonical-disk-growth-linked-microlumens-gmax4p0-grate2p5-tend1p2 montage">
-              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+              <ul class="clean"><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/simulation_summary.json">simulation_summary_json</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/run_config.json">run_config_json</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/summary.json">summary_json</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/metrics.csv">metrics_csv</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/post_summary.json">post_summary_json</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/lumen_components.csv">lumen_components_csv</a></li><li><a href="raw/current/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/lumen_seed_family_summary.json">lumen_seed_family_summary_json</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/canonical_disk_growth_linked_microlumens_gmax4p0_grate2p5_tend1p2/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
             </div>
             
       </div>
