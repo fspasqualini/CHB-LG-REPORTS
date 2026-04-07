@@ -4,6 +4,7 @@
     "canonical-disk-growth-campaign",
     "canonical-disk-growth-mechanism-decomposition",
     "canonical-disk-mass-increasing-deformation",
+    "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
@@ -35,6 +36,14 @@
       "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
       "tier": "full",
       "title": "Canonical Disk Mass-Increasing Deformation"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-growth-wip-diagnostic-study/index.html",
+      "manifest_path": "studies/canonical_disk_mass_injecting_growth_wip/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
+      "summary": "First-class WIP diagnostic study for the interrupted canonical-disk mass-injecting growth campaign, with overall analysis and kinematic-growth comparison pages.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting Growth WIP Diagnostic Study"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",

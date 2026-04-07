@@ -1,0 +1,40 @@
+step 1695: nonconverged (ch=True, biot=True, split=9.220019333392117e-06); retrying with dt=5.000e-04
+step 1695: nonconverged (ch=True, biot=True, split=5.027047385743298e-06); retrying with dt=2.500e-04
+step 1703: nonconverged (ch=True, biot=True, split=9.189926335868544e-06); retrying with dt=5.000e-04
+step 1703: nonconverged (ch=True, biot=True, split=5.075508249741625e-06); retrying with dt=2.500e-04
+step 1711: nonconverged (ch=True, biot=True, split=8.973161699620274e-06); retrying with dt=5.000e-04
+step 1712: nonconverged (ch=True, biot=True, split=5.1007292068239255e-06); retrying with dt=2.500e-04
+step 1719: nonconverged (ch=True, biot=True, split=6.8546186111176514e-06); retrying with dt=3.750e-04
+step 1725: nonconverged (ch=True, biot=True, split=5.332385578842443e-06); retrying with dt=2.500e-04
+step 1733: nonconverged (ch=True, biot=True, split=5.19400888347602e-06); retrying with dt=2.500e-04
+step 1741: nonconverged (ch=True, biot=True, split=5.16980659616115e-06); retrying with dt=2.500e-04
+step 1749: nonconverged (ch=True, biot=True, split=5.342345202021403e-06); retrying with dt=2.500e-04
+step 1757: nonconverged (ch=True, biot=True, split=5.479407057686604e-06); retrying with dt=2.500e-04
+step 1765: nonconverged (ch=True, biot=True, split=5.5209326807119735e-06); retrying with dt=2.500e-04
+step 1773: nonconverged (ch=True, biot=True, split=5.719914552718173e-06); retrying with dt=2.500e-04
+step 1781: nonconverged (ch=True, biot=True, split=5.684106267347178e-06); retrying with dt=2.500e-04
+step 1789: nonconverged (ch=True, biot=True, split=5.656917353766783e-06); retrying with dt=2.500e-04
+step 1797: nonconverged (ch=True, biot=True, split=5.725242384522655e-06); retrying with dt=2.500e-04
+step 1799: nonconverged (ch=True, biot=False, split=0.0); retrying with dt=1.250e-04
+step 1806: nonconverged (ch=True, biot=False, split=0.0); retrying with dt=6.250e-05
+step 1810: nonconverged (ch=True, biot=False, split=3.5404439087873193e-06); retrying with dt=3.125e-05
+step 1811: nonconverged (ch=True, biot=False, split=3.988944597498098e-06); retrying with dt=1.562e-05
+step 1811: nonconverged (ch=True, biot=False, split=2.369921368584366e-06); retrying with dt=7.812e-06
+step 1815: nonconverged (ch=True, biot=False, split=0.0); retrying with dt=3.906e-06
+step 1815: nonconverged (ch=True, biot=False, split=1.5533088347268253e-06); retrying with dt=1.953e-06
+step 1816: nonconverged (ch=True, biot=False, split=2.6934904395972542e-06); stopping without advancing the accepted trajectory.
+
+
+
+stderr:
+Traceback (most recent call last):
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/scripts/run.py", line 14, in <module>
+    raise SystemExit(main(["run", *(__import__("sys").argv[1:])]))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/src/chblg/cli.py", line 111, in main
+    runtime_main(
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/src/chb/spheroid_simulation.py", line 812, in main
+    raise RuntimeError(runtime_state.abort_error)
+RuntimeError: Nonconvergence at step 1816 (ch=True, biot=False, split=2.6934904395972542e-06).
+
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/run.py --config /tmp/chblg-mi-tissue-srate15-stage/canonical-disk-mi-calibration-tissue-srate15-tend14p0-tissue-srate15p0-tend14p0/config/canonical-disk-mi-calibration-tissue-srate15-tend14p0-tissue-srate15p0-tend14p0.toml --startup-from /tmp/chblg-mi-tissue-srate15-stage/canonical-disk-mi-calibration-tissue-srate15-tend14p0-tissue-srate15p0-tend14p0/stage/canonical-disk-mi-calibration-tissue-srate15-tend14p0-tissue-srate15p0-tend14p0_init/startup_bundle.json --output /tmp/chblg-mi-tissue-srate15-stage/canonical-disk-mi-calibration-tissue-srate15-tend14p0-tissue-srate15p0-tend14p0/stage` failed. (See above for error)
