@@ -119,7 +119,7 @@ code {
     <section class="hero">
       <div class="card">
         <h1>Simulation Report: mig-direct-s15</h1>
-        <p class="muted">Generated 2026-04-08T18:22:55.624640+00:00 from commit f9a27e7.</p>
+        <p class="muted">Generated 2026-04-09T21:08:34.770800+00:00 from commit 32a077f.</p>
 <p>This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.</p>
       </div>
       <div class="card">
@@ -188,7 +188,27 @@ code {
 
     <section class="card">
       <h2>Run Table</h2>
-      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Lumen-phase measure</th><th>Left/right lumen balance</th><th>min_J</th></tr></thead><tbody><tr><td>mig-direct-s15</td><td>achieved</td><td>canonical disk source pf theta closed direct start s15</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>382.254</td><td>18342</td><td>2972</td><td>0.636845</td><td>1.67369</td><td>1.04717</td></tr></tbody></table>
+      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Lumen-phase measure</th><th>Left/right lumen balance</th><th>min_J</th><th>Run health</th></tr></thead><tbody><tr><td>mig-direct-s15</td><td>achieved</td><td>canonical disk source pf theta closed direct start s15</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>382.254</td><td>18342</td><td>2972</td><td>0.636845</td><td>1.67369</td><td>1.04717</td><td><span class="status-pass">green</span></td></tr></tbody></table>
+    </section>
+
+    <section class="cards-3">
+      <h2>Run Health</h2>
+      
+            <div class="card">
+              <h3>mig-direct-s15 <span class="muted">(achieved)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Worst min_J.</strong> 0.822918 at t=0.022</p>
+              <p class="muted"><strong>Final min_J.</strong> 1.04717</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.8.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.5.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.2.</strong> 0</p>
+              <p class="muted"><strong>Peak max_pf.</strong> 1.03888 at t=0.063</p>
+              <p class="muted"><strong>Peak p_eff range.</strong> 0.0617349 at t=0.1</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>mechanically clean accepted-step history</li></ul>
+            </div>
+            
     </section>
 
     <section class="cards-3">
@@ -204,7 +224,7 @@ code {
     <section class="card">
       <h2>Trends</h2>
       <div class="plot-grid">
-        <div><h3>Area Ratio</h3><img src="plots/area_ratio.png" alt="Area Ratio"></div><div><h3>Max Displacement</h3><img src="plots/max_u.png" alt="Max Displacement"></div><div><h3>Left/Right Lumen Balance</h3><img src="plots/ratio.png" alt="Left/Right Lumen Balance"></div><div><h3>Total Energy (P-Form)</h3><img src="plots/total_energy.png" alt="Total Energy (P-Form)"></div><div><h3>Theta-Form Energy</h3><img src="plots/energy_total_theta.png" alt="Theta-Form Energy"></div><div><h3>Cross-Form Energy</h3><img src="plots/energy_total_cross.png" alt="Cross-Form Energy"></div><div><h3>Lumen-Phase Measure</h3><img src="plots/mass.png" alt="Lumen-Phase Measure"></div><div><h3>Split Iterations</h3><img src="plots/split_iterations.png" alt="Split Iterations"></div><div><h3>Mesh Cells</h3><img src="plots/mesh_num_cells.png" alt="Mesh Cells"></div><div><h3>Flow Potential Range</h3><img src="plots/flow_potential_range.png" alt="Flow Potential Range"></div><div><h3>Effective Pressure Range</h3><img src="plots/p_eff_range.png" alt="Effective Pressure Range"></div><div><h3>Theta_Eq Range</h3><img src="plots/theta_eq_range.png" alt="Theta_Eq Range"></div><div><h3>Storage Strain Range</h3><img src="plots/storage_strain_range.png" alt="Storage Strain Range"></div><div><h3>Wall Time</h3><img src="plots/wall_time.png" alt="Wall Time"></div>
+        <div><h3>Area Ratio</h3><img src="plots/area_ratio.png" alt="Area Ratio"></div><div><h3>Max Displacement</h3><img src="plots/max_u.png" alt="Max Displacement"></div><div><h3>Min_J</h3><img src="plots/min_J.png" alt="Min_J"></div><div><h3>Min_Je</h3><img src="plots/min_Je.png" alt="Min_Je"></div><div><h3>Max_Pf</h3><img src="plots/max_pf.png" alt="Max_Pf"></div><div><h3>Left/Right Lumen Balance</h3><img src="plots/ratio.png" alt="Left/Right Lumen Balance"></div><div><h3>Total Energy (P-Form)</h3><img src="plots/total_energy.png" alt="Total Energy (P-Form)"></div><div><h3>Theta-Form Energy</h3><img src="plots/energy_total_theta.png" alt="Theta-Form Energy"></div><div><h3>Cross-Form Energy</h3><img src="plots/energy_total_cross.png" alt="Cross-Form Energy"></div><div><h3>Lumen-Phase Measure</h3><img src="plots/mass.png" alt="Lumen-Phase Measure"></div><div><h3>Split Iterations</h3><img src="plots/split_iterations.png" alt="Split Iterations"></div><div><h3>Mesh Cells</h3><img src="plots/mesh_num_cells.png" alt="Mesh Cells"></div><div><h3>Flow Potential Range</h3><img src="plots/flow_potential_range.png" alt="Flow Potential Range"></div><div><h3>Effective Pressure Range</h3><img src="plots/p_eff_range.png" alt="Effective Pressure Range"></div><div><h3>Theta_Eq Range</h3><img src="plots/theta_eq_range.png" alt="Theta_Eq Range"></div><div><h3>Storage Strain Range</h3><img src="plots/storage_strain_range.png" alt="Storage Strain Range"></div><div><h3>Wall Time</h3><img src="plots/wall_time.png" alt="Wall Time"></div>
       </div>
     </section>
 
