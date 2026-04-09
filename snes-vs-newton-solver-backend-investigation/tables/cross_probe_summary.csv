@@ -1,6 +1,0 @@
-case,fixed2_status,task2_status,fixed2_ok,task2_ok,fixed2_error,task2_error,takeaway
-snes_biot_gmres_ilu_explicit,pass,pass,True,True,,,passes on both probes
-snes_biot_gmres_lu,fail,fail,False,False,"RuntimeError: Nonconvergence at step 1 (ch=True, biot=False, split=1.1883925128669366e-06).",CH+transport strip ladder failed at t=0.000100 for level medium.,fails on both probes
-snes_biot_lu,fail,fail,False,False,"RuntimeError: Nonconvergence at step 1 (ch=True, biot=False, split=1.1883931337232049e-06).",CH+transport strip ladder failed at t=0.000100 for level medium.,fails on both probes
-snes_biot_preonly_ilu,fail,pass,False,True,"RuntimeError: Nonconvergence at step 1 (ch=True, biot=False, split=0.0).",,passes on strip probe only
-snes_default,pass,pass,True,True,,,passes on both probes
