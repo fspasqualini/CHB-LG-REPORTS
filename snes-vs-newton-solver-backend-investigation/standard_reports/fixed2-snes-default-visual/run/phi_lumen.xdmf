@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf Version="3.0" xmlns:xi="https://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      <Topology TopologyType="Triangle" NumberOfElements="2972" NodesPerElement="3">
+        <DataItem Dimensions="2972 3" NumberType="Int" Format="HDF">phi_lumen.h5:/Mesh/mesh/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XY">
+        <DataItem Dimensions="1550 2" Format="HDF">phi_lumen.h5:/Mesh/mesh/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid Name="phi_lumen" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="phi_lumen" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="phi_lumen" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="1550 1" Format="HDF">phi_lumen.h5:/Function/phi_lumen/0</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="phi_lumen" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.001" />
+        <Attribute Name="phi_lumen" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="1550 1" Format="HDF">phi_lumen.h5:/Function/phi_lumen/0_001</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="phi_lumen" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.002" />
+        <Attribute Name="phi_lumen" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="1550 1" Format="HDF">phi_lumen.h5:/Function/phi_lumen/0_002</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

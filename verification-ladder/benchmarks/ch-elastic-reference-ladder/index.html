@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>CH-Elastic Reference Ladder - reference-ladders</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+.return-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.return-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../families/reference-ladders/index.html">Family Index</a></nav>
+    
+    <nav class="return-links"><a class="return-link" href="../../../index.html">Main Index</a><a class="return-link" href="../../families/reference-ladders/index.html">Family Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>CH-Elastic Reference Ladder</h1>
+        <p class="muted">Family: reference-ladders</p>
+        <p>Coarse and medium retained-accuracy ladder against an overkill CH-elastic reference.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Overkill reference</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> pf, u</p>
+        <p><strong>Frozen terms:</strong> pressure, storage, hydraulic transport</p>
+        <p><strong>Comparison grammar:</strong> Achieved / Target</p>
+        <p><strong>Tickets:</strong> VV-010b</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This ladder checks retained coupled CH-elastic accuracy against a same-equations overkill reference on a strip-mode benchmark.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>A small-amplitude strip mode is advanced in the coupled CH-elastic system at coarse, medium, and overkill-reference fidelities.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the overkill reference lane. The expected trend is retained improvement: the medium lane should be visibly closer to the reference than the coarse lane across amplitude, side-center span, and invariant diagnostics.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The setup schematic explains the ladder, the history plots show raw amplitude and span samples from the runs, the energy plot shows a reference-lane state diagnostic, and the error bar chart summarizes the extracted observable errors against the overkill target.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>This page should be read like an accuracy ladder, not a stability page: improvement of medium over coarse is the key result, even when both lanes look qualitatively similar.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>All lanes solve the same public equations and geometry. The reference lane only tightens resolution and time-step choices, so differences can be interpreted as discretization drift.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This ladder is strip-mode specific and intentionally low amplitude. It does not replace the larger canonical-disk CHB reference ladders.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">medium_amplitude</p>
+              <div class="kpi">0.00292944</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">medium_side_center_span</p>
+              <div class="kpi">1.37466e-16</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">medium_min_J</p>
+              <div class="kpi">2.38264e-11</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">medium_energy_total_p</p>
+              <div class="kpi">7.44081e-15</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the CH-elastic retained-accuracy ladder.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the CH-elastic retained-accuracy ladder.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/amplitude-history.png" alt="Raw amplitude history for the medium lane against the overkill reference.">
+              <div class="plot-copy">
+                <p><strong>Raw amplitude history for the medium lane against the overkill reference.</strong></p>
+                <p class="muted">plots/amplitude-history.png</p>
+              </div>
+            </div>
+            
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/reference-energy-history.png" alt="Reference-lane energy and invariant history.">
+              <div class="plot-copy">
+                <p><strong>Reference-lane energy and invariant history.</strong></p>
+                <p class="muted">plots/reference-energy-history.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/side-center-span-history.png" alt="Side-center displacement span history across the ladder lanes.">
+              <div class="plot-copy">
+                <p><strong>Side-center displacement span history across the ladder lanes.</strong></p>
+                <p class="muted">plots/side-center-span-history.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/medium-observable-errors.png" alt="Observable errors for the medium lane against the overkill reference.">
+              <div class="plot-copy">
+                <p><strong>Observable errors for the medium lane against the overkill reference.</strong></p>
+                <p class="muted">plots/medium-observable-errors.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>medium_amplitude</td><td>0.00292944</td><td></td><td>0</td><td>0</td><td>pass</td></tr><tr><td>medium_side_center_span</td><td>1.37466e-16</td><td></td><td>0</td><td>0</td><td>pass</td></tr><tr><td>medium_min_J</td><td>2.38264e-11</td><td></td><td>0</td><td>0</td><td>pass</td></tr><tr><td>medium_energy_total_p</td><td>7.44081e-15</td><td></td><td>0</td><td>0</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>medium_error_count</td><td>observables</td><td>4</td><td>&gt;= 1</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>coarse_amplitude</td><td>reference_target</td><td>amplitude</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_side_center_span</td><td>reference_target</td><td>side center span</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_min_J</td><td>reference_target</td><td>min J</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>coarse_energy_total_p</td><td>reference_target</td><td>energy total p</td><td>coarse</td><td>coarse</td><td>overkill reference</td></tr><tr><td>medium_amplitude</td><td>reference_target</td><td>amplitude</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_side_center_span</td><td>reference_target</td><td>side center span</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_min_J</td><td>reference_target</td><td>min J</td><td>medium</td><td>medium</td><td>overkill reference</td></tr><tr><td>medium_energy_total_p</td><td>reference_target</td><td>energy total p</td><td>medium</td><td>medium</td><td>overkill reference</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>coarse</h3>
+              <p>Coarse lane in the CH-elastic retained-accuracy ladder.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>medium</h3>
+              <p>Medium lane in the CH-elastic retained-accuracy ladder.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>reference</h3>
+              <p>Reference lane in the CH-elastic retained-accuracy ladder.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

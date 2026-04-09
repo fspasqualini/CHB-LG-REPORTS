@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Research-Tier Coarsening Scaling - coarsening-and-scaling</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+.return-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.return-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../families/coarsening-and-scaling/index.html">Family Index</a></nav>
+    
+    <nav class="return-links"><a class="return-link" href="../../../index.html">Main Index</a><a class="return-link" href="../../families/coarsening-and-scaling/index.html">Family Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>Research-Tier Coarsening Scaling</h1>
+        <p class="muted">Family: coarsening-and-scaling</p>
+        <p>Fixture-backed research-tier coarsening scaling checks calibrated against the canonical sphere coarsening study.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Expected baseline</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> reference-frame characteristic length and interface measure</p>
+        <p><strong>Frozen terms:</strong> fixture-backed accepted rows and documented fit window</p>
+        
+        <p><strong>Comparison grammar:</strong> Expected / Achieved</p>
+        <p><strong>comparison_validity:</strong> research-tier</p>
+        
+        <p><strong>Tickets:</strong> VV-NEXT-402</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This page publishes the Task 8 fixture-backed research-tier coarsening scaling check calibrated against the canonical sphere coarsening study.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>A fixture-backed canonical sphere lane is used to fit the reference-frame characteristic-length scaling over a documented pre-merge time window.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is a documented research-tier exponent band, not a merge-blocking physics truth claim and not an arrest-length validation.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The history plot shows the full fit-series rows and the selected fit window, while the exponent plots make the achieved-versus-target comparison explicit.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>Read this page as research-tier coarsening scaling checks only. It should not be used to claim asymptotic Safran-law verification.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>The benchmark is calibrated against the canonical sphere coarsening study and remains explicitly non-blocking within the broader V&amp;V surface.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This is a bounded pre-merge transient on the current canonical sphere family. Defer arrest-length validation until the constitutive physics makes that fair.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">fitted_exponent</p>
+              <div class="kpi">0.189848</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">documented_window</p>
+              <div class="kpi">0.001 to 0.003</div>
+              <p class="muted">time</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">status</p>
+              <div class="kpi">research-tier / non-blocking</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Primary Plots</h2>
+      
+      <h3>Trend</h3>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/coarsening-scaling-history.png" alt="Reference-frame characteristic-length history with the documented fit window highlighted.">
+              <div class="plot-copy">
+                <p><strong>Reference-frame characteristic-length history with the documented fit window highlighted.</strong></p>
+                <p class="muted">plots/coarsening-scaling-history.png</p>
+              </div>
+            </div>
+            
+      </div>
+            
+      <h3>Expected Vs Achieved</h3>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/coarsening-scaling-exponent.png" alt="Fitted research-tier coarsening exponent versus the documented target exponent.">
+              <div class="plot-copy">
+                <p><strong>Fitted research-tier coarsening exponent versus the documented target exponent.</strong></p>
+                <p class="muted">plots/coarsening-scaling-exponent.png</p>
+              </div>
+            </div>
+            
+      </div>
+            
+      <h3>Delta Table</h3>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/coarsening-scaling-window.png" alt="Documented research-tier exponent window used by the canonical sphere scaling lane.">
+              <div class="plot-copy">
+                <p><strong>Documented research-tier exponent window used by the canonical sphere scaling lane.</strong></p>
+                <p class="muted">plots/coarsening-scaling-window.png</p>
+              </div>
+            </div>
+            
+      </div>
+            
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>fitted_exponent</td><td>0.189848</td><td></td><td>target exponent</td><td>0.19</td><td>pass</td></tr><tr><td>documented_window</td><td>0.001 to 0.003</td><td>time</td><td>fit window</td><td>0.001 to 0.003</td><td>pass</td></tr><tr><td>status</td><td>research-tier / non-blocking</td><td></td><td>publication label</td><td>research-tier</td><td>warn</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>fit_window_points</td><td>number of fit-window points</td><td>4</td><td>&gt;= 2</td><td>pass</td></tr><tr><td>fitted_exponent_window</td><td>documented exponent window</td><td>0.189848</td><td>[0.11, 0.27]</td><td>pass</td></tr><tr><td>comparison_validity</td><td>publication status</td><td>research-tier</td><td>non-blocking</td><td>warn</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>coarsening_scaling_exponent</td><td>expected_vs_achieved</td><td>fitted exponent</td><td>fixture</td><td>research-tier</td><td>documented target exponent</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>fixture</h3>
+              <p>Fixture-backed canonical sphere fixed5 coarsening scaling lane calibrated against the canonical sphere coarsening study.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

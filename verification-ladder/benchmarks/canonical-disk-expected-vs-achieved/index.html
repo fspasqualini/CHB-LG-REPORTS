@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Canonical Disk Expected vs Achieved - fixed-mesh-baselines</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+.return-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.return-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../families/fixed-mesh-baselines/index.html">Family Index</a></nav>
+    
+    <nav class="return-links"><a class="return-link" href="../../../index.html">Main Index</a><a class="return-link" href="../../families/fixed-mesh-baselines/index.html">Family Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>Canonical Disk Expected vs Achieved</h1>
+        <p class="muted">Family: fixed-mesh-baselines</p>
+        <p>Fixed-mesh canonical disk expected-versus-achieved summary anchored to the committed fixture truth surface.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Expected baseline</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> fixed-mesh summary observables</p>
+        <p><strong>Frozen terms:</strong> committed baseline fixture</p>
+        
+        <p><strong>Comparison grammar:</strong> Expected / Achieved</p>
+        <p><strong>comparison_validity:</strong> advisory</p>
+        
+        <p><strong>Tickets:</strong> vv-baseline</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This benchmark is a fixture-backed advisory regression anchor for the fixed-mesh canonical disk smoke lane. It is not an analytic target and not a live achieved-versus-expected rerun.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>Canonical disk geometry with four equal-radius lumens at the cardinal positions, no-growth startup, and hydration enabled is run on a 2-step fixed-mesh schedule from `configs/vnv/canonical_disk_fixed2.toml`.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is the committed fixed-mesh baseline fixture in `tests/fixtures/vnv/canonical_disk_fixed2_baseline`. This page compares against that expected surface for regression review, not to set physics truth or replace the deeper fixed-mesh validation gates.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The setup schematic explains the four-lumen toy problem, the accepted-step history gives a raw example of how the main observables evolve during the run, and the grouped expected-versus-achieved plus delta plots show exactly which extracted metrics are being compared against the committed baseline.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>For each observed metric, near-zero deltas indicate agreement with the committed baseline. Large shifts are flagged via advisory severity and should be reviewed before accepting drift. Because this page currently projects the committed target directly, expected and achieved can be identical until the runtime achieved source is decoupled from the fixture.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>This baseline is a committed fixture-backed advisory surface for this benchmark and is tied to committed summary/metric fixtures plus fixed-mesh runtime smoke checks in `tests/integration/test_lean_runtime_smokes.py` for invariant and convergence behavior.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>This is a short fixed-mesh advisory checkpoint, not an adaptive-mesh study and not a full physical validation campaign. Use it for regression trend review only and interpret with the stated configuration context.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">comparison_validity</p>
+              <div class="kpi">advisory</div>
+              <p class="muted"></p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Setup schematic for the canonical four-lumen fixed-mesh baseline and the observables extracted from it.">
+              <div class="plot-copy">
+                <p><strong>Setup schematic for the canonical four-lumen fixed-mesh baseline and the observables extracted from it.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/accepted-step-history.png" alt="Accepted-step history for mass, area ratio, max_u, min_J, and min_Je.">
+              <div class="plot-copy">
+                <p><strong>Accepted-step history for mass, area ratio, max_u, min_J, and min_Je.</strong></p>
+                <p class="muted">plots/accepted-step-history.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/expected-vs-achieved.png" alt="Expected-versus-achieved baseline summary for the canonical disk fixture observables.">
+              <div class="plot-copy">
+                <p><strong>Expected-versus-achieved baseline summary for the canonical disk fixture observables.</strong></p>
+                <p class="muted">plots/expected-vs-achieved.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/expected-vs-achieved-delta.png" alt="Achieved-minus-expected deltas for the canonical disk baseline observables.">
+              <div class="plot-copy">
+                <p><strong>Achieved-minus-expected deltas for the canonical disk baseline observables.</strong></p>
+                <p class="muted">plots/expected-vs-achieved-delta.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>comparison_validity</td><td>advisory</td><td></td><td>expected baseline</td><td></td><td>warn</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>mass_final</td><td>mass_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>area_ratio_final</td><td>area_ratio_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>max_u_final</td><td>max_u_final</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>min_J</td><td>min_J</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr><tr><td>min_Je</td><td>min_Je</td><td>achieved matches expected fixture</td><td>fixture value</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>mass_final</td><td>expected_vs_achieved</td><td>mass final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>area_ratio_final</td><td>expected_vs_achieved</td><td>area ratio final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>max_u_final</td><td>expected_vs_achieved</td><td>max u final</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>min_J</td><td>expected_vs_achieved</td><td>min J</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr><tr><td>min_Je</td><td>expected_vs_achieved</td><td>min Je</td><td>achieved</td><td>fixed-mesh</td><td>expected</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>expected</h3>
+              <p>Committed fixed-mesh baseline fixture.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>achieved</h3>
+              <p>Fixture values mirrored into expected-versus-achieved grammar for advisory regression review.</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>

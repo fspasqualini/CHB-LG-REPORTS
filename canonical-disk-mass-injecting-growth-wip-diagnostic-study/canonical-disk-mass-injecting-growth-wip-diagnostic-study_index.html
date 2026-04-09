@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Canonical Disk Mass-Injecting Growth WIP Diagnostic Study</title>
+  <style>
+    :root { --bg:#f4f1ea; --panel:#fffdf8; --ink:#1f1d18; --muted:#605b53; --line:#d2c8b6; --accent:#8a3b12; --pass:#2f6f4f; --warn:#a76412; --fail:#a12f2f; }
+    body { margin:0; font-family:"Iowan Old Style","Palatino Linotype",serif; background:radial-gradient(circle at top,#fffdf8 0%,var(--bg) 55%,#e6dece 100%); color:var(--ink); }
+    main { max-width:1380px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+    h1,h2,h3,h4 { margin:0 0 0.4rem; }
+    p,li,td,th { line-height:1.45; }
+    a { color:var(--accent); }
+    .hero,.grid,.summary-grid { display:grid; gap:1rem; }
+    .hero { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); margin-bottom:1.5rem; }
+    .summary-grid { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin:1rem 0 1.5rem; }
+    .grid { grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
+    .card { background:color-mix(in oklab,var(--panel) 94%, white 6%); border:1px solid var(--line); border-radius:18px; box-shadow:0 12px 30px rgba(86,73,46,0.08); padding:1rem 1.1rem; }
+    .muted { color:var(--muted); }
+    .badge { display:inline-block; padding:0.2rem 0.55rem; border-radius:999px; font-size:0.88rem; border:1px solid var(--line); }
+    .badge-pass { color:var(--pass); background:rgba(47,111,79,0.10); }
+    .badge-warn { color:var(--warn); background:rgba(167,100,18,0.10); }
+    .badge-fail { color:var(--fail); background:rgba(161,47,47,0.10); }
+    .kpi { font-size:1.8rem; color:var(--accent); font-weight:600; }
+    img,video { width:100%; display:block; margin-top:0.75rem; border-radius:12px; border:1px solid var(--line); background:#fff; }
+    table { width:100%; border-collapse:collapse; margin-top:0.75rem; background:rgba(255,255,255,0.72); }
+    th,td { border-bottom:1px solid var(--line); text-align:left; padding:0.55rem 0.45rem; vertical-align:top; }
+    .mini-table th,.mini-table td { padding:0.35rem 0.3rem; }
+    .card-header { display:flex; justify-content:space-between; gap:1rem; align-items:flex-start; }
+    .forensic-box { margin-top:0.75rem; padding:0.8rem; border-radius:12px; border:1px dashed var(--line); background:rgba(161,47,47,0.04); }
+    .nav { display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1rem; }
+    </style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="index.html">Study Index</a></nav>
+    <nav class="nav">
+      <a href="index.html">Overall Analysis</a>
+      <a href="kinematic-growth-comparison.html">Kinematic Growth Comparison</a>
+      <a href="comparisons/wip-mass-injecting-growth-comparison/report/wip-mass-injecting-growth-comparison_index.html">Interrupted campaign comparison page</a>
+    </nav>
+    <section class="hero">
+      <div class="card">
+        <p class="muted">WIP Diagnostic Study</p>
+        <h1>Canonical Disk Mass-Injecting Growth WIP Diagnostic Study</h1>
+        <p>This is a promoted first-class diagnostic study for the interrupted mass-injecting growth campaign. It preserves the same reporting grammar as the completed studies, but keeps the WIP/forensic status explicit.</p>
+        <p>Interrupted after ETA review showed multi-day to multi-week completion times under reduced-dt regimes, with multiple solver failures already present. Preserving partial fields for WIP comparison.</p>
+      </div>
+      <div class="card">
+        <h2>Overall Analysis</h2>
+        <p>The study answered the near-term scientific question even though the full 8x matrix did not complete. The positive result is that source-driven mass addition can be pushed into the same broad timescale family as the kinematic-growth study. The negative result is that robustness depends strongly on modality and source strength, and some interrupted/failed runs left unreadable field files.</p>
+        <ul>
+          <li>Runs with full visual artifacts: 5 / 9</li>
+          <li>Runs that failed before shutdown: 5</li>
+          <li>Best media-bearing cases: canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1, canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1, canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1</li>
+          <li>Forensic-only cases: canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1, canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1, canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1, canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1</li>
+        </ul>
+      </div>
+    </section>
+    <section class="summary-grid">
+      <div class="card"><div class="kpi">9</div><p>Tracked cases</p></div>
+      <div class="card"><div class="kpi">5</div><p>Solver-recorded failures</p></div>
+      <div class="card"><div class="kpi">5</div><p>Cases with usable montage/video evidence</p></div>
+      <div class="card"><div class="kpi">4</div><p>Cases that were still advancing at shutdown</p></div>
+    </section>
+    <section class="card">
+      <h2>What Worked</h2>
+      <ul>
+        <li>The shared source-rate family generated meaningful large-mass responses quickly enough to diagnose the regime instead of leaving the study underdriven.</li>
+        <li>Five cases retained enough accepted-step field output to package the usual montage and video artifacts for collaborator review.</li>
+        <li>The interrupted campaign comparison page and the per-run pages remain useful because they preserve the mixed positive/negative evidence rather than collapsing everything into a single status line.</li>
+      </ul>
+      <h2>What Did Not</h2>
+      <ul>
+        <li>A single shared source-rate ladder did not remain uniformly stable across tissue, homogeneous, and lumen localization.</li>
+        <li>At least one slow homogeneous case failed, so the problem is not just “fast source is too aggressive”.</li>
+        <li>Four partial runs ended with unreadable HDF5/XDMF field files, so some artifact loss is coupled to interruption/failure handling rather than to the scientific mechanism alone.</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Failure Analysis</h2>
+      <p>The observed pattern is not yet univocal. The run-level evidence is consistent with repeated Biot nonconvergence in a reduced-dt regime, but the precise physical trigger may differ across cases.</p>
+      <h3>Possible causes</h3>
+      <ul><li>Biot nonconvergence triggered by source-driven topological change while the timestep controller was already in a reduced-dt recovery band.</li><li>Closed-boundary dual-phase storage under homogeneous or strong source injection may stiffen the coupled pressure-hydration response faster than the current monolithic SNES settings can relax it.</li><li>Artifact loss in some interrupted cases came from unreadable partial HDF5/XDMF field files after interruption or earlier solver failure, so output corruption is a separate risk from the PDE failure itself.</li><li>Homogeneous source injection distributes forcing everywhere, so the slow homogeneous failure may reflect a domain-wide conditioning problem rather than the same local lumen-collapse mechanism seen in the fast-source failures.</li></ul>
+    </section>
+    <section class="card">
+      <h2>Case Status Matrix</h2>
+      <table>
+        <thead>
+          <tr><th>Case</th><th>Status</th><th>Mechanism</th><th>Mass Final</th><th>Area Ratio</th><th>Max u</th><th>ETA to 8x (h)</th><th>ETA to t_end (h)</th><th>Run page</th></tr>
+        </thead>
+        <tbody><tr><td>canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1</td><td><span class="badge badge-fail">failed</span></td><td>homogeneous</td><td>3.283</td><td>0.487</td><td>0.361</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1</td><td><span class="badge badge-fail">failed</span></td><td>homogeneous</td><td>3.655</td><td>0.323</td><td>0.587</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1</td><td><span class="badge badge-fail">failed</span></td><td>lumen</td><td>3.614</td><td>0.592</td><td>0.398</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1</td><td><span class="badge badge-fail">failed</span></td><td>tissue</td><td>3.326</td><td>0.658</td><td>0.324</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1</td><td><span class="badge badge-fail">failed</span></td><td>tissue</td><td>3.483</td><td>0.329</td><td>0.489</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1</td><td><span class="badge badge-warn">interrupted</span></td><td>homogeneous</td><td>4.246</td><td>0.144</td><td>0.697</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1/canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1</td><td><span class="badge badge-warn">interrupted</span></td><td>lumen</td><td>3.482</td><td>0.570</td><td>0.366</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1/canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1</td><td><span class="badge badge-warn">interrupted</span></td><td>lumen</td><td>3.802</td><td>0.538</td><td>0.442</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1/canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1_index.html">run page</a></td></tr><tr><td>canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1</td><td><span class="badge badge-warn">interrupted</span></td><td>tissue</td><td>3.640</td><td>0.554</td><td>0.401</td><td>n/a</td><td>n/a</td><td><a href="simulations/canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1/canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1_index.html">run page</a></td></tr></tbody>
+      </table>
+      <p> and  summarize the promoted WIP matrix.</p>
+    </section>
+    <section>
+      <h2>Per-Case Evidence</h2>
+      <div class="grid">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1</h3>
+                  <p class="muted">source_region=homogeneous | source_pf=15.000</p>
+                </div>
+                <span class="badge badge-fail">failed</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1_index.html">Open run page</a></p>
+              <img src="simulations/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1/media/canonical_disk_mi_calibration_homogeneous_srate15_tend14p0_v1/montages/toy_montage_norm.png" alt="canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1 montage"><video controls muted playsinline preload="metadata" src="simulations/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-v1/media/canonical_disk_mi_calibration_homogeneous_srate15_tend14p0_v1/videos/fields_grid5_norm.mp4"></video>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.283</td></tr>
+                <tr><th>area_ratio_final</th><td>0.487</td></tr>
+                <tr><th>max_u_final</th><td>0.361</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>10 failed attempt row(s) recorded before acceptance/termination.</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li><li>Run status: failed / partial.</li><li>Interruption reason: solver_nonconvergence.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1</h3>
+                  <p class="muted">source_region=homogeneous | source_pf=30.000</p>
+                </div>
+                <span class="badge badge-fail">failed</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1_index.html">Open run page</a></p>
+              <img src="simulations/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1/media/canonical_disk_mi_calibration_homogeneous_srate30_tend7p0_v1/montages/toy_montage_norm.png" alt="canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1 montage"><video controls muted playsinline preload="metadata" src="simulations/canonical-disk-mi-calibration-homogeneous-srate30-tend7p0-v1/media/canonical_disk_mi_calibration_homogeneous_srate30_tend7p0_v1/videos/fields_grid5_norm.mp4"></video>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.655</td></tr>
+                <tr><th>area_ratio_final</th><td>0.323</td></tr>
+                <tr><th>max_u_final</th><td>0.587</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>48 failed attempt row(s) recorded before acceptance/termination.</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li><li>Run status: failed / partial.</li><li>Interruption reason: solver_nonconvergence.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1</h3>
+                  <p class="muted">source_region=lumen | source_pf=75.000</p>
+                </div>
+                <span class="badge badge-fail">failed</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1_index.html">Open run page</a></p>
+              <img src="simulations/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1/media/canonical_disk_mi_calibration_lumen_srate75_tend2p8_v1/montages/toy_montage_norm.png" alt="canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1 montage"><video controls muted playsinline preload="metadata" src="simulations/canonical-disk-mi-calibration-lumen-srate75-tend2p8-v1/media/canonical_disk_mi_calibration_lumen_srate75_tend2p8_v1/videos/fields_grid5_norm.mp4"></video>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.614</td></tr>
+                <tr><th>area_ratio_final</th><td>0.592</td></tr>
+                <tr><th>max_u_final</th><td>0.398</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>57 failed attempt row(s) recorded before acceptance/termination.</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li><li>Run status: failed / partial.</li><li>Interruption reason: solver_nonconvergence.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1</h3>
+                  <p class="muted">source_region=tissue | source_pf=15.000</p>
+                </div>
+                <span class="badge badge-fail">failed</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1_index.html">Open run page</a></p>
+              <img src="simulations/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1/media/canonical_disk_mi_calibration_tissue_srate15_tend14p0_v1/montages/toy_montage_norm.png" alt="canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1 montage"><video controls muted playsinline preload="metadata" src="simulations/canonical-disk-mi-calibration-tissue-srate15-tend14p0-v1/media/canonical_disk_mi_calibration_tissue_srate15_tend14p0_v1/videos/fields_grid5_norm.mp4"></video>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.326</td></tr>
+                <tr><th>area_ratio_final</th><td>0.658</td></tr>
+                <tr><th>max_u_final</th><td>0.324</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>98 failed attempt row(s) recorded before acceptance/termination.</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li><li>Run status: failed / partial.</li><li>Interruption reason: solver_nonconvergence.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1</h3>
+                  <p class="muted">source_region=tissue | source_pf=75.000</p>
+                </div>
+                <span class="badge badge-fail">failed</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1_index.html">Open run page</a></p>
+              <img src="simulations/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1/media/canonical_disk_mi_calibration_tissue_srate75_tend2p8_v1/montages/toy_montage_norm.png" alt="canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1 montage"><video controls muted playsinline preload="metadata" src="simulations/canonical-disk-mi-calibration-tissue-srate75-tend2p8-v1/media/canonical_disk_mi_calibration_tissue_srate75_tend2p8_v1/videos/fields_grid5_norm.mp4"></video>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.483</td></tr>
+                <tr><th>area_ratio_final</th><td>0.329</td></tr>
+                <tr><th>max_u_final</th><td>0.489</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>35 failed attempt row(s) recorded before acceptance/termination.</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li><li>Run status: failed / partial.</li><li>Interruption reason: solver_nonconvergence.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1</h3>
+                  <p class="muted">source_region=homogeneous | source_pf=75.000</p>
+                </div>
+                <span class="badge badge-warn">interrupted</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1/canonical-disk-mi-calibration-homogeneous-srate75-tend2p8-v1_index.html">Open run page</a></p>
+              <div class="forensic-box"><strong>No renderable media survived.</strong><p>The packaged case remains useful for diagnostics, but the partial field files were unreadable during postprocess.</p></div>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>4.246</td></tr>
+                <tr><th>area_ratio_final</th><td>0.144</td></tr>
+                <tr><th>max_u_final</th><td>0.697</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>71 failed attempt row(s) recorded before acceptance/termination.</li><li>Post-processing did not complete; visual media may be missing or truncated.</li><li>Post-process error: OSError: Unable to synchronously open file (bad object header version number)</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1</h3>
+                  <p class="muted">source_region=lumen | source_pf=15.000</p>
+                </div>
+                <span class="badge badge-warn">interrupted</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1/canonical-disk-mi-calibration-lumen-srate15-tend14p0-v1_index.html">Open run page</a></p>
+              <div class="forensic-box"><strong>No renderable media survived.</strong><p>The packaged case remains useful for diagnostics, but the partial field files were unreadable during postprocess.</p></div>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.482</td></tr>
+                <tr><th>area_ratio_final</th><td>0.570</td></tr>
+                <tr><th>max_u_final</th><td>0.366</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>67 failed attempt row(s) recorded before acceptance/termination.</li><li>Post-processing did not complete; visual media may be missing or truncated.</li><li>Post-process error: OSError: Unable to synchronously open file (bad object header version number)</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1</h3>
+                  <p class="muted">source_region=lumen | source_pf=30.000</p>
+                </div>
+                <span class="badge badge-warn">interrupted</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1/canonical-disk-mi-calibration-lumen-srate30-tend7p0-v1_index.html">Open run page</a></p>
+              <div class="forensic-box"><strong>No renderable media survived.</strong><p>The packaged case remains useful for diagnostics, but the partial field files were unreadable during postprocess.</p></div>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.802</td></tr>
+                <tr><th>area_ratio_final</th><td>0.538</td></tr>
+                <tr><th>max_u_final</th><td>0.442</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>96 failed attempt row(s) recorded before acceptance/termination.</li><li>Post-processing did not complete; visual media may be missing or truncated.</li><li>Post-process error: OSError: Unable to synchronously open file (bad object header version number)</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li></ul>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3>canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1</h3>
+                  <p class="muted">source_region=tissue | source_pf=30.000</p>
+                </div>
+                <span class="badge badge-warn">interrupted</span>
+              </div>
+              <p><a href="simulations/canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1/canonical-disk-mi-calibration-tissue-srate30-tend7p0-v1_index.html">Open run page</a></p>
+              <div class="forensic-box"><strong>No renderable media survived.</strong><p>The packaged case remains useful for diagnostics, but the partial field files were unreadable during postprocess.</p></div>
+              <table class="mini-table">
+                <tr><th>mass_final</th><td>3.640</td></tr>
+                <tr><th>area_ratio_final</th><td>0.554</td></tr>
+                <tr><th>max_u_final</th><td>0.401</td></tr>
+                <tr><th>eta_to_8x_hours</th><td>n/a</td></tr>
+                <tr><th>eta_to_t_end_hours</th><td>n/a</td></tr>
+              </table>
+              <h4>Key warnings</h4>
+              <ul><li>127 failed attempt row(s) recorded before acceptance/termination.</li><li>Post-processing did not complete; visual media may be missing or truncated.</li><li>Post-process error: OSError: Unable to synchronously open file (bad object header version number)</li><li>Skipped analyze_lumen_components for interrupted WIP salvage; generated visual media only.</li></ul>
+            </div>
+            </div>
+    </section>
+  </main>
+</body>
+</html>
