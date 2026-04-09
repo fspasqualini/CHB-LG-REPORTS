@@ -36,6 +36,10 @@ p, li {
 a {
   color: var(--accent);
 }
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
 .grid {
   display: grid;
   gap: 1rem;
@@ -93,6 +97,7 @@ a {
         <p>Public source-channel ablation tier covering `s=2`, conservative-`dt` `s=30`, and pressure-anchored `s=75`.</p>
       </div>
     </section>
+    <section><div class="card"><h2>Interpretation Note</h2><ul class="clean"><li>`s=2` is a sanity tier only. Use it to establish baseline channel signatures, not to settle the reboot mechanism question by itself.</li><li>Read the `s=30` tier as channel attribution inside an interpretable numerical-control lane. All three source laws finish under conservative `dt = 5e-4` with steering disabled, so differences there are more informative than on the original cold-start branch, but they do not isolate steering as the sole cause of the earlier cost blow-up.</li><li>Read the `s=75` pressure-anchored tier descriptively. The `theta-only` branch was operator-truncated after persistent gap/retry behavior, `pf-only` was the cleanest completed branch, and coupled `pf+theta` completed but remained stressed with low `min_J` and strong lumen-phase growth.</li><li>This study helps separate source-channel roles within the current source law; it does not validate strong source-driven growth as equivalent to the large kinematic-growth phenotype.</li></ul></div></section>
     <section>
       <h2>Comparisons</h2>
       <div class="grid">
