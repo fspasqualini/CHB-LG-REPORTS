@@ -8,6 +8,7 @@
     "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
     "canonical-disk-mass-injecting-s30-steering-control",
     "canonical-disk-mass-injecting-s75-hydraulic-sweep",
+    "canonical-disk-mass-injecting-source-channel-ablation",
     "canonical-disk-mass-injecting-source-continuation-ladder",
     "canonical-disk-mass-injecting-threshold-sensitivity",
     "canonical-sphere-coarsening",
@@ -73,6 +74,14 @@
       "summary": "Public s75 hydraulic sweep tier.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting S75 Hydraulic Sweep"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-source-channel-ablation/index.html",
+      "manifest_path": "studies/mass-injecting-source-channel-ablation/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-source-channel-ablation",
+      "summary": "Public source-channel ablation tier covering closed s = 2, conservative-dt closed s = 30, and pressure-anchored s = 75 on the simple canonical disk.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting Source-Channel Ablation"
     },
     {
       "href": "canonical-disk-mass-injecting-source-continuation-ladder/index.html",
