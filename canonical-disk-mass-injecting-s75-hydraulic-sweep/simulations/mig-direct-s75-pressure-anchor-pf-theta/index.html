@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Simulation Report: mig-direct-s75-pressure-anchor-pf-theta</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+code {
+  font-family: "SFMono-Regular", ui-monospace, monospace;
+  font-size: 0.92em;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../index.html">Study Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <h1>Simulation Report: mig-direct-s75-pressure-anchor-pf-theta</h1>
+        <p class="muted">Generated 2026-04-09T07:35:51.174455+00:00 from commit 3285fda.</p>
+<p>This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.</p>
+      </div>
+      <div class="card">
+        <h2>Status</h2>
+        <p class="kpi status-warn">warn</p>
+        <p class="muted">1 run(s), 0 fail signal(s), 1 warning signal(s).</p>
+      </div>
+    </section>
+
+    <section class="cards-2">
+      <div class="card">
+        <h2>Comparison Context</h2>
+        <p><span class="status-pass">Single-Run Review</span></p>
+        <p class="muted">Current runs: 1. Baselines: 0.</p>
+        <p class="muted">Default policy: correctness drift fails, performance drift warns.</p>
+      </div>
+      <div class="card">
+        <h2>Execution</h2>
+        <p><span class="status-pass">complete</span></p>
+        <p class="muted">Comparison validity:
+          <span class="status-pass">
+            not_applicable
+          </span>
+        </p>
+      </div>
+    </section>
+
+    
+
+    <section class="cards-2">
+      <div class="card">
+        <h2>Warnings</h2>
+        <ul class="clean"><li>None</li></ul>
+      </div>
+      <div class="card">
+        <h2>Interpretation</h2>
+        <p class="muted">
+          Read execution status first. If execution is incomplete, numerical deltas are descriptive only and should not be treated as validated physics drift.
+          For baseline comparisons, timing and scenario-dependent differences may be expected even when correctness checks pass.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards-2">
+      <h2>Scenario Reading</h2>
+      
+            <div class="card">
+              <h3>canonical disk source pf theta pressure anchored direct start s75 <span class="muted">(achieved)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:pressure_anchored</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">source_pf</span><span class="tag">source_theta</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> High-amplitude direct-start hydraulic sweep lane on the simple canonical disk with pressure-anchored hydraulic boundary conditions.</p>
+              <p><strong>Expected dynamics.</strong> Pressure-anchored comparison lane for whether the hard s75 direct-start regime changes under anchored hydraulic pressure.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> pressure_anchored</p>
+              <p class="muted"><strong>Source pf.</strong> 75</p>
+              <p class="muted"><strong>Source theta.</strong> 75</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> In source-driven reboot reports, `mass` is the lumen-phase measure derived from `0.5*(1+pf)`, not a total constituent-mass budget; `ratio` is left/right lumen balance, not a generic growth ratio.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, p_eff_range, flow_potential_range, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
+    </section>
+
+    <section class="card"><h2>Expected vs Achieved</h2><table><thead><tr><th>Role</th><th>Source</th><th>Label</th><th>Execution</th><th>Final Time</th><th>Accepted Steps</th></tr></thead><tbody><tr><td>achieved</td><td>current</td><td>mig-direct-s75-pressure-anchor-pf-theta</td><td><span class="status-pass">complete</span></td><td>0.14</td><td>443</td></tr></tbody></table></section>
+
+    <section class="card">
+      <h2>Run Table</h2>
+      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Lumen-phase measure</th><th>Left/right lumen balance</th><th>min_J</th></tr></thead><tbody><tr><td>mig-direct-s75-pressure-anchor-pf-theta</td><td>achieved</td><td>canonical disk source pf theta pressure anchored direct start s75</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>6484.86</td><td>18342</td><td>2972</td><td>3.30352</td><td>0.976157</td><td>0.211889</td></tr></tbody></table>
+    </section>
+
+    <section class="cards-3">
+      <h2>Status Checks</h2>
+      
+            <div class="card">
+              <h3>mig-direct-s75-pressure-anchor-pf-theta <span class="muted">(achieved)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li><li><span class="status-warn">warn</span> 26 failed attempt row(s) recorded before acceptance/termination.</li></ul>
+            </div>
+            
+    </section>
+
+    <section class="card">
+      <h2>Trends</h2>
+      <div class="plot-grid">
+        <div><h3>Area Ratio</h3><img src="plots/area_ratio.png" alt="Area Ratio"></div><div><h3>Max Displacement</h3><img src="plots/max_u.png" alt="Max Displacement"></div><div><h3>Left/Right Lumen Balance</h3><img src="plots/ratio.png" alt="Left/Right Lumen Balance"></div><div><h3>Total Energy (P-Form)</h3><img src="plots/total_energy.png" alt="Total Energy (P-Form)"></div><div><h3>Theta-Form Energy</h3><img src="plots/energy_total_theta.png" alt="Theta-Form Energy"></div><div><h3>Cross-Form Energy</h3><img src="plots/energy_total_cross.png" alt="Cross-Form Energy"></div><div><h3>Lumen-Phase Measure</h3><img src="plots/mass.png" alt="Lumen-Phase Measure"></div><div><h3>Split Iterations</h3><img src="plots/split_iterations.png" alt="Split Iterations"></div><div><h3>Mesh Cells</h3><img src="plots/mesh_num_cells.png" alt="Mesh Cells"></div><div><h3>Flow Potential Range</h3><img src="plots/flow_potential_range.png" alt="Flow Potential Range"></div><div><h3>Effective Pressure Range</h3><img src="plots/p_eff_range.png" alt="Effective Pressure Range"></div><div><h3>Theta_Eq Range</h3><img src="plots/theta_eq_range.png" alt="Theta_Eq Range"></div><div><h3>Storage Strain Range</h3><img src="plots/storage_strain_range.png" alt="Storage Strain Range"></div><div><h3>Wall Time</h3><img src="plots/wall_time.png" alt="Wall Time"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Artifacts</h2>
+      <div class="media-grid">
+        
+            <div class="card">
+              <h3>mig-direct-s75-pressure-anchor-pf-theta</h3>
+              <img src="media/mig_direct_s75_pressure_anchor_pf_theta/montages/toy_montage_norm.png" alt="mig-direct-s75-pressure-anchor-pf-theta montage"><video controls preload="metadata" src="media/mig_direct_s75_pressure_anchor_pf_theta/videos/fields_grid5_norm.mp4">Your browser does not support the video tag.</video>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/mig_direct_s75_pressure_anchor_pf_theta/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+            </div>
+            
+      </div>
+    </section>
+
+    
+  </main>
+</body>
+</html>

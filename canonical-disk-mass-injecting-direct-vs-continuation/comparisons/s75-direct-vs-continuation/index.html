@@ -119,21 +119,21 @@ code {
     <section class="hero">
       <div class="card">
         <h1>Comparison Report: s75-direct-vs-continuation</h1>
-        <p class="muted">Generated 2026-04-08T18:27:38.584805+00:00 from commit f9a27e7.</p>
-<p>This report compares an achieved run against an expected reference. If the expected side is a baseline fixture, treat the deltas as guidance for human review rather than absolute truth, especially for timing or scenario-dependent outputs.</p>
+        <p class="muted">Generated 2026-04-08T21:24:24.321767+00:00 from commit 4c610d1.</p>
+<p>This report compares completed runs side by side without baseline semantics. Treat the numerical differences as descriptive unless explicit tolerances were intended for this comparison.</p>
       </div>
       <div class="card">
         <h2>Status</h2>
         <p class="kpi status-fail">fail</p>
-        <p class="muted">2 run(s), 9 fail signal(s), 5 warning signal(s).</p>
+        <p class="muted">2 run(s), 1 fail signal(s), 1 warning signal(s).</p>
       </div>
     </section>
 
     <section class="cards-2">
       <div class="card">
         <h2>Comparison Context</h2>
-        <p><span class="status-pass">Expected vs Achieved</span></p>
-        <p class="muted">Current runs: 2. Baselines: 1.</p>
+        <p><span class="status-pass">Peer Comparison</span></p>
+        <p class="muted">Current runs: 2. Baselines: 0.</p>
         <p class="muted">Default policy: correctness drift fails, performance drift warns.</p>
       </div>
       <div class="card">
@@ -167,23 +167,7 @@ code {
       <h2>Scenario Reading</h2>
       
             <div class="card">
-              <h3>canonical disk source pf theta closed continuation s75 <span class="muted">(expected)</span></h3>
-              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">source_pf</span><span class="tag">source_theta</span><span class="tag">source_region:all</span></p>
-              <p>Preferred hydration driving storage and deformation responses.</p>
-              <p><strong>Model setup.</strong> Simple-geometry reboot continuation lane on the canonical four-lumen disk with no diagonal microlumen proxy seeds; used to escalate the coupled source law only after the weak ablation and hydraulic gates stay interpretable.</p>
-              <p><strong>Expected dynamics.</strong> Continuation segment for the coupled pf+theta source law on the simple closed canonical disk; restart from the previous converged checkpoint and stop escalation once the lane becomes non-interpretable.</p>
-              <p class="muted"><strong>Hydraulic mode.</strong> closed</p>
-              <p class="muted"><strong>Source pf.</strong> 75</p>
-              <p class="muted"><strong>Source theta.</strong> 75</p>
-              <p class="muted"><strong>Source region.</strong> all</p>
-              <p class="muted"><strong>Observable semantics.</strong> In source-driven reboot reports, `mass` is the lumen-phase measure derived from `0.5*(1+pf)`, not a total constituent-mass budget; `ratio` is left/right lumen balance, not a generic growth ratio.</p>
-              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
-              <p class="muted"><strong>Where to observe it.</strong></p>
-              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
-            </div>
-            
-            <div class="card">
-              <h3>canonical disk source pf theta closed direct start s75 <span class="muted">(achieved)</span></h3>
+              <h3>canonical disk source pf theta closed direct start s75 <span class="muted">(peer)</span></h3>
               <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">source_pf</span><span class="tag">source_theta</span><span class="tag">source_region:all</span></p>
               <p>Preferred hydration driving storage and deformation responses.</p>
               <p><strong>Model setup.</strong> Simple-geometry reboot direct-start lane on the canonical four-lumen disk with no diagonal microlumen proxy seeds; used to compare cold starts against checkpoint continuation at the same source amplitude and horizon.</p>
@@ -198,26 +182,42 @@ code {
               <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
             </div>
             
+            <div class="card">
+              <h3>canonical disk source pf theta closed continuation s75 <span class="muted">(peer)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">source_pf</span><span class="tag">source_theta</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> Simple-geometry reboot continuation lane on the canonical four-lumen disk with no diagonal microlumen proxy seeds; used to escalate the coupled source law only after the weak ablation and hydraulic gates stay interpretable.</p>
+              <p><strong>Expected dynamics.</strong> Continuation segment for the coupled pf+theta source law on the simple closed canonical disk; restart from the previous converged checkpoint and stop escalation once the lane becomes non-interpretable.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> closed</p>
+              <p class="muted"><strong>Source pf.</strong> 75</p>
+              <p class="muted"><strong>Source theta.</strong> 75</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> In source-driven reboot reports, `mass` is the lumen-phase measure derived from `0.5*(1+pf)`, not a total constituent-mass budget; `ratio` is left/right lumen balance, not a generic growth ratio.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
     </section>
 
-    <section class="card"><h2>Expected vs Achieved</h2><table><thead><tr><th>Role</th><th>Source</th><th>Label</th><th>Execution</th><th>Final Time</th><th>Accepted Steps</th></tr></thead><tbody><tr><td>expected</td><td>current</td><td>mig-cont-s75-supported</td><td><span class="status-pass">complete</span></td><td>0.14</td><td>21</td></tr><tr><td>achieved</td><td>current</td><td>mig-direct-s75</td><td><span class="status-fail">incomplete</span></td><td>0.111629</td><td>838</td></tr><tr><td>expected</td><td>baseline</td><td>mig-cont-s75-supported</td><td><span class="status-pass">complete</span></td><td>0.14</td><td>21</td></tr></tbody></table></section>
+    
 
     <section class="card">
       <h2>Run Table</h2>
-      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Lumen-phase measure</th><th>Left/right lumen balance</th><th>min_J</th></tr></thead><tbody><tr><td>mig-cont-s75-supported</td><td>expected</td><td>canonical disk source pf theta closed continuation s75</td><td>snes</td><td>disk</td><td>monolithic</td><td>restart</td><td><span class="status-pass">pass</span></td><td>57.9394</td><td>18342</td><td>2972</td><td>0.750902</td><td>1.64757</td><td>1.04558</td></tr><tr><td>mig-direct-s75</td><td>achieved</td><td>canonical disk source pf theta closed direct start s75</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-fail">fail</span></td><td>13246.8</td><td>18342</td><td>2972</td><td>4.06189</td><td>0.966407</td><td>0.0135171</td></tr></tbody></table>
+      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Lumen-phase measure</th><th>Left/right lumen balance</th><th>min_J</th></tr></thead><tbody><tr><td>mig-direct-s75</td><td>peer</td><td>canonical disk source pf theta closed direct start s75</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-fail">fail</span></td><td>13246.8</td><td>18342</td><td>2972</td><td>4.06189</td><td>0.966407</td><td>0.0135171</td></tr><tr><td>mig-cont-s75-supported</td><td>peer</td><td>canonical disk source pf theta closed continuation s75</td><td>snes</td><td>disk</td><td>monolithic</td><td>restart</td><td><span class="status-pass">pass</span></td><td>57.9394</td><td>18342</td><td>2972</td><td>0.750902</td><td>1.64757</td><td>1.04558</td></tr></tbody></table>
     </section>
 
     <section class="cards-3">
       <h2>Status Checks</h2>
       
             <div class="card">
-              <h3>mig-cont-s75-supported <span class="muted">(expected)</span></h3>
-              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li></ul>
+              <h3>mig-direct-s75 <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-fail">fail</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li><li><span class="status-warn">warn</span> 61 failed attempt row(s) recorded before acceptance/termination.</li></ul>
             </div>
             
             <div class="card">
-              <h3>mig-direct-s75 <span class="muted">(achieved)</span></h3>
-              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-fail">fail</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li><li><span class="status-warn">warn</span> 61 failed attempt row(s) recorded before acceptance/termination.</li></ul>
+              <h3>mig-cont-s75-supported <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li></ul>
             </div>
             
     </section>
@@ -234,21 +234,21 @@ code {
       <div class="media-grid">
         
             <div class="card">
-              <h3>mig-cont-s75-supported</h3>
-              <img src="media/mig_cont_s75_supported/montages/toy_montage_norm.png" alt="mig-cont-s75-supported montage"><video controls preload="metadata" src="media/mig_cont_s75_supported/videos/fields_grid5_norm.mp4">Your browser does not support the video tag.</video>
-              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_cont_s75_supported/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_cont_s75_supported/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/mig_cont_s75_supported/representative_frames/frames_norm/geometry/step_000120.png">step_000120.png</a></li></ul>
-            </div>
-            
-            <div class="card">
               <h3>mig-direct-s75</h3>
               <img src="media/mig_direct_s75/montages/toy_montage_norm.png" alt="mig-direct-s75 montage"><video controls preload="metadata" src="media/mig_direct_s75/videos/fields_grid5_norm.mp4">Your browser does not support the video tag.</video>
               <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_direct_s75/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_direct_s75/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/mig_direct_s75/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/mig_direct_s75/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/mig_direct_s75/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/mig_direct_s75/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/mig_direct_s75/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/mig_direct_s75/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
             </div>
             
+            <div class="card">
+              <h3>mig-cont-s75-supported</h3>
+              <img src="media/mig_cont_s75_supported/montages/toy_montage_norm.png" alt="mig-cont-s75-supported montage"><video controls preload="metadata" src="media/mig_cont_s75_supported/videos/fields_grid5_norm.mp4">Your browser does not support the video tag.</video>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_cont_s75_supported/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_cont_s75_supported/videos/fields_grid5_norm.mp4">fields_grid5_norm.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/geometry.mp4">geometry.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/p.mp4">p.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/pf.mp4">pf.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/theta.mp4">theta.mp4</a></li><li><a href="media/mig_cont_s75_supported/videos/videos_norm/u.mp4">u.mp4</a></li><li><a href="media/mig_cont_s75_supported/representative_frames/frames_norm/geometry/step_000120.png">step_000120.png</a></li></ul>
+            </div>
+            
       </div>
     </section>
 
-    <section class="card"><h2>Baseline Deltas</h2><table><thead><tr><th>Run</th><th>Metric</th><th>Current</th><th>Baseline</th><th>Abs Delta</th><th>Rel Delta</th><th>Abs Tol</th><th>Rel Tol</th><th>Status</th></tr></thead><tbody><tr><td>mig-direct-s75</td><td>Final lumen-phase measure</td><td>4.06189</td><td>0.750902</td><td>3.31099</td><td>4.40935</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Final left/right lumen balance</td><td>0.966407</td><td>1.64757</td><td>0.681162</td><td>0.413435</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Lumen total volume</td><td>0.421011</td><td>0.5305</td><td>0.109489</td><td>0.206388</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Lumen deformed volume</td><td>0.421011</td><td>0.5305</td><td>0.109489</td><td>0.206388</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Lumen component count</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="status-pass">pass</span></td></tr><tr><td>mig-direct-s75</td><td>Final min_J</td><td>0.0135171</td><td>1.04558</td><td>1.03206</td><td>0.987072</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Final area ratio</td><td>0.181012</td><td>1.16475</td><td>0.983734</td><td>0.844591</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Final min_pf</td><td>-0.691665</td><td>-0.976918</td><td>0.285253</td><td>0.291993</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Final max_pf</td><td>2.36013</td><td>1.03659</td><td>1.32354</td><td>1.27682</td><td>1e-08</td><td>1e-06</td><td><span class="status-fail">fail</span></td></tr><tr><td>mig-direct-s75</td><td>Wall time</td><td>13246.8</td><td>57.9394</td><td>13188.8</td><td>227.632</td><td>0.25</td><td>0.1</td><td><span class="status-warn">warn</span></td></tr><tr><td>mig-direct-s75</td><td>Total DoF</td><td>18342</td><td>18342</td><td>0</td><td>0</td><td>0</td><td>0.02</td><td><span class="status-pass">pass</span></td></tr><tr><td>mig-direct-s75</td><td>Split iterations total</td><td>7674</td><td>141</td><td>7533</td><td>53.4255</td><td>1</td><td>0.1</td><td><span class="status-warn">warn</span></td></tr><tr><td>mig-direct-s75</td><td>CH SNES iterations total</td><td>843</td><td>20</td><td>823</td><td>41.15</td><td>1</td><td>0.1</td><td><span class="status-warn">warn</span></td></tr><tr><td>mig-direct-s75</td><td>Biot iterations total</td><td>1890</td><td>40</td><td>1850</td><td>46.25</td><td>1</td><td>0.1</td><td><span class="status-warn">warn</span></td></tr><tr><td>mig-direct-s75</td><td>Final mesh cells</td><td>2972</td><td>2972</td><td>0</td><td>0</td><td>1</td><td>0.02</td><td><span class="status-pass">pass</span></td></tr><tr><td>mig-direct-s75</td><td>Final mesh vertices</td><td>1550</td><td>1550</td><td>0</td><td>0</td><td>1</td><td>0.02</td><td><span class="status-pass">pass</span></td></tr></tbody></table></section>
+    
   </main>
 </body>
 </html>

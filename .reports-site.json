@@ -6,7 +6,10 @@
     "canonical-disk-mass-increasing-deformation",
     "canonical-disk-mass-injecting-direct-vs-continuation",
     "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
+    "canonical-disk-mass-injecting-s30-steering-control",
+    "canonical-disk-mass-injecting-s75-hydraulic-sweep",
     "canonical-disk-mass-injecting-source-continuation-ladder",
+    "canonical-disk-mass-injecting-threshold-sensitivity",
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
@@ -43,7 +46,7 @@
       "href": "canonical-disk-mass-injecting-direct-vs-continuation/index.html",
       "manifest_path": "studies/mass-injecting-direct-vs-continuation/manifest.toml",
       "slug": "canonical-disk-mass-injecting-direct-vs-continuation",
-      "summary": "Matched-amplitude direct-start versus supported-checkpoint continuation comparison surface for the simple canonical disk at s = 15, 30, 75.",
+      "summary": "Direct-start versus supported-checkpoint continuation comparison surface for the simple canonical disk at s = 15, 30, 75, with embedded side-by-side media in each pair report.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Direct vs Continuation"
     },
@@ -56,12 +59,36 @@
       "title": "Canonical Disk Mass-Injecting Growth WIP Diagnostic Study"
     },
     {
+      "href": "canonical-disk-mass-injecting-s30-steering-control/index.html",
+      "manifest_path": "studies/mass-injecting-s30-steering-control/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-s30-steering-control",
+      "summary": "Public s30 steering-control tier at dt = 5e-4.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting S30 Steering Control"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-s75-hydraulic-sweep/index.html",
+      "manifest_path": "studies/mass-injecting-s75-hydraulic-sweep/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-s75-hydraulic-sweep",
+      "summary": "Public s75 hydraulic sweep tier.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting S75 Hydraulic Sweep"
+    },
+    {
       "href": "canonical-disk-mass-injecting-source-continuation-ladder/index.html",
       "manifest_path": "studies/mass-injecting-source-continuation-ladder/manifest.toml",
       "slug": "canonical-disk-mass-injecting-source-continuation-ladder",
-      "summary": "Supported checkpoint continuation ladder for the simple canonical disk across source amplitudes s = 2, 5, 10, 15, 30, 75.",
+      "summary": "Supported checkpoint continuation ladder for the simple canonical disk, with copied montages, representative frames, and embedded videos for each amplitude package.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Source Continuation Ladder"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-threshold-sensitivity/index.html",
+      "manifest_path": "studies/mass-injecting-threshold-sensitivity/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-threshold-sensitivity",
+      "summary": "Public threshold sensitivity tier for the direct-start canonical disk at s = 30.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting Threshold Sensitivity"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",
