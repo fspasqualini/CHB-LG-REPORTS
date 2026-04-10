@@ -1,0 +1,387 @@
+{
+  "metadata": {
+    "cases": [
+      "newton_max_it_40",
+      "newton_relax_0p5_max_it_40",
+      "newton_biot_lu"
+    ],
+    "config_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/configs/vnv/canonical_disk_fixed2.toml",
+    "runner": "fixed2_disk_solver_matrix",
+    "runtime_config_path": "/tmp/chblg_runtime_2ukjj4ai.json"
+  },
+  "results": [
+    {
+      "case": {
+        "cli_args": [
+          "--newton-max-it",
+          "40"
+        ],
+        "name": "newton_max_it_40",
+        "notes": "Match the public SNES Biot max-iteration cap while leaving the rest of Newton unchanged.",
+        "petsc_biot": [],
+        "petsc_ch": [],
+        "solver_backend": "newton",
+        "timeout_seconds": 420.0
+      },
+      "commands": {
+        "run": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40"
+        ],
+        "startup": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/startup",
+          "--run-name",
+          "canonical_disk_fixed2_init",
+          "--init-only",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40"
+        ]
+      },
+      "error": {
+        "cmd": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40"
+        ],
+        "returncode": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 817, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 812, in main\n    raise RuntimeError(runtime_state.abort_error)\nRuntimeError: Nonconvergence at step 1 (ch=False, biot=False, split=nan).\n",
+        "stdout": "[2026-03-25 18:40:32.916] [warning] Newton solver did not converge.\n[2026-03-25 18:40:37.833] [warning] Newton solver did not converge.\n[2026-03-25 18:40:42.726] [warning] Newton solver did not converge.\n[2026-03-25 18:40:47.624] [warning] Newton solver did not converge.\n[2026-03-25 18:40:52.516] [warning] Newton solver did not converge.\n[2026-03-25 18:40:52.810] [warning] Newton solver did not converge.\n[2026-03-25 18:40:57.665] [warning] Newton solver did not converge.\n[2026-03-25 18:40:57.961] [warning] Newton solver did not converge.\n[2026-03-25 18:41:02.827] [warning] Newton solver did not converge.\n[2026-03-25 18:41:03.121] [warning] Newton solver did not converge.\n[2026-03-25 18:41:07.981] [warning] Newton solver did not converge.\n[2026-03-25 18:41:08.275] [warning] Newton solver did not converge.\n[2026-03-25 18:41:13.148] [warning] Newton solver did not converge.\n[2026-03-25 18:41:13.442] [warning] Newton solver did not converge.\n[2026-03-25 18:41:18.320] [warning] Newton solver did not converge.\n[2026-03-25 18:41:18.614] [warning] Newton solver did not converge.\n[2026-03-25 18:41:23.485] [warning] Newton solver did not converge.\n[2026-03-25 18:41:23.779] [warning] Newton solver did not converge.\n[2026-03-25 18:41:28.641] [warning] Newton solver did not converge.\n[2026-03-25 18:41:33.630] [warning] Newton solver did not converge.\n[2026-03-25 18:41:38.528] [warning] Newton solver did not converge.\n[2026-03-25 18:41:43.435] [warning] Newton solver did not converge.\n[2026-03-25 18:41:48.329] [warning] Newton solver did not converge.\n[2026-03-25 18:41:53.273] [warning] Newton solver did not converge.\n[2026-03-25 18:41:58.431] [warning] Newton solver did not converge.\n[2026-03-25 18:42:03.521] [warning] Newton solver did not converge.\n[2026-03-25 18:42:08.628] [warning] Newton solver did not converge.\n[2026-03-25 18:42:08.934] [warning] Newton solver did not converge.\n[2026-03-25 18:42:14.013] [warning] Newton solver did not converge.\n[2026-03-25 18:42:14.318] [warning] Newton solver did not converge.\n[2026-03-25 18:42:19.394] [warning] Newton solver did not converge.\n[2026-03-25 18:42:19.697] [warning] Newton solver did not converge.\n[2026-03-25 18:42:24.779] [warning] Newton solver did not converge.\n[2026-03-25 18:42:25.081] [warning] Newton solver did not converge.\n[2026-03-25 18:42:30.126] [warning] Newton solver did not converge.\n[2026-03-25 18:42:35.318] [warning] Newton solver did not converge.\n[2026-03-25 18:42:40.422] [warning] Newton solver did not converge.\n[2026-03-25 18:42:45.515] [warning] Newton solver did not converge.\n[2026-03-25 18:42:50.603] [warning] Newton solver did not converge.\n[2026-03-25 18:42:55.706] [warning] Newton solver did not converge.\n[2026-03-25 18:42:56.010] [warning] Newton solver did not converge.\n[2026-03-25 18:43:01.055] [warning] Newton solver did not converge.\n[2026-03-25 18:43:01.358] [warning] Newton solver did not converge.\n[2026-03-25 18:43:06.481] [warning] Newton solver did not converge.\n[2026-03-25 18:43:06.783] [warning] Newton solver did not converge.\n[2026-03-25 18:43:11.832] [warning] Newton solver did not converge.\n[2026-03-25 18:43:12.136] [warning] Newton solver did not converge.\n[2026-03-25 18:43:17.205] [warning] Newton solver did not converge.\n[2026-03-25 18:43:17.508] [warning] Newton solver did not converge.\n[2026-03-25 18:43:22.567] [warning] Newton solver did not converge.\n[2026-03-25 18:43:22.870] [warning] Newton solver did not converge.\n[2026-03-25 18:43:27.935] [warning] Newton solver did not converge.\n[2026-03-25 18:43:28.237] [warning] Newton solver did not converge.\n[2026-03-25 18:43:33.294] [warning] Newton solver did not converge.\n[2026-03-25 18:43:38.475] [warning] Newton solver did not converge.\n[2026-03-25 18:43:43.558] [warning] Newton solver did not converge.\n[2026-03-25 18:43:48.677] [warning] Newton solver did not converge.\n[2026-03-25 18:43:53.780] [warning] Newton solver did not converge.\n[2026-03-25 18:43:58.861] [warning] Newton solver did not converge.\n[2026-03-25 18:44:03.970] [warning] Newton solver did not converge.\n[2026-03-25 18:44:09.083] [warning] Newton solver did not converge.\n[2026-03-25 18:44:14.146] [warning] Newton solver did not converge.\n[2026-03-25 18:44:19.243] [warning] Newton solver did not converge.\n[2026-03-25 18:44:24.332] [warning] Newton solver did not converge.\n[2026-03-25 18:44:29.410] [warning] Newton solver did not converge.\n[2026-03-25 18:44:34.485] [warning] Newton solver did not converge.\n[2026-03-25 18:44:39.637] [warning] Newton solver did not converge.\n[2026-03-25 18:44:39.941] [warning] Newton solver did not converge.\n[2026-03-25 18:44:45.009] [warning] Newton solver did not converge.\n[2026-03-25 18:44:45.314] [warning] Newton solver did not converge.\n[2026-03-25 18:44:50.356] [warning] Newton solver did not converge.\n[2026-03-25 18:44:50.660] [warning] Newton solver did not converge.\n[2026-03-25 18:44:55.707] [warning] Newton solver did not converge.\n[2026-03-25 18:44:56.010] [warning] Newton solver did not converge.\n[2026-03-25 18:45:01.058] [warning] Newton solver did not converge.\n[2026-03-25 18:45:01.359] [warning] Newton solver did not converge.\n[2026-03-25 18:45:06.449] [warning] Newton solver did not converge.\n[2026-03-25 18:45:06.754] [warning] Newton solver did not converge.\n[2026-03-25 18:45:11.818] [warning] Newton solver did not converge.\n[2026-03-25 18:45:12.123] [warning] Newton solver did not converge.\n[2026-03-25 18:45:17.180] [warning] Newton solver did not converge.\n[2026-03-25 18:45:17.483] [warning] Newton solver did not converge.\n[2026-03-25 18:45:22.550] [warning] Newton solver did not converge.\n[2026-03-25 18:45:22.852] [warning] Newton solver did not converge.\n[2026-03-25 18:45:27.905] [warning] Newton solver did not converge.\n[2026-03-25 18:45:28.209] [warning] Newton solver did not converge.\n[2026-03-25 18:45:33.273] [warning] Newton solver did not converge.\n[2026-03-25 18:45:33.572] [warning] Newton solver did not converge.\n[2026-03-25 18:45:38.638] [warning] Newton solver did not converge.\n[2026-03-25 18:45:43.799] [warning] Newton solver did not converge.\n[2026-03-25 18:45:44.103] [warning] Newton solver did not converge.\n[2026-03-25 18:45:49.166] [warning] Newton solver did not converge.\n[2026-03-25 18:45:49.468] [warning] Newton solver did not converge.\n[2026-03-25 18:45:54.531] [warning] Newton solver did not converge.\n[2026-03-25 18:45:54.835] [warning] Newton solver did not converge.\n[2026-03-25 18:45:59.876] [warning] Newton solver did not converge.\n[2026-03-25 18:46:00.177] [warning] Newton solver did not converge.\n[2026-03-25 18:46:05.249] [warning] Newton solver did not converge.\n[2026-03-25 18:46:05.552] [warning] Newton solver did not converge.\n[2026-03-25 18:46:10.641] [warning] Newton solver did not converge.\n[2026-03-25 18:46:10.945] [warning] Newton solver did not converge.\n[2026-03-25 18:46:16.011] [warning] Newton solver did not converge.\n[2026-03-25 18:46:16.317] [warning] Newton solver did not converge.\n[2026-03-25 18:46:21.400] [warning] Newton solver did not converge.\n[2026-03-25 18:46:21.706] [warning] Newton solver did not converge.\n[2026-03-25 18:46:26.819] [warning] Newton solver did not converge.\n[2026-03-25 18:46:27.123] [warning] Newton solver did not converge.\n[2026-03-25 18:46:32.218] [warning] Newton solver did not converge.\n[2026-03-25 18:46:32.524] [warning] Newton solver did not converge.\n[2026-03-25 18:46:37.605] [warning] Newton solver did not converge.\n[2026-03-25 18:46:37.908] [warning] Newton solver did not converge.\n[2026-03-25 18:46:42.977] [warning] Newton solver did not converge.\n[chb] preset=None rigid-body-policy=nullspace-only\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=5.000e-04\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=2.500e-04\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=1.250e-04\nstep 1: nonconverged (ch=True, biot=False, split=0.00012345413072949746); retrying with dt=6.250e-05\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=3.125e-05\nstep 1: nonconverged (ch=False, biot=False, split=nan); stopping without advancing the accepted trajectory.\n"
+      },
+      "ok": false,
+      "paths": {
+        "case_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40",
+        "run_dir": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/run/canonical_disk_fixed2",
+        "run_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/run",
+        "runtime_config_path": "/tmp/chblg_runtime_2ukjj4ai.json",
+        "startup_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_max_it_40/startup"
+      },
+      "resolved_solver": {
+        "amr_enable": false,
+        "amr_every": 2,
+        "amr_mass_correction": false,
+        "amr_max_events": 2,
+        "amr_mode": "reference",
+        "amr_threshold": 0.05,
+        "biot_relaxation": 1.0,
+        "biot_split": "monolithic",
+        "dt_max_retries": 5,
+        "dt_min": 1e-06,
+        "dt_recovery_enable": true,
+        "dt_recovery_grid_tol": 1e-10,
+        "dt_recovery_snap_mode": "nearest-grid",
+        "dt_recovery_window_blocks": 2,
+        "dt_retry": true,
+        "dt_scale": 0.5,
+        "newton_atol": 1e-08,
+        "newton_max_it": 40,
+        "newton_rtol": 1e-06,
+        "outer_relaxation": 0.2,
+        "outer_relaxation_method": "aitken",
+        "outer_relaxation_scope": "biot",
+        "petsc_biot": [
+          "snes_type=newtonls",
+          "snes_linesearch_type=bt",
+          "snes_max_it=40"
+        ],
+        "petsc_ch": [],
+        "require_convergence": true,
+        "solver_backend": "newton",
+        "split_iters": 12,
+        "split_monitor": false,
+        "split_tol": 5e-06
+      },
+      "summary": {
+        "accepted_evolved_steps": 0,
+        "accepted_rows": 1,
+        "final_time": 0.0,
+        "metrics_row_count": 7
+      }
+    },
+    {
+      "case": {
+        "cli_args": [
+          "--newton-max-it",
+          "40",
+          "--biot-relaxation",
+          "0.5"
+        ],
+        "name": "newton_relax_0p5_max_it_40",
+        "notes": "Probe whether damping the Newton Biot step closes the gap to SNES line-search globalization.",
+        "petsc_biot": [],
+        "petsc_ch": [],
+        "solver_backend": "newton",
+        "timeout_seconds": 420.0
+      },
+      "commands": {
+        "run": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40",
+          "--biot-relaxation",
+          "0.5"
+        ],
+        "startup": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/startup",
+          "--run-name",
+          "canonical_disk_fixed2_init",
+          "--init-only",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40",
+          "--biot-relaxation",
+          "0.5"
+        ]
+      },
+      "error": {
+        "cmd": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--newton-max-it",
+          "40",
+          "--biot-relaxation",
+          "0.5"
+        ],
+        "returncode": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 817, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 812, in main\n    raise RuntimeError(runtime_state.abort_error)\nRuntimeError: Nonconvergence at step 1 (ch=True, biot=False, split=1.6908408013360833e-06).\n",
+        "stdout": "[2026-03-25 18:47:13.958] [warning] Newton solver did not converge.\n[2026-03-25 18:47:19.049] [warning] Newton solver did not converge.\n[2026-03-25 18:47:24.129] [warning] Newton solver did not converge.\n[2026-03-25 18:47:29.227] [warning] Newton solver did not converge.\n[2026-03-25 18:47:34.311] [warning] Newton solver did not converge.\n[2026-03-25 18:47:39.410] [warning] Newton solver did not converge.\n[2026-03-25 18:47:39.714] [warning] Newton solver did not converge.\n[2026-03-25 18:47:44.790] [warning] Newton solver did not converge.\n[2026-03-25 18:47:45.094] [warning] Newton solver did not converge.\n[2026-03-25 18:47:50.163] [warning] Newton solver did not converge.\n[2026-03-25 18:47:50.470] [warning] Newton solver did not converge.\n[2026-03-25 18:47:55.585] [warning] Newton solver did not converge.\n[2026-03-25 18:47:55.891] [warning] Newton solver did not converge.\n[2026-03-25 18:48:01.001] [warning] Newton solver did not converge.\n[2026-03-25 18:48:01.300] [warning] Newton solver did not converge.\n[2026-03-25 18:48:06.381] [warning] Newton solver did not converge.\n[2026-03-25 18:48:06.686] [warning] Newton solver did not converge.\n[2026-03-25 18:48:12.113] [warning] Newton solver did not converge.\n[2026-03-25 18:48:17.407] [warning] Newton solver did not converge.\n[2026-03-25 18:48:22.299] [warning] Newton solver did not converge.\n[2026-03-25 18:48:27.195] [warning] Newton solver did not converge.\n[2026-03-25 18:48:32.084] [warning] Newton solver did not converge.\n[2026-03-25 18:48:36.976] [warning] Newton solver did not converge.\n[2026-03-25 18:48:41.868] [warning] Newton solver did not converge.\n[2026-03-25 18:48:46.747] [warning] Newton solver did not converge.\n[2026-03-25 18:48:51.625] [warning] Newton solver did not converge.\n[2026-03-25 18:48:56.512] [warning] Newton solver did not converge.\n[2026-03-25 18:49:01.392] [warning] Newton solver did not converge.\n[2026-03-25 18:49:06.395] [warning] Newton solver did not converge.\n[2026-03-25 18:49:11.294] [warning] Newton solver did not converge.\n[2026-03-25 18:49:16.195] [warning] Newton solver did not converge.\n[2026-03-25 18:49:21.098] [warning] Newton solver did not converge.\n[2026-03-25 18:49:25.986] [warning] Newton solver did not converge.\n[2026-03-25 18:49:30.871] [warning] Newton solver did not converge.\n[2026-03-25 18:49:35.759] [warning] Newton solver did not converge.\n[2026-03-25 18:49:40.647] [warning] Newton solver did not converge.\n[2026-03-25 18:49:45.536] [warning] Newton solver did not converge.\n[2026-03-25 18:49:50.433] [warning] Newton solver did not converge.\n[2026-03-25 18:49:55.320] [warning] Newton solver did not converge.\n[2026-03-25 18:50:00.226] [warning] Newton solver did not converge.\n[2026-03-25 18:50:05.224] [warning] Newton solver did not converge.\n[2026-03-25 18:50:10.122] [warning] Newton solver did not converge.\n[2026-03-25 18:50:15.019] [warning] Newton solver did not converge.\n[2026-03-25 18:50:19.902] [warning] Newton solver did not converge.\n[2026-03-25 18:50:24.794] [warning] Newton solver did not converge.\n[2026-03-25 18:50:29.681] [warning] Newton solver did not converge.\n[2026-03-25 18:50:34.571] [warning] Newton solver did not converge.\n[2026-03-25 18:50:39.457] [warning] Newton solver did not converge.\n[2026-03-25 18:50:39.750] [warning] Newton solver did not converge.\n[2026-03-25 18:50:44.617] [warning] Newton solver did not converge.\n[2026-03-25 18:50:44.911] [warning] Newton solver did not converge.\n[2026-03-25 18:50:49.798] [warning] Newton solver did not converge.\n[2026-03-25 18:50:50.093] [warning] Newton solver did not converge.\n[2026-03-25 18:50:54.951] [warning] Newton solver did not converge.\n[2026-03-25 18:50:55.245] [warning] Newton solver did not converge.\n[2026-03-25 18:51:00.125] [warning] Newton solver did not converge.\n[2026-03-25 18:51:05.133] [warning] Newton solver did not converge.\n[2026-03-25 18:51:10.023] [warning] Newton solver did not converge.\n[2026-03-25 18:51:14.952] [warning] Newton solver did not converge.\n[2026-03-25 18:51:19.869] [warning] Newton solver did not converge.\n[2026-03-25 18:51:24.761] [warning] Newton solver did not converge.\n[2026-03-25 18:51:29.635] [warning] Newton solver did not converge.\n[2026-03-25 18:51:34.514] [warning] Newton solver did not converge.\n[2026-03-25 18:51:39.504] [warning] Newton solver did not converge.\n[2026-03-25 18:51:44.394] [warning] Newton solver did not converge.\n[2026-03-25 18:51:49.327] [warning] Newton solver did not converge.\n[2026-03-25 18:51:54.219] [warning] Newton solver did not converge.\n[2026-03-25 18:51:59.106] [warning] Newton solver did not converge.\n[2026-03-25 18:52:04.004] [warning] Newton solver did not converge.\n[2026-03-25 18:52:08.889] [warning] Newton solver did not converge.\n[2026-03-25 18:52:13.781] [warning] Newton solver did not converge.\n[chb] preset=None rigid-body-policy=nullspace-only\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=5.000e-04\nstep 1: nonconverged (ch=True, biot=False, split=2.5939992265097656e-06); retrying with dt=2.500e-04\nstep 1: nonconverged (ch=True, biot=False, split=6.459571764987187e-06); retrying with dt=1.250e-04\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=6.250e-05\nstep 1: nonconverged (ch=True, biot=False, split=4.071398187627865e-06); retrying with dt=3.125e-05\nstep 1: nonconverged (ch=True, biot=False, split=1.6908408013360833e-06); stopping without advancing the accepted trajectory.\n"
+      },
+      "ok": false,
+      "paths": {
+        "case_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40",
+        "run_dir": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/run/canonical_disk_fixed2",
+        "run_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/run",
+        "runtime_config_path": "/tmp/chblg_runtime_2ukjj4ai.json",
+        "startup_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_relax_0p5_max_it_40/startup"
+      },
+      "resolved_solver": {
+        "amr_enable": false,
+        "amr_every": 2,
+        "amr_mass_correction": false,
+        "amr_max_events": 2,
+        "amr_mode": "reference",
+        "amr_threshold": 0.05,
+        "biot_relaxation": 0.5,
+        "biot_split": "monolithic",
+        "dt_max_retries": 5,
+        "dt_min": 1e-06,
+        "dt_recovery_enable": true,
+        "dt_recovery_grid_tol": 1e-10,
+        "dt_recovery_snap_mode": "nearest-grid",
+        "dt_recovery_window_blocks": 2,
+        "dt_retry": true,
+        "dt_scale": 0.5,
+        "newton_atol": 1e-08,
+        "newton_max_it": 40,
+        "newton_rtol": 1e-06,
+        "outer_relaxation": 0.2,
+        "outer_relaxation_method": "aitken",
+        "outer_relaxation_scope": "biot",
+        "petsc_biot": [
+          "snes_type=newtonls",
+          "snes_linesearch_type=bt",
+          "snes_max_it=40"
+        ],
+        "petsc_ch": [],
+        "require_convergence": true,
+        "solver_backend": "newton",
+        "split_iters": 12,
+        "split_monitor": false,
+        "split_tol": 5e-06
+      },
+      "summary": {
+        "accepted_evolved_steps": 0,
+        "accepted_rows": 1,
+        "final_time": 0.0,
+        "metrics_row_count": 7
+      }
+    },
+    {
+      "case": {
+        "cli_args": [],
+        "name": "newton_biot_lu",
+        "notes": "Newton backend with explicit LU only on Biot.",
+        "petsc_biot": [
+          "ksp_type=preonly",
+          "pc_type=lu"
+        ],
+        "petsc_ch": [],
+        "solver_backend": "newton",
+        "timeout_seconds": 420.0
+      },
+      "commands": {
+        "run": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--petsc-biot",
+          "ksp_type=preonly",
+          "--petsc-biot",
+          "pc_type=lu"
+        ],
+        "startup": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/startup",
+          "--run-name",
+          "canonical_disk_fixed2_init",
+          "--init-only",
+          "--solver-backend",
+          "newton",
+          "--petsc-biot",
+          "ksp_type=preonly",
+          "--petsc-biot",
+          "pc_type=lu"
+        ]
+      },
+      "error": {
+        "cmd": [
+          "python",
+          "-m",
+          "chb.spheroid_simulation",
+          "--config",
+          "/tmp/chblg_runtime_2ukjj4ai.json",
+          "--output-dir",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/run",
+          "--run-name",
+          "canonical_disk_fixed2",
+          "--initial-state-from",
+          "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/startup/canonical_disk_fixed2_init/initial_state/initial_state.json",
+          "--solver-backend",
+          "newton",
+          "--petsc-biot",
+          "ksp_type=preonly",
+          "--petsc-biot",
+          "pc_type=lu"
+        ],
+        "returncode": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 817, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/drosscomputer/Projects/CHB-LG-LEAN/src/chb/spheroid_simulation.py\", line 812, in main\n    raise RuntimeError(runtime_state.abort_error)\nRuntimeError: Nonconvergence at step 1 (ch=False, biot=False, split=nan).\n",
+        "stdout": "[2026-03-25 18:52:42.287] [warning] Newton solver did not converge.\n[2026-03-25 18:52:45.362] [warning] Newton solver did not converge.\n[2026-03-25 18:52:45.548] [warning] Newton solver did not converge.\n[2026-03-25 18:52:48.596] [warning] Newton solver did not converge.\n[2026-03-25 18:52:48.782] [warning] Newton solver did not converge.\n[2026-03-25 18:52:51.850] [warning] Newton solver did not converge.\n[2026-03-25 18:52:52.036] [warning] Newton solver did not converge.\n[2026-03-25 18:52:55.089] [warning] Newton solver did not converge.\n[2026-03-25 18:52:55.275] [warning] Newton solver did not converge.\n[2026-03-25 18:52:58.310] [warning] Newton solver did not converge.\n[2026-03-25 18:52:58.495] [warning] Newton solver did not converge.\n[2026-03-25 18:53:01.538] [warning] Newton solver did not converge.\n[2026-03-25 18:53:01.724] [warning] Newton solver did not converge.\n[2026-03-25 18:53:04.764] [warning] Newton solver did not converge.\n[2026-03-25 18:53:04.949] [warning] Newton solver did not converge.\n[2026-03-25 18:53:07.994] [warning] Newton solver did not converge.\n[2026-03-25 18:53:08.180] [warning] Newton solver did not converge.\n[2026-03-25 18:53:11.239] [warning] Newton solver did not converge.\n[2026-03-25 18:53:11.425] [warning] Newton solver did not converge.\n[2026-03-25 18:53:14.461] [warning] Newton solver did not converge.\n[2026-03-25 18:53:14.647] [warning] Newton solver did not converge.\n[2026-03-25 18:53:17.695] [warning] Newton solver did not converge.\n[2026-03-25 18:53:20.873] [warning] Newton solver did not converge.\n[2026-03-25 18:53:23.930] [warning] Newton solver did not converge.\n[2026-03-25 18:53:24.115] [warning] Newton solver did not converge.\n[2026-03-25 18:53:27.156] [warning] Newton solver did not converge.\n[2026-03-25 18:53:27.343] [warning] Newton solver did not converge.\n[2026-03-25 18:53:30.378] [warning] Newton solver did not converge.\n[2026-03-25 18:53:30.564] [warning] Newton solver did not converge.\n[2026-03-25 18:53:33.605] [warning] Newton solver did not converge.\n[2026-03-25 18:53:33.791] [warning] Newton solver did not converge.\n[2026-03-25 18:53:36.833] [warning] Newton solver did not converge.\n[2026-03-25 18:53:37.019] [warning] Newton solver did not converge.\n[2026-03-25 18:53:40.058] [warning] Newton solver did not converge.\n[2026-03-25 18:53:40.245] [warning] Newton solver did not converge.\n[2026-03-25 18:53:43.284] [warning] Newton solver did not converge.\n[2026-03-25 18:53:43.471] [warning] Newton solver did not converge.\n[2026-03-25 18:53:46.519] [warning] Newton solver did not converge.\n[2026-03-25 18:53:46.706] [warning] Newton solver did not converge.\n[2026-03-25 18:53:49.760] [warning] Newton solver did not converge.\n[2026-03-25 18:53:49.946] [warning] Newton solver did not converge.\n[2026-03-25 18:53:53.123] [warning] Newton solver did not converge.\n[2026-03-25 18:53:53.323] [warning] Newton solver did not converge.\n[2026-03-25 18:53:56.483] [warning] Newton solver did not converge.\n[2026-03-25 18:53:59.760] [warning] Newton solver did not converge.\n[2026-03-25 18:54:02.942] [warning] Newton solver did not converge.\n[2026-03-25 18:54:06.171] [warning] Newton solver did not converge.\n[2026-03-25 18:54:09.369] [warning] Newton solver did not converge.\n[2026-03-25 18:54:12.559] [warning] Newton solver did not converge.\n[2026-03-25 18:54:15.745] [warning] Newton solver did not converge.\n[2026-03-25 18:54:18.941] [warning] Newton solver did not converge.\n[2026-03-25 18:54:22.137] [warning] Newton solver did not converge.\n[2026-03-25 18:54:25.329] [warning] Newton solver did not converge.\n[2026-03-25 18:54:28.527] [warning] Newton solver did not converge.\n[2026-03-25 18:54:31.717] [warning] Newton solver did not converge.\n[2026-03-25 18:54:34.915] [warning] Newton solver did not converge.\n[2026-03-25 18:54:38.214] [warning] Newton solver did not converge.\n[2026-03-25 18:54:41.394] [warning] Newton solver did not converge.\n[2026-03-25 18:54:44.582] [warning] Newton solver did not converge.\n[2026-03-25 18:54:47.760] [warning] Newton solver did not converge.\n[2026-03-25 18:54:50.991] [warning] Newton solver did not converge.\n[2026-03-25 18:54:54.193] [warning] Newton solver did not converge.\n[2026-03-25 18:54:57.383] [warning] Newton solver did not converge.\n[2026-03-25 18:55:00.575] [warning] Newton solver did not converge.\n[2026-03-25 18:55:03.762] [warning] Newton solver did not converge.\n[2026-03-25 18:55:07.047] [warning] Newton solver did not converge.\n[2026-03-25 18:55:07.236] [warning] Newton solver did not converge.\n[2026-03-25 18:55:10.398] [warning] Newton solver did not converge.\n[2026-03-25 18:55:10.588] [warning] Newton solver did not converge.\n[2026-03-25 18:55:13.758] [warning] Newton solver did not converge.\n[2026-03-25 18:55:13.949] [warning] Newton solver did not converge.\n[2026-03-25 18:55:17.112] [warning] Newton solver did not converge.\n[2026-03-25 18:55:17.303] [warning] Newton solver did not converge.\n[2026-03-25 18:55:20.477] [warning] Newton solver did not converge.\n[2026-03-25 18:55:20.671] [warning] Newton solver did not converge.\n[2026-03-25 18:55:23.825] [warning] Newton solver did not converge.\n[2026-03-25 18:55:24.014] [warning] Newton solver did not converge.\n[2026-03-25 18:55:27.165] [warning] Newton solver did not converge.\n[2026-03-25 18:55:27.355] [warning] Newton solver did not converge.\n[2026-03-25 18:55:30.521] [warning] Newton solver did not converge.\n[2026-03-25 18:55:30.713] [warning] Newton solver did not converge.\n[2026-03-25 18:55:33.877] [warning] Newton solver did not converge.\n[2026-03-25 18:55:34.068] [warning] Newton solver did not converge.\n[2026-03-25 18:55:37.247] [warning] Newton solver did not converge.\n[2026-03-25 18:55:37.440] [warning] Newton solver did not converge.\n[2026-03-25 18:55:40.603] [warning] Newton solver did not converge.\n[2026-03-25 18:55:40.795] [warning] Newton solver did not converge.\n[2026-03-25 18:55:43.949] [warning] Newton solver did not converge.\n[2026-03-25 18:55:47.241] [warning] Newton solver did not converge.\n[2026-03-25 18:55:47.432] [warning] Newton solver did not converge.\n[2026-03-25 18:55:50.594] [warning] Newton solver did not converge.\n[2026-03-25 18:55:50.784] [warning] Newton solver did not converge.\n[2026-03-25 18:55:53.930] [warning] Newton solver did not converge.\n[2026-03-25 18:55:54.121] [warning] Newton solver did not converge.\n[2026-03-25 18:55:57.285] [warning] Newton solver did not converge.\n[2026-03-25 18:55:57.476] [warning] Newton solver did not converge.\n[2026-03-25 18:56:00.716] [warning] Newton solver did not converge.\n[2026-03-25 18:56:00.909] [warning] Newton solver did not converge.\n[2026-03-25 18:56:04.178] [warning] Newton solver did not converge.\n[2026-03-25 18:56:04.376] [warning] Newton solver did not converge.\n[2026-03-25 18:56:07.713] [warning] Newton solver did not converge.\n[2026-03-25 18:56:07.911] [warning] Newton solver did not converge.\n[2026-03-25 18:56:11.246] [warning] Newton solver did not converge.\n[2026-03-25 18:56:11.440] [warning] Newton solver did not converge.\n[2026-03-25 18:56:14.760] [warning] Newton solver did not converge.\n[2026-03-25 18:56:14.956] [warning] Newton solver did not converge.\n[2026-03-25 18:56:18.270] [warning] Newton solver did not converge.\n[2026-03-25 18:56:18.466] [warning] Newton solver did not converge.\n[2026-03-25 18:56:21.787] [warning] Newton solver did not converge.\n[2026-03-25 18:56:21.984] [warning] Newton solver did not converge.\n[2026-03-25 18:56:25.306] [warning] Newton solver did not converge.\n[chb] preset=None rigid-body-policy=nullspace-only\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=5.000e-04\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=2.500e-04\nstep 1: nonconverged (ch=True, biot=False, split=3.4179235647188873e-06); retrying with dt=1.250e-04\nstep 1: nonconverged (ch=True, biot=False, split=1.4645823379489453e-06); retrying with dt=6.250e-05\nstep 1: nonconverged (ch=False, biot=False, split=nan); retrying with dt=3.125e-05\nstep 1: nonconverged (ch=False, biot=False, split=nan); stopping without advancing the accepted trajectory.\n"
+      },
+      "ok": false,
+      "paths": {
+        "case_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu",
+        "run_dir": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/run/canonical_disk_fixed2",
+        "run_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/run",
+        "runtime_config_path": "/tmp/chblg_runtime_2ukjj4ai.json",
+        "startup_root": "output/fixed2-disk-solver-matrix/2026-03-25/newton_phase2/newton_biot_lu/startup"
+      },
+      "resolved_solver": {
+        "amr_enable": false,
+        "amr_every": 2,
+        "amr_mass_correction": false,
+        "amr_max_events": 2,
+        "amr_mode": "reference",
+        "amr_threshold": 0.05,
+        "biot_relaxation": 1.0,
+        "biot_split": "monolithic",
+        "dt_max_retries": 5,
+        "dt_min": 1e-06,
+        "dt_recovery_enable": true,
+        "dt_recovery_grid_tol": 1e-10,
+        "dt_recovery_snap_mode": "nearest-grid",
+        "dt_recovery_window_blocks": 2,
+        "dt_retry": true,
+        "dt_scale": 0.5,
+        "newton_atol": 1e-08,
+        "newton_max_it": 25,
+        "newton_rtol": 1e-06,
+        "outer_relaxation": 0.2,
+        "outer_relaxation_method": "aitken",
+        "outer_relaxation_scope": "biot",
+        "petsc_biot": [
+          "ksp_type=preonly",
+          "pc_type=lu"
+        ],
+        "petsc_ch": [],
+        "require_convergence": true,
+        "solver_backend": "newton",
+        "split_iters": 12,
+        "split_monitor": false,
+        "split_tol": 5e-06
+      },
+      "summary": {
+        "accepted_evolved_steps": 0,
+        "accepted_rows": 1,
+        "final_time": 0.0,
+        "metrics_row_count": 7
+      }
+    }
+  ]
+}

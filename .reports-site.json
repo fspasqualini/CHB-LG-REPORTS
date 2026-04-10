@@ -1,15 +1,43 @@
 {
   "managed_root_entries": [
     ".nojekyll",
+    "canonical-disk-growth-campaign",
+    "canonical-disk-growth-mechanism-decomposition",
+    "canonical-disk-mass-increasing-deformation",
     "canonical-sphere-coarsening",
     "index.html",
     "reference-disk-source-driven-growth-continuation",
     "reference-disk-source-driven-growth-direct-start",
     "robots.txt",
+    "snes-vs-newton-solver-backend-investigation",
     "verification-ladder",
     "water-transport"
   ],
   "studies": [
+    {
+      "href": "canonical-disk-growth-campaign/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_campaign/manifest.toml",
+      "slug": "canonical-disk-growth-campaign",
+      "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
+      "tier": "full",
+      "title": "Reference Disk Kinematic Growth"
+    },
+    {
+      "href": "canonical-disk-growth-mechanism-decomposition/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
+      "slug": "canonical-disk-growth-mechanism-decomposition",
+      "summary": "Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.",
+      "tier": "full",
+      "title": "Canonical Disk Growth Mechanism Decomposition"
+    },
+    {
+      "href": "canonical-disk-mass-increasing-deformation/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
+      "slug": "canonical-disk-mass-increasing-deformation",
+      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
+      "tier": "full",
+      "title": "Reference Disk Kinematic Growth Mechanism Comparison"
+    },
     {
       "href": "canonical-sphere-coarsening/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_sphere_coarsening/manifest.toml",
@@ -33,6 +61,14 @@
       "summary": "Top-level direct-start macro study showing the screened mass-injecting modalities and the decision to move forward with pf-only plus conservative early-time dt.",
       "tier": "full",
       "title": "Reference Disk Source-Driven Growth: Direct Start"
+    },
+    {
+      "href": "snes-vs-newton-solver-backend-investigation/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/solver_backend_investigation/manifest.toml",
+      "slug": "snes-vs-newton-solver-backend-investigation",
+      "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
+      "tier": "full",
+      "title": "SNES vs Newton Solver Backend Investigation"
     },
     {
       "href": "verification-ladder/index.html",
