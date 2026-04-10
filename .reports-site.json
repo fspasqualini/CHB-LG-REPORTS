@@ -2,7 +2,6 @@
   "managed_root_entries": [
     ".nojekyll",
     "canonical-disk-growth-campaign",
-    "canonical-disk-growth-mechanism-decomposition",
     "canonical-disk-mass-increasing-deformation",
     "canonical-disk-mass-preserving-deformation-decomposition",
     "canonical-sphere-coarsening",
@@ -21,14 +20,6 @@
       "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
       "tier": "full",
       "title": "Canonical Disk Growth Campaign"
-    },
-    {
-      "href": "canonical-disk-growth-mechanism-decomposition/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
-      "slug": "canonical-disk-growth-mechanism-decomposition",
-      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Preserving Deformation Decomposition"
     },
     {
       "href": "canonical-disk-mass-increasing-deformation/index.html",
