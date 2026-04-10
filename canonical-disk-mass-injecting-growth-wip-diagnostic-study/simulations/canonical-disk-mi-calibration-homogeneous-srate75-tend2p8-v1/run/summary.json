@@ -1,0 +1,19 @@
+{
+  "area_ratio_final": 0.14435690663711057,
+  "completion_state": "partial",
+  "degrees_of_freedom_total": null,
+  "eta_to_8x_hours": null,
+  "eta_to_t_end_hours": null,
+  "final_time": 0.11881044072030773,
+  "interruption_note": "Interrupted after ETA review showed multi-day to multi-week completion times under reduced-dt regimes, with multiple solver failures already present. Preserving partial fields for WIP comparison.",
+  "interruption_reason": "manual_shutdown_long_eta",
+  "mass_final": 4.245625327842649,
+  "max_u_final": 0.6965773945642361,
+  "mesh_num_cells_final": 2972,
+  "mesh_num_vertices_final": 1550,
+  "min_J": 0.010573845075065902,
+  "ratio_final": 0.994333050555521,
+  "summary_origin": "synthesized_from_partial_run",
+  "termination_status": "interrupted",
+  "wall_time_seconds": null
+}

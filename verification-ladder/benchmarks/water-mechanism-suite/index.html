@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Water Mechanism Suite - mechanism-validation</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid, .kpi-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid, .kpi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.plot-visual {
+  display: grid;
+  gap: 0.75rem;
+}
+.plot-copy {
+  display: grid;
+  gap: 0.15rem;
+}
+.visual-subsection {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.visual-subsection:first-child {
+  margin-top: 0;
+}
+.visual-subsection h3 {
+  margin: 0;
+}
+.spotlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.artifact-stack {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+.artifact-stack .plot-visual img,
+.artifact-stack .plot-visual video {
+  width: auto;
+  max-width: 100%;
+  max-height: 960px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+.return-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.return-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../families/mechanism-validation/index.html">Family Index</a></nav>
+    
+    <nav class="return-links"><a class="return-link" href="../../../index.html">Main Index</a><a class="return-link" href="../../families/mechanism-validation/index.html">Family Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Benchmark</p>
+        <h1>Water Mechanism Suite</h1>
+        <p class="muted">Family: mechanism-validation</p>
+        <p>Mechanism-signature suite for hydration, leakage, osmotic, anchoring, prestretch, and 3D probe lanes.</p>
+      </div>
+      <div class="card">
+        <h2>Target and Success Criteria</h2>
+        <p><strong>target_kind:</strong> Mechanism signature</p>
+        <p><strong>Tier:</strong> full</p>
+        <p><strong>Unknowns active:</strong> water-mechanism summary observables</p>
+        <p><strong>Frozen terms:</strong> curated fixed-mesh baselines plus one 3D probe rerun</p>
+        <p><strong>Comparison grammar:</strong> Achieved / Target</p>
+        <p><strong>Tickets:</strong> vv-013</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What This Benchmark Verifies</h2>
+      <p>This suite checks that each water mechanism produces the expected qualitative signature across area ratio, flow-potential range, effective-pressure range, and storage strain range.</p>
+    </section>
+
+    
+    <section class="card">
+      <h2>Benchmark Narrative</h2>
+      <div class="cards-3">
+        
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Physical Problem</h3>
+              <p>This suite compares curated water scenarios and one live 3D probe to confirm that hydration, leakage, osmosis, pressure anchoring, and prestretch produce the intended qualitative signatures.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Target Definition</h3>
+              <p>The target is a mechanism signature, not an analytic curve: each scenario should exhibit the expected pattern across area ratio, displacement, storage strain, flow potential, and effective-pressure ranges.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Why These Observables</h3>
+              <p>The mechanism schematic explains why the scenario family exists, the 3D probe media give a raw runtime example, and the signature plots show which extracted observables are used to separate hydration, leakage, osmotic, pressure-anchored, and prestretch responses.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>How To Read The Error</h3>
+              <p>A miss isolated to one scenario usually points to wiring or metadata drift; coordinated shifts across many scenarios suggest shared constitutive or reporting regressions. The live 3D probe should be read as runtime confirmation, not as the canonical fixed-mesh truth.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Reference Qualification</h3>
+              <p>Most scenarios are backed by committed fixed-mesh baselines, while the 3D hydration probe is rerun through the public init/run path to confirm the mechanism survives outside the 2D fixture surface.</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Narrative</p>
+              <h3>Limitations</h3>
+              <p>These are qualitative mechanism checks, not analytic accuracy claims. Scenario signatures are the focus, and AMR remains out of scope.</p>
+            </div>
+            
+      </div>
+    </section>
+    
+
+    <section class="cards-3">
+      
+            <div class="card">
+              <p class="eyebrow">scenario_count</p>
+              <div class="kpi">7</div>
+              <p class="muted">count</p>
+              <p class="status-pass">pass</p>
+            </div>
+            
+    </section>
+
+    
+    <section class="card">
+      <h2>Setup Schematic</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">figure</p>
+              <img src="plots/setup-schematic.png" alt="Abstract schematic of the curated water-mechanism scenarios and the qualitative signatures they are expected to produce.">
+              <div class="plot-copy">
+                <p><strong>Abstract schematic of the curated water-mechanism scenarios and the qualitative signatures they are expected to produce.</strong></p>
+                <p class="muted">plots/setup-schematic.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Raw Run Evidence</h2>
+      
+      <div class="visual-subsection">
+        <h3>Extracted Observables</h3>
+        <div class="plot-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/storage-strain-signatures.png" alt="Storage-strain activation across the curated water-mechanism suite.">
+              <div class="plot-copy">
+                <p><strong>Storage-strain activation across the curated water-mechanism suite.</strong></p>
+                <p class="muted">plots/storage-strain-signatures.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+      <div class="visual-subsection">
+        <h3>Representative Simulation Artifacts</h3>
+        
+      <div class="visual-subsection">
+        <h3>Montage and Video Views</h3>
+        <div class="artifact-stack">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">montage</p>
+              <img src="probe3d_hydration/run/water3d_hydration_swelling_fixed2/toy_montage_3d_equator_slice_norm.png" alt="3D hydration probe montage: toy_montage_3d_equator_slice_norm.png">
+              <div class="plot-copy">
+                <p><strong>3D hydration probe montage: toy_montage_3d_equator_slice_norm.png</strong></p>
+                <p class="muted">probe3d_hydration/run/water3d_hydration_swelling_fixed2/toy_montage_3d_equator_slice_norm.png</p>
+              </div>
+            </div>
+            
+            <div class="card plot-visual">
+              <p class="eyebrow">montage</p>
+              <img src="probe3d_hydration/run/water3d_hydration_swelling_fixed2/toy_montage_3d_iso_quarter_cut_transparent_norm.png" alt="3D hydration probe montage: toy_montage_3d_iso_quarter_cut_transparent_norm.png">
+              <div class="plot-copy">
+                <p><strong>3D hydration probe montage: toy_montage_3d_iso_quarter_cut_transparent_norm.png</strong></p>
+                <p class="muted">probe3d_hydration/run/water3d_hydration_swelling_fixed2/toy_montage_3d_iso_quarter_cut_transparent_norm.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+      <div class="visual-subsection">
+        <h3>Representative Frames</h3>
+        <div class="plot-grid spotlight-grid">
+          
+            <div class="card plot-visual">
+              <p class="eyebrow">frame</p>
+              <img src="probe3d_hydration/run/water3d_hydration_swelling_fixed2/frames_3d_equator_slice_norm/geometry/step_000000.png" alt="3D hydration probe representative frame: step_000000.png">
+              <div class="plot-copy">
+                <p><strong>3D hydration probe representative frame: step_000000.png</strong></p>
+                <p class="muted">probe3d_hydration/run/water3d_hydration_swelling_fixed2/frames_3d_equator_slice_norm/geometry/step_000000.png</p>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+    
+      </div>
+    
+    </section>
+    
+    <section class="card">
+      <h2>Target Comparison</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/area-ratio-signatures.png" alt="Final area-ratio signatures across the curated water-mechanism suite.">
+              <div class="plot-copy">
+                <p><strong>Final area-ratio signatures across the curated water-mechanism suite.</strong></p>
+                <p class="muted">plots/area-ratio-signatures.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    <section class="card">
+      <h2>Error Summary</h2>
+      <div class="plot-grid">
+        
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/flow-potential-signatures.png" alt="Flow-potential ranges across the curated water-mechanism suite.">
+              <div class="plot-copy">
+                <p><strong>Flow-potential ranges across the curated water-mechanism suite.</strong></p>
+                <p class="muted">plots/flow-potential-signatures.png</p>
+              </div>
+            </div>
+            
+            <div class="card plot-visual">
+              <p class="eyebrow">plot</p>
+              <img src="plots/effective-pressure-signatures.png" alt="Effective-pressure ranges across the curated water-mechanism suite.">
+              <div class="plot-copy">
+                <p><strong>Effective-pressure ranges across the curated water-mechanism suite.</strong></p>
+                <p class="muted">plots/effective-pressure-signatures.png</p>
+              </div>
+            </div>
+            
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="card">
+      <h2>Scalar Summary</h2>
+      <table><thead><tr><th>Label</th><th>Value</th><th>Unit</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>scenario_count</td><td>7</td><td>count</td><td>&gt;= 6</td><td>6</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Evidence Table</h2>
+      <table><thead><tr><th>Label</th><th>Metric</th><th>Comparison</th><th>Threshold</th><th>Severity</th></tr></thead><tbody><tr><td>scenario_count</td><td>summaries</td><td>7</td><td>&gt;= 6</td><td>pass</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Series Overview</h2>
+      <table><thead><tr><th>Plot</th><th>Group</th><th>Observable</th><th>Case</th><th>Level</th><th>Target</th></tr></thead><tbody><tr><td>hydration_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>hydration</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>leaky_hydration_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>leaky_hydration</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>osmotic_closed_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>osmotic_closed</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>osmotic_leaky_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>osmotic_leaky</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>pressure_anchor_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>pressure_anchor</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>prestretch_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>prestretch</td><td>scenario</td><td>mechanism signature</td></tr><tr><td>probe3d_hydration_area_ratio</td><td>mechanism_signature</td><td>Area ratio</td><td>probe3d_hydration</td><td>scenario</td><td>mechanism signature</td></tr></tbody></table>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="cards-2">
+        
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>hydration</h3>
+              <p>Hydration-Driven Swelling</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>leaky_hydration</h3>
+              <p>Leakage-Limited Relaxation</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>osmotic_closed</h3>
+              <p>Osmotic Inflation</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>osmotic_leaky</h3>
+              <p>Osmotic Drainage Response</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>pressure_anchor</h3>
+              <p>Pressure-Anchored Osmotic Response</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>prestretch</h3>
+              <p>Prestretch Swelling Verification</p>
+            </div>
+            
+            <div class="card">
+              <p class="eyebrow">Case</p>
+              <h3>probe3d_hydration</h3>
+              <p>Hydration-Driven Swelling</p>
+            </div>
+            
+      </div>
+    </section>
+        
+  </main>
+</body>
+</html>
