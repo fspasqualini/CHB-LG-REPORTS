@@ -7,6 +7,7 @@
     "canonical-disk-mass-injecting-direct-vs-continuation",
     "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
     "canonical-disk-mass-injecting-s30-steering-control",
+    "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
     "canonical-disk-mass-injecting-s75-hydraulic-sweep",
     "canonical-disk-mass-injecting-source-channel-ablation",
     "canonical-disk-mass-injecting-source-continuation-ladder",
@@ -66,6 +67,14 @@
       "summary": "Public s30 steering-control tier at dt = 5e-4.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting S30 Steering Control"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up/index.html",
+      "manifest_path": "studies/mass-injecting-s75-hydraulic-channel-followup/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
+      "summary": "Public tier for the focused s=75 hydraulic-by-channel follow-up.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting S75 Hydraulic-Channel Follow-up"
     },
     {
       "href": "canonical-disk-mass-injecting-s75-hydraulic-sweep/index.html",
