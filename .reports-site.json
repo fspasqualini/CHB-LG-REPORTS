@@ -1,75 +1,44 @@
 {
   "managed_root_entries": [
     ".nojekyll",
-    "canonical-disk-growth-campaign",
-    "canonical-disk-growth-mechanism-decomposition",
-    "canonical-disk-mass-increasing-deformation",
     "canonical-disk-mass-injecting-direct-vs-continuation",
-    "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
     "canonical-disk-mass-injecting-s30-steering-control",
+    "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
     "canonical-disk-mass-injecting-s75-hydraulic-sweep",
     "canonical-disk-mass-injecting-source-channel-ablation",
     "canonical-disk-mass-injecting-source-continuation-ladder",
     "canonical-disk-mass-injecting-threshold-sensitivity",
-    "canonical-sphere-coarsening",
     "index.html",
-    "robots.txt",
-    "snes-vs-newton-solver-backend-investigation",
-    "verification-ladder",
-    "water-transport"
+    "robots.txt"
   ],
   "studies": [
     {
-      "href": "canonical-disk-growth-campaign/index.html",
-      "manifest_path": "studies/canonical_disk_growth_campaign/manifest.toml",
-      "slug": "canonical-disk-growth-campaign",
-      "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
-      "tier": "full",
-      "title": "Canonical Disk Growth Campaign"
-    },
-    {
-      "href": "canonical-disk-growth-mechanism-decomposition/index.html",
-      "manifest_path": "studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
-      "slug": "canonical-disk-growth-mechanism-decomposition",
-      "summary": "Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.",
-      "tier": "full",
-      "title": "Canonical Disk Growth Mechanism Decomposition"
-    },
-    {
-      "href": "canonical-disk-mass-increasing-deformation/index.html",
-      "manifest_path": "studies/canonical_disk_mass_increasing_deformation/manifest.toml",
-      "slug": "canonical-disk-mass-increasing-deformation",
-      "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Increasing Deformation"
-    },
-    {
       "href": "canonical-disk-mass-injecting-direct-vs-continuation/index.html",
-      "manifest_path": "studies/mass-injecting-direct-vs-continuation/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-direct-vs-continuation/manifest.toml",
       "slug": "canonical-disk-mass-injecting-direct-vs-continuation",
       "summary": "Direct-start versus supported-checkpoint continuation comparison surface for the simple canonical disk at s = 15, 30, 75, with embedded side-by-side media in each pair report.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Direct vs Continuation"
     },
     {
-      "href": "canonical-disk-mass-injecting-growth-wip-diagnostic-study/index.html",
-      "manifest_path": "studies/canonical_disk_mass_injecting_growth_wip/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
-      "summary": "First-class WIP diagnostic study for the interrupted canonical-disk mass-injecting growth campaign, with overall analysis and kinematic-growth comparison pages.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Growth WIP Diagnostic Study"
-    },
-    {
       "href": "canonical-disk-mass-injecting-s30-steering-control/index.html",
-      "manifest_path": "studies/mass-injecting-s30-steering-control/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s30-steering-control/manifest.toml",
       "slug": "canonical-disk-mass-injecting-s30-steering-control",
       "summary": "Public s30 steering-control tier at dt = 5e-4.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting S30 Steering Control"
     },
     {
+      "href": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s75-hydraulic-channel-followup/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
+      "summary": "Public tier for the focused `s=75` hydraulic-by-channel follow-up.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting S75 Hydraulic-Channel Follow-up"
+    },
+    {
       "href": "canonical-disk-mass-injecting-s75-hydraulic-sweep/index.html",
-      "manifest_path": "studies/mass-injecting-s75-hydraulic-sweep/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s75-hydraulic-sweep/manifest.toml",
       "slug": "canonical-disk-mass-injecting-s75-hydraulic-sweep",
       "summary": "Public s75 hydraulic sweep tier.",
       "tier": "full",
@@ -77,15 +46,15 @@
     },
     {
       "href": "canonical-disk-mass-injecting-source-channel-ablation/index.html",
-      "manifest_path": "studies/mass-injecting-source-channel-ablation/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-source-channel-ablation/manifest.toml",
       "slug": "canonical-disk-mass-injecting-source-channel-ablation",
-      "summary": "Public source-channel ablation tier covering closed s = 2, conservative-dt closed s = 30, and pressure-anchored s = 75 on the simple canonical disk.",
+      "summary": "Public source-channel ablation tier covering `s=2`, conservative-`dt` `s=30`, and pressure-anchored `s=75`.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Source-Channel Ablation"
     },
     {
       "href": "canonical-disk-mass-injecting-source-continuation-ladder/index.html",
-      "manifest_path": "studies/mass-injecting-source-continuation-ladder/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-source-continuation-ladder/manifest.toml",
       "slug": "canonical-disk-mass-injecting-source-continuation-ladder",
       "summary": "Supported checkpoint continuation ladder for the simple canonical disk, with copied montages, representative frames, and embedded videos for each amplitude package.",
       "tier": "full",
@@ -93,43 +62,11 @@
     },
     {
       "href": "canonical-disk-mass-injecting-threshold-sensitivity/index.html",
-      "manifest_path": "studies/mass-injecting-threshold-sensitivity/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-threshold-sensitivity/manifest.toml",
       "slug": "canonical-disk-mass-injecting-threshold-sensitivity",
       "summary": "Public threshold sensitivity tier for the direct-start canonical disk at s = 30.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Threshold Sensitivity"
-    },
-    {
-      "href": "canonical-sphere-coarsening/index.html",
-      "manifest_path": "studies/canonical_sphere_coarsening/manifest.toml",
-      "slug": "canonical-sphere-coarsening",
-      "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
-      "tier": "full",
-      "title": "Canonical Sphere Coarsening"
-    },
-    {
-      "href": "snes-vs-newton-solver-backend-investigation/index.html",
-      "manifest_path": "studies/solver_backend_investigation/manifest.toml",
-      "slug": "snes-vs-newton-solver-backend-investigation",
-      "summary": "Tracked solver-backend investigation bundle covering the short-disk probe, the controlled strip probe, and the current SNES-family timing refinement.",
-      "tier": "full",
-      "title": "SNES vs Newton Solver Backend Investigation"
-    },
-    {
-      "href": "verification-ladder/index.html",
-      "manifest_path": "studies/verification_ladder/manifest.toml",
-      "slug": "verification-ladder",
-      "summary": "Expanded verification-study slice through Task 8, covering the current VV ladder family by family.",
-      "tier": "full",
-      "title": "Verification Ladder"
-    },
-    {
-      "href": "water-transport/index.html",
-      "manifest_path": "studies/water_transport/manifest.toml",
-      "slug": "water-transport",
-      "summary": "Full 2D and 3D water-transport toy-problem suite.",
-      "tier": "full",
-      "title": "Water Transport"
     }
   ]
 }
