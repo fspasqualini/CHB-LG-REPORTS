@@ -6,6 +6,7 @@
     "canonical-disk-mass-increasing-deformation",
     "canonical-disk-mass-injecting-direct-vs-continuation",
     "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
+    "canonical-disk-mass-injecting-overall-findings",
     "canonical-disk-mass-injecting-s30-steering-control",
     "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
     "canonical-disk-mass-injecting-s75-hydraulic-sweep",
@@ -60,6 +61,14 @@
       "summary": "First-class WIP diagnostic study for the interrupted canonical-disk mass-injecting growth campaign, with overall analysis and kinematic-growth comparison pages.",
       "tier": "full",
       "title": "Canonical Disk Mass-Injecting Growth WIP Diagnostic Study"
+    },
+    {
+      "href": "canonical-disk-mass-injecting-overall-findings/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-overall-findings/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-overall-findings",
+      "summary": "Durable synthesis note for the current mass-injecting reboot evidence surface.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Injecting Overall Findings"
     },
     {
       "href": "canonical-disk-mass-injecting-s30-steering-control/index.html",
