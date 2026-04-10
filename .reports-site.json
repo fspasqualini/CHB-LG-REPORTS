@@ -4,6 +4,7 @@
     "canonical-disk-growth-campaign",
     "canonical-disk-growth-mechanism-decomposition",
     "canonical-disk-mass-increasing-deformation",
+    "canonical-disk-mass-preserving-deformation-decomposition",
     "canonical-sphere-coarsening",
     "index.html",
     "reference-disk-source-driven-growth-continuation",
@@ -36,6 +37,14 @@
       "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
       "tier": "full",
       "title": "Canonical Disk Mass-Increasing Deformation"
+    },
+    {
+      "href": "canonical-disk-mass-preserving-deformation-decomposition/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
+      "slug": "canonical-disk-mass-preserving-deformation-decomposition",
+      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
+      "tier": "full",
+      "title": "Canonical Disk Mass-Preserving Deformation Decomposition"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",
