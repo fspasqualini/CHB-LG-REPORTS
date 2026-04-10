@@ -4,16 +4,8 @@
     "canonical-disk-growth-campaign",
     "canonical-disk-growth-mechanism-decomposition",
     "canonical-disk-mass-increasing-deformation",
-    "canonical-disk-mass-injecting-direct-vs-continuation",
-    "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
-    "canonical-disk-mass-injecting-overall-findings",
-    "canonical-disk-mass-injecting-s30-steering-control",
-    "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
-    "canonical-disk-mass-injecting-s75-hydraulic-sweep",
-    "canonical-disk-mass-injecting-source-channel-ablation",
-    "canonical-disk-mass-injecting-source-continuation-ladder",
-    "canonical-disk-mass-injecting-source-region-localization",
-    "canonical-disk-mass-injecting-threshold-sensitivity",
+    "canonical-disk-mass-injecting-growth-continuation",
+    "canonical-disk-mass-injecting-growth-direct-start",
     "canonical-sphere-coarsening",
     "index.html",
     "robots.txt",
@@ -47,84 +39,20 @@
       "title": "Canonical Disk Mass-Increasing Deformation"
     },
     {
-      "href": "canonical-disk-mass-injecting-direct-vs-continuation/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-direct-vs-continuation/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-direct-vs-continuation",
-      "summary": "Direct-start versus supported-checkpoint continuation comparison surface for the simple canonical disk at s = 15, 30, 75, with embedded side-by-side media in each pair report.",
+      "href": "canonical-disk-mass-injecting-growth-continuation/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-growth-continuation/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-growth-continuation",
+      "summary": "Top-level continuation macro study showing the supported continuation branch as a map of the mass-injecting growth surface, not as production biology.",
       "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Direct vs Continuation"
+      "title": "Canonical Disk Mass-Injecting Growth Continuation"
     },
     {
-      "href": "canonical-disk-mass-injecting-growth-wip-diagnostic-study/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/canonical_disk_mass_injecting_growth_wip/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-growth-wip-diagnostic-study",
-      "summary": "First-class WIP diagnostic study for the interrupted canonical-disk mass-injecting growth campaign, with overall analysis and kinematic-growth comparison pages.",
+      "href": "canonical-disk-mass-injecting-growth-direct-start/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-growth-direct-start/manifest.toml",
+      "slug": "canonical-disk-mass-injecting-growth-direct-start",
+      "summary": "Top-level direct-start macro study showing the screened mass-injecting modalities and the decision to move forward with pf-only plus conservative early-time dt.",
       "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Growth WIP Diagnostic Study"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-overall-findings/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-overall-findings/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-overall-findings",
-      "summary": "Durable synthesis note for the current mass-injecting reboot evidence surface.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Overall Findings"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-s30-steering-control/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s30-steering-control/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-s30-steering-control",
-      "summary": "Public s30 steering-control tier at dt = 5e-4.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting S30 Steering Control"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s75-hydraulic-channel-followup/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-s75-hydraulic-channel-follow-up",
-      "summary": "Public tier for the focused `s=75` hydraulic-by-channel follow-up.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting S75 Hydraulic-Channel Follow-up"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-s75-hydraulic-sweep/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-s75-hydraulic-sweep/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-s75-hydraulic-sweep",
-      "summary": "Public s75 hydraulic sweep tier.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting S75 Hydraulic Sweep"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-source-channel-ablation/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-source-channel-ablation/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-source-channel-ablation",
-      "summary": "Public source-channel ablation tier covering `s=2`, conservative-`dt` `s=30`, and pressure-anchored `s=75`.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Source-Channel Ablation"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-source-continuation-ladder/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-source-continuation-ladder/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-source-continuation-ladder",
-      "summary": "Supported checkpoint continuation ladder for the simple canonical disk, with copied montages, representative frames, and embedded videos for each amplitude package.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Source Continuation Ladder"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-source-region-localization/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-source-region-localization/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-source-region-localization",
-      "summary": "Public source-region localization tier for the `pf-only` `s=30` direct-start screen.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Source-Region Localization"
-    },
-    {
-      "href": "canonical-disk-mass-injecting-threshold-sensitivity/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-threshold-sensitivity/manifest.toml",
-      "slug": "canonical-disk-mass-injecting-threshold-sensitivity",
-      "summary": "Public threshold sensitivity tier for the direct-start canonical disk at s = 30.",
-      "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Threshold Sensitivity"
+      "title": "Canonical Disk Mass-Injecting Growth Direct Start"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",
