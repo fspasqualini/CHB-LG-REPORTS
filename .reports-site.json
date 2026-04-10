@@ -20,7 +20,7 @@
       "slug": "canonical-disk-growth-campaign",
       "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
       "tier": "full",
-      "title": "Canonical Disk Growth Campaign"
+      "title": "Reference Disk Kinematic Growth"
     },
     {
       "href": "canonical-disk-growth-mechanism-decomposition/index.html",
@@ -32,11 +32,11 @@
     },
     {
       "href": "canonical-disk-mass-increasing-deformation/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/canonical_disk_mass_increasing_deformation/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
       "slug": "canonical-disk-mass-increasing-deformation",
-      "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
+      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
       "tier": "full",
-      "title": "Canonical Disk Mass-Increasing Deformation"
+      "title": "Reference Disk Kinematic Growth Mechanism Comparison"
     },
     {
       "href": "canonical-disk-mass-injecting-growth-continuation/index.html",
@@ -44,7 +44,7 @@
       "slug": "canonical-disk-mass-injecting-growth-continuation",
       "summary": "Top-level continuation macro study showing the supported continuation branch as a map of the mass-injecting growth surface, not as production biology.",
       "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Growth Continuation"
+      "title": "Reference Disk Source-Driven Growth: Continuation"
     },
     {
       "href": "canonical-disk-mass-injecting-growth-direct-start/index.html",
@@ -52,7 +52,7 @@
       "slug": "canonical-disk-mass-injecting-growth-direct-start",
       "summary": "Top-level direct-start macro study showing the screened mass-injecting modalities and the decision to move forward with pf-only plus conservative early-time dt.",
       "tier": "full",
-      "title": "Canonical Disk Mass-Injecting Growth Direct Start"
+      "title": "Reference Disk Source-Driven Growth: Direct Start"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",
@@ -60,7 +60,7 @@
       "slug": "canonical-sphere-coarsening",
       "summary": "Single fixed-mesh 3D four-cardinal coarsening investigation.",
       "tier": "full",
-      "title": "Canonical Sphere Coarsening"
+      "title": "Reference Sphere Coarsening"
     },
     {
       "href": "snes-vs-newton-solver-backend-investigation/index.html",
