@@ -1,0 +1,848 @@
+{
+  "artifacts": [
+    {
+      "baseline": {},
+      "current": {
+        "component_runtime_jsonl": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/component_runtime.jsonl",
+        "lumen_components_csv": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/lumen_components.csv",
+        "metrics_csv": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/metrics.csv",
+        "montages": [
+          "media/fixed2_snes_gmres_ilu_restart50_visual/montages/toy_montage_norm.png"
+        ],
+        "post_summary_json": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/post_summary.json",
+        "representative_frames": [
+          "media/fixed2_snes_gmres_ilu_restart50_visual/representative_frames/frames_norm/geometry/step_000000.png"
+        ],
+        "run_config_json": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/run_config.json",
+        "simulation_summary_json": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/simulation_summary.json",
+        "summary_json": "raw/current/fixed2_snes_gmres_ilu_restart50_visual/summary.json",
+        "videos": [
+          "media/fixed2_snes_gmres_ilu_restart50_visual/videos/fields_grid5_norm.mp4"
+        ]
+      },
+      "label": "fixed2-snes-gmres-ilu-restart50-visual"
+    }
+  ],
+  "baseline_roles": [
+    "none"
+  ],
+  "baselines": [
+    null
+  ],
+  "comparison_intent": "single_run_review",
+  "comparison_intent_label": "Single-Run Review",
+  "comparison_validity": "not_applicable",
+  "curator_notes": null,
+  "deltas": [],
+  "deltas_csv": null,
+  "execution_status": "complete",
+  "fail_count": 0,
+  "generated_at": "2026-03-25T19:45:44.978116+00:00",
+  "git_commit": "92de650",
+  "intro_text": "This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.",
+  "run_roles": [
+    "achieved"
+  ],
+  "runs": [
+    {
+      "artifacts": {
+        "component_runtime_jsonl": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/component_runtime.jsonl",
+        "lumen_components_csv": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/lumen_components.csv",
+        "metrics_csv": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/metrics.csv",
+        "montages": [
+          "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/toy_montage_norm.png"
+        ],
+        "post_summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/post_summary.json",
+        "representative_frames": [
+          "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/frames_norm/geometry/step_000000.png"
+        ],
+        "run_config_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/run_config.json",
+        "source_run_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run",
+        "summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/summary.json",
+        "videos": [
+          "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run/fields_grid5_norm.mp4"
+        ]
+      },
+      "backend_metadata": {
+        "backend": "snes",
+        "config_source": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual.json",
+        "geometry": "disk",
+        "profiles": {},
+        "report_label": "fixed2-snes-gmres-ilu-restart50-visual",
+        "report_role": "achieved",
+        "restart_mode": "startup",
+        "scenario_expected_dynamics": "Hydration should activate theta_eq and storage-strain ranges together with a small but persistent geometric response.",
+        "scenario_interpretation": "Preferred hydration driving storage and deformation responses.",
+        "scenario_key_observables": [
+          "area_ratio",
+          "max_u",
+          "theta_eq_range",
+          "storage_strain_range"
+        ],
+        "scenario_model_setup": "geometry=disk, hydraulic=closed, fixed_mesh, dimensionless, hydration_on",
+        "scenario_name": "",
+        "scenario_observation_guide": [
+          "Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.",
+          "Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall."
+        ],
+        "scenario_tags": [
+          "hydraulic:closed",
+          "preferred_hydration"
+        ],
+        "solver_mode": "monolithic",
+        "source_run_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/solver_backend_investigation/standard_reports/fixed2-snes-gmres-ilu-restart50-visual/run"
+      },
+      "checks": [
+        {
+          "label": "Accepted metrics rows present",
+          "name": "accepted_rows_present",
+          "status": "pass"
+        },
+        {
+          "details": {
+            "expected_final_time": 0.002
+          },
+          "label": "Run advanced beyond the initial state",
+          "name": "evolved_rows_present",
+          "status": "pass"
+        },
+        {
+          "details": {
+            "expected_final_time": 0.002,
+            "final_time": 0.002
+          },
+          "label": "Run reached target time",
+          "name": "reached_target_time",
+          "status": "pass"
+        },
+        {
+          "details": {
+            "biot_converged": true,
+            "ch_converged": true
+          },
+          "label": "Final accepted step converged",
+          "name": "final_convergence",
+          "status": "pass"
+        },
+        {
+          "details": {
+            "min_J": 0.8581168124514451
+          },
+          "label": "Final min_J is positive",
+          "name": "positive_min_J",
+          "status": "pass"
+        },
+        {
+          "label": "Post-processing completed",
+          "name": "postprocess_status",
+          "status": "pass"
+        }
+      ],
+      "converged": true,
+      "degrees_of_freedom": {
+        "total": 18342
+      },
+      "energies": {
+        "total": 8.3045896866505,
+        "total_cross": 8.304589692057856,
+        "total_p": 8.3045896866505,
+        "total_theta": 8.304590122694709
+      },
+      "geometry_metrics": {
+        "area_def_final": 3.0770078912909486,
+        "area_ratio_final": 0.9798480747701827,
+        "area_ref_final": 3.140290796624407,
+        "mesh_num_cells_final": 2972,
+        "mesh_num_vertices_final": 1550
+      },
+      "history": {
+        "area_ratio": [
+          1.0,
+          0.9773850825729407,
+          0.9798480747701827
+        ],
+        "biot_iterations": [
+          1,
+          2
+        ],
+        "ch_snes_its": [
+          1,
+          1,
+          1
+        ],
+        "energy_total_cross": [
+          8.692354450276143,
+          8.343758501870957,
+          8.304589692057856
+        ],
+        "energy_total_p": [
+          8.692354450276143,
+          8.343758500495305,
+          8.3045896866505
+        ],
+        "energy_total_theta": [
+          8.692354450276143,
+          8.34375883319821,
+          8.304590122694709
+        ],
+        "flow_potential_max": [
+          0.0,
+          0.023159330179731406,
+          0.022836778626721278
+        ],
+        "flow_potential_min": [
+          0.0,
+          0.006603715701050424,
+          0.007102237986354714
+        ],
+        "flow_potential_range": [
+          0.0,
+          0.01655561447868098,
+          0.015734540640366564
+        ],
+        "mass": [
+          0.5835720178604035,
+          0.5835720178604027,
+          0.5835720178604035
+        ],
+        "max_u": [
+          0.0,
+          0.014404355966206622,
+          0.013674027002561394
+        ],
+        "mesh_num_cells": [
+          2972,
+          2972,
+          2972
+        ],
+        "mesh_num_vertices": [
+          1550,
+          1550,
+          1550
+        ],
+        "p_eff_max": [
+          0.0,
+          0.023159330179731406,
+          0.022836778626721278
+        ],
+        "p_eff_min": [
+          0.0,
+          0.006603715701050424,
+          0.007102237986354714
+        ],
+        "p_eff_range": [
+          0.0,
+          0.01655561447868098,
+          0.015734540640366564
+        ],
+        "ratio": [
+          1.015043336656825,
+          1.015793787595404,
+          1.0174979985547479
+        ],
+        "split_iterations": [
+          0,
+          8,
+          7
+        ],
+        "storage_strain_max": [
+          0.0,
+          0.03577428354161274,
+          0.03672930293218248
+        ],
+        "storage_strain_min": [
+          0.0,
+          0.00661541553773519,
+          0.00713533161391811
+        ],
+        "storage_strain_range": [
+          0.0,
+          0.02915886800387755,
+          0.029593971318264373
+        ],
+        "theta_eq_max": [
+          0.02997089252604989,
+          0.029933180959781702,
+          0.02990387280211027
+        ],
+        "theta_eq_min": [
+          0.022181668653079252,
+          0.022412547792930188,
+          0.022312297864397965
+        ],
+        "theta_eq_range": [
+          0.007789223872970638,
+          0.007520633166851514,
+          0.007591574937712304
+        ],
+        "time": [
+          0.0,
+          0.001,
+          0.002
+        ],
+        "total_energy": [
+          8.692354450276143,
+          8.343758500495305,
+          8.3045896866505
+        ]
+      },
+      "iteration_counts": {
+        "accepted_steps": 3,
+        "attempt_rows": 3,
+        "biot_iterations_final": 2,
+        "biot_iterations_max": 2,
+        "biot_iterations_total": 3,
+        "ch_snes_its_final": 1,
+        "ch_snes_its_max": 1,
+        "ch_snes_its_total": 3,
+        "split_iterations_final": 7,
+        "split_iterations_max": 8,
+        "split_iterations_total": 15
+      },
+      "observables": {
+        "area_def_final": 3.0770078912909486,
+        "area_ratio_final": 0.9798480747701827,
+        "area_ref_final": 3.140290796624407,
+        "biot_converged": true,
+        "biot_converged_final": true,
+        "ch_converged": true,
+        "ch_converged_final": true,
+        "component_runtime_jsonl": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual/run/fixed2_snes_gmres_ilu_restart50_visual/component_runtime.jsonl",
+        "degrees_of_freedom_total": 18342,
+        "final_step": 2,
+        "final_time": 0.002,
+        "flow_potential_max_final": 0.022836778626721278,
+        "flow_potential_min_final": 0.007102237986354714,
+        "flow_potential_range_final": 0.015734540640366564,
+        "g_final": 1.005,
+        "lumen_active_cell_count": 8,
+        "lumen_any_component_edge_touch": false,
+        "lumen_center_x": 0.11743118686583585,
+        "lumen_center_y": 0.13675792982908183,
+        "lumen_center_z": null,
+        "lumen_component_event": "split",
+        "lumen_edge_components": 0,
+        "lumen_edge_count": 0,
+        "lumen_edge_touch": false,
+        "lumen_largest_center_x": 0.46703023157025175,
+        "lumen_largest_center_y": 0.02569703138689854,
+        "lumen_largest_center_z": null,
+        "lumen_largest_edge_count": 0,
+        "lumen_largest_edge_touch": false,
+        "lumen_largest_fraction": 0.3747993548998861,
+        "lumen_largest_volume": 0.0027742567644763417,
+        "lumen_mass_def_final": 0.5598457024599064,
+        "lumen_mass_def_initial": 0.5835720178604042,
+        "lumen_min_gap": 0.5427946625827248,
+        "lumen_n_components": 4,
+        "lumen_rmax": 0.504722572580069,
+        "lumen_second_edge_touch": false,
+        "lumen_second_fraction": 0.37479440866765784,
+        "lumen_second_volume": 0.0027742201525717625,
+        "lumen_total_volume": 0.007401978493846081,
+        "lumen_total_volume_def": 0.007401978493846081,
+        "lumen_total_volume_ref": 0.008612302426012283,
+        "mass_final": 0.5835720178604035,
+        "mass_initial": 0.5835720178604035,
+        "max_pf": 0.537540427120407,
+        "max_u_final": 0.013674027002561394,
+        "mesh_num_cells_final": 2972,
+        "mesh_num_vertices_final": 1550,
+        "min_J": 0.8581168124514451,
+        "min_Je": 0.8574748909315567,
+        "min_pf": -0.9807745604220545,
+        "p_eff_max_final": 0.022836778626721278,
+        "p_eff_min_final": 0.007102237986354714,
+        "p_eff_range_final": 0.015734540640366564,
+        "ratio_final": 1.0174979985547479,
+        "ratio_initial": 1.015043336656825,
+        "storage_strain_max_final": 0.03672930293218248,
+        "storage_strain_min_final": 0.00713533161391811,
+        "storage_strain_range_final": 0.029593971318264373,
+        "theta_eq_max_final": 0.02990387280211027,
+        "theta_eq_min_final": 0.022312297864397965,
+        "theta_eq_range_final": 0.007591574937712304,
+        "wall_time_seconds": 5.96222431701608
+      },
+      "run_config": {
+        "args": {
+          "L0": null,
+          "M0": 1.0,
+          "M1": 0.1,
+          "P0": null,
+          "T0": null,
+          "alpha0": 1.0,
+          "alpha1": 0.1,
+          "amr_enable": false,
+          "amr_every": 2,
+          "amr_mass_correction": false,
+          "amr_max_events": 2,
+          "amr_mode": "reference",
+          "amr_threshold": 0.05,
+          "biot_relaxation": 1.0,
+          "biot_split": "monolithic",
+          "ch_config": "current",
+          "checkpoint_at_end": true,
+          "checkpoint_dir": null,
+          "checkpoint_interval_steps": 0,
+          "checkpoint_steps": [],
+          "checkpoint_tag": null,
+          "closure_mode": "thermo_consistent",
+          "component_steering": true,
+          "config": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual.json",
+          "disable_xdmf_output": false,
+          "dt": 0.001,
+          "dt_max_retries": 5,
+          "dt_min": 1e-06,
+          "dt_recovery_enable": true,
+          "dt_recovery_grid_tol": 1e-10,
+          "dt_recovery_snap_mode": "nearest-grid",
+          "dt_recovery_window_blocks": 2,
+          "dt_retry": true,
+          "dt_scale": 0.5,
+          "edge_min_dofs": 10,
+          "edge_stop": false,
+          "edge_tol": 0.01,
+          "ell": 0.15,
+          "form_quadrature_degree": 4,
+          "frames": true,
+          "fs_lumen": 0.0,
+          "fs_power": 1.0,
+          "fs_tissue": 0.0,
+          "g": 1.0,
+          "g_max": 1.2,
+          "g_rate": 2.5,
+          "gamma": 1.0,
+          "geometry": "disk",
+          "growth_phase": "tissue",
+          "hydration_on": true,
+          "initial_state_from": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual/startup/fixed2_snes_gmres_ilu_restart50_visual_init/initial_state/initial_state.json",
+          "initial_state_ref": null,
+          "initialize_only": false,
+          "lag_phase_coeffs": false,
+          "lumen_centers": "-0.45,0.0@0.45,0.0@0.0,0.45@0.0,-0.45",
+          "lumen_jitter_active_plane": "auto",
+          "lumen_jitter_eps_scale": 1.0,
+          "lumen_jitter_mode": "auto",
+          "lumen_jitter_seed": 20260305,
+          "lumen_merge_beta": 25.0,
+          "lumen_merge_mode": "max",
+          "lumen_radii": "0.15,0.15,0.15,0.15",
+          "lumen_radius": 0.15,
+          "lumen_threshold": 0.5,
+          "mesh_algorithm": 6,
+          "mesh_h": 0.05,
+          "mesh_random_factor": 0.0,
+          "mesh_rotation_deg": 0.0,
+          "mobility": 0.5,
+          "montage_frames": 5,
+          "mu_bias": 0.0,
+          "mu_elastic_coupling": 1.0,
+          "mu_growthphase_coupling": 0.0,
+          "mu_osmotic_coupling": 1.0,
+          "mu_storage_coupling": 1.0,
+          "newton_atol": 1e-08,
+          "newton_max_it": 25,
+          "newton_rtol": 1e-06,
+          "osmotic_on": false,
+          "outer_relaxation": 0.2,
+          "outer_relaxation_method": "aitken",
+          "outer_relaxation_scope": "biot",
+          "output_dir": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual/run",
+          "p_offset": 0.0,
+          "p_offset_lumen": false,
+          "permeability": 0.5,
+          "petsc_biot": [
+            "snes_type=newtonls",
+            "snes_linesearch_type=bt",
+            "snes_max_it=40",
+            "ksp_type=gmres",
+            "pc_type=ilu",
+            "ksp_gmres_restart=50"
+          ],
+          "petsc_ch": [],
+          "pi0": 0.0,
+          "pi_power": 1.0,
+          "preferred_fluid_init_mode": "closure_consistent",
+          "preset": null,
+          "print_config_template": false,
+          "print_resolved_config": false,
+          "radius": 1.0,
+          "require_convergence": true,
+          "restart_from": null,
+          "restart_mode": "physics_equivalent",
+          "run_name": "fixed2_snes_gmres_ilu_restart50_visual",
+          "s_pf": 0.0,
+          "s_theta": 0.0,
+          "scalar_degree": 1,
+          "scales_json": null,
+          "solid_prestretch_on": false,
+          "solver_backend": "snes",
+          "source_region": "all",
+          "split_iters": 12,
+          "split_monitor": false,
+          "split_tol": 5e-06,
+          "steady_fraction_tol": 0.001,
+          "steady_stop": false,
+          "steady_tol": 0.001,
+          "steady_window": 5,
+          "steps": 2,
+          "swelling": 0.0,
+          "swelling_option": "none",
+          "t_end": 0.002,
+          "theta_eq_lumen": 0.02,
+          "theta_eq_power": 1.0,
+          "theta_eq_tissue": 0.03,
+          "tissue_radius": null,
+          "u_degree": 2,
+          "units": "nondim",
+          "wall_pref": -1.0,
+          "wall_strength": 8.0,
+          "write_every": 1
+        },
+        "config_payload": {
+          "boundary_conditions": {
+            "hydraulic": {
+              "kappa": 0.0,
+              "mode": "closed",
+              "p_ext": 0.0,
+              "pressure": 0.0,
+              "tag": 2,
+              "use_effective_potential": false
+            },
+            "wall_pref": -1.0,
+            "wall_strength": 8.0
+          },
+          "geometry": {
+            "geometry": "disk",
+            "radius": 1.0
+          },
+          "initial_conditions": {
+            "lumen_centers": [
+              [
+                -0.45,
+                0.0
+              ],
+              [
+                0.45,
+                0.0
+              ],
+              [
+                0.0,
+                0.45
+              ],
+              [
+                0.0,
+                -0.45
+              ]
+            ],
+            "lumen_radii": [
+              0.15,
+              0.15,
+              0.15,
+              0.15
+            ],
+            "lumen_radius": 0.15,
+            "p_offset": 0.0,
+            "p_offset_lumen": false,
+            "startup": {
+              "growth_mode": "no-growth",
+              "mode": "algebraic_consistent",
+              "pressure_gauge": "keep_offset",
+              "relax_dt": 0.001,
+              "relax_pf_frozen": false,
+              "relax_steps": 0
+            }
+          },
+          "mesh": {
+            "form_quadrature_degree": 4,
+            "mesh_h": 0.05,
+            "scalar_degree": 1,
+            "u_degree": 2
+          },
+          "output": {
+            "disable_xdmf_output": false,
+            "frames": true,
+            "make_movie": true,
+            "montage_frames": 5,
+            "output_dir": "output",
+            "run_name": "canonical_disk_fixed2",
+            "write_every": 1
+          },
+          "physics": {
+            "M0": 1.0,
+            "M1": 0.1,
+            "alpha0": 1.0,
+            "alpha1": 0.1,
+            "ch_config": "current",
+            "closure_mode": "thermo_consistent",
+            "ell": 0.15,
+            "fs_lumen": 0.0,
+            "fs_power": 1.0,
+            "fs_tissue": 0.0,
+            "g": 1.0,
+            "g_max": 1.2,
+            "g_rate": 2.5,
+            "gamma": 1.0,
+            "growth_phase": "tissue",
+            "hydration_on": true,
+            "lag_phase_coeffs": false,
+            "mobility": 0.5,
+            "mu_bias": 0.0,
+            "mu_elastic_coupling": 1.0,
+            "mu_osmotic_coupling": 1.0,
+            "mu_storage_coupling": 1.0,
+            "osmotic_on": false,
+            "permeability": 0.5,
+            "pi0": 0.0,
+            "pi_power": 1.0,
+            "s_pf": 0.0,
+            "s_theta": 0.0,
+            "solid_prestretch_on": false,
+            "theta_eq_lumen": 0.02,
+            "theta_eq_power": 1.0,
+            "theta_eq_tissue": 0.03
+          },
+          "restart": {
+            "checkpoint_at_end": true,
+            "checkpoint_interval_steps": 0,
+            "restart_from": null
+          },
+          "run": {
+            "dt": 0.001,
+            "lumen_threshold": 0.5,
+            "t_end": 0.002,
+            "units": "nondim"
+          },
+          "solver": {
+            "amr_enable": false,
+            "amr_every": 2,
+            "amr_mass_correction": false,
+            "amr_max_events": 2,
+            "amr_mode": "reference",
+            "amr_threshold": 0.05,
+            "biot_split": "monolithic",
+            "dt_max_retries": 5,
+            "dt_min": 1e-06,
+            "dt_recovery_enable": true,
+            "dt_recovery_grid_tol": 1e-10,
+            "dt_recovery_snap_mode": "nearest-grid",
+            "dt_recovery_window_blocks": 2,
+            "dt_retry": true,
+            "dt_scale": 0.5,
+            "newton_atol": 1e-08,
+            "newton_max_it": 25,
+            "newton_rtol": 1e-06,
+            "outer_relaxation": 0.2,
+            "outer_relaxation_method": "aitken",
+            "outer_relaxation_scope": "biot",
+            "petsc_biot": [
+              "snes_type=newtonls",
+              "snes_linesearch_type=bt",
+              "snes_max_it=40"
+            ],
+            "require_convergence": true,
+            "solver_backend": "snes",
+            "split_iters": 12,
+            "split_tol": 5e-06
+          }
+        },
+        "config_source": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual.json",
+        "preset": null,
+        "profiles": {},
+        "resolved_config": {
+          "boundary_conditions": {
+            "hydraulic": {
+              "kappa": 0.0,
+              "mode": "closed",
+              "p_ext": 0.0,
+              "pressure": 0.0,
+              "tag": 2,
+              "use_effective_potential": false
+            },
+            "wall_pref": -1.0,
+            "wall_strength": 8.0
+          },
+          "geometry": {
+            "geometry": "disk",
+            "radius": 1.0,
+            "tissue_radius": null
+          },
+          "initial_conditions": {
+            "initial_state_from": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual/startup/fixed2_snes_gmres_ilu_restart50_visual_init/initial_state/initial_state.json",
+            "initial_state_ref": null,
+            "lumen_centers": [
+              [
+                -0.45,
+                0.0
+              ],
+              [
+                0.45,
+                0.0
+              ],
+              [
+                0.0,
+                0.45
+              ],
+              [
+                0.0,
+                -0.45
+              ]
+            ],
+            "lumen_jitter_active_plane": "auto",
+            "lumen_jitter_eps_scale": 1.0,
+            "lumen_jitter_mode": "auto",
+            "lumen_jitter_seed": 20260305,
+            "lumen_merge_beta": 25.0,
+            "lumen_merge_mode": "max",
+            "lumen_radii": [
+              0.15,
+              0.15,
+              0.15,
+              0.15
+            ],
+            "lumen_radius": 0.15,
+            "p_offset": 0.0,
+            "p_offset_lumen": false,
+            "startup": {
+              "growth_mode": "no-growth",
+              "mode": "algebraic_consistent",
+              "pressure_gauge": "keep_offset",
+              "relax_dt": 0.001,
+              "relax_pf_frozen": false,
+              "relax_steps": 0
+            }
+          },
+          "mesh": {
+            "form_quadrature_degree": 4,
+            "mesh_algorithm": 6,
+            "mesh_h": 0.05,
+            "mesh_random_factor": 0.0,
+            "mesh_rotation_deg": 0.0,
+            "scalar_degree": 1,
+            "u_degree": 2
+          },
+          "output": {
+            "disable_xdmf_output": false,
+            "frames": true,
+            "make_movie": true,
+            "montage_frames": 5,
+            "output_dir": "/tmp/solver_backend_study_media_8mn0ltd9/fixed2-snes-gmres-ilu-restart50-visual/run",
+            "run_name": "fixed2_snes_gmres_ilu_restart50_visual",
+            "write_every": 1
+          },
+          "physics": {
+            "M0": 1.0,
+            "M1": 0.1,
+            "alpha0": 1.0,
+            "alpha1": 0.1,
+            "ch_config": "current",
+            "closure_mode": "thermo_consistent",
+            "ell": 0.15,
+            "fs_lumen": 0.0,
+            "fs_power": 1.0,
+            "fs_tissue": 0.0,
+            "g": 1.0,
+            "g_max": 1.2,
+            "g_rate": 2.5,
+            "gamma": 1.0,
+            "growth_phase": "tissue",
+            "hydration_on": true,
+            "lag_phase_coeffs": false,
+            "mobility": 0.5,
+            "mu_bias": 0.0,
+            "mu_elastic_coupling": 1.0,
+            "mu_growthphase_coupling": 0.0,
+            "mu_osmotic_coupling": 1.0,
+            "mu_storage_coupling": 1.0,
+            "osmotic_on": false,
+            "permeability": 0.5,
+            "pi0": 0.0,
+            "pi_power": 1.0,
+            "s_pf": 0.0,
+            "s_theta": 0.0,
+            "solid_prestretch_on": false,
+            "source_region": "all",
+            "theta_eq_lumen": 0.02,
+            "theta_eq_power": 1.0,
+            "theta_eq_tissue": 0.03
+          },
+          "restart": {
+            "checkpoint_at_end": true,
+            "checkpoint_dir": null,
+            "checkpoint_interval_steps": 0,
+            "checkpoint_steps": [],
+            "checkpoint_tag": null,
+            "restart_from": null,
+            "restart_mode": "physics_equivalent"
+          },
+          "run": {
+            "L0": null,
+            "P0": null,
+            "T0": null,
+            "component_steering": true,
+            "dt": 0.001,
+            "edge_min_dofs": 10,
+            "edge_stop": false,
+            "edge_tol": 0.01,
+            "lumen_threshold": 0.5,
+            "scales_json": null,
+            "steady_fraction_tol": 0.001,
+            "steady_stop": false,
+            "steady_tol": 0.001,
+            "steady_window": 5,
+            "steps": 2,
+            "t_end": 0.002,
+            "units": "nondim"
+          },
+          "solver": {
+            "amr_enable": false,
+            "amr_every": 2,
+            "amr_mass_correction": false,
+            "amr_max_events": 2,
+            "amr_mode": "reference",
+            "amr_threshold": 0.05,
+            "biot_relaxation": 1.0,
+            "biot_split": "monolithic",
+            "dt_max_retries": 5,
+            "dt_min": 1e-06,
+            "dt_recovery_enable": true,
+            "dt_recovery_grid_tol": 1e-10,
+            "dt_recovery_snap_mode": "nearest-grid",
+            "dt_recovery_window_blocks": 2,
+            "dt_retry": true,
+            "dt_scale": 0.5,
+            "newton_atol": 1e-08,
+            "newton_max_it": 25,
+            "newton_rtol": 1e-06,
+            "outer_relaxation": 0.2,
+            "outer_relaxation_method": "aitken",
+            "outer_relaxation_scope": "biot",
+            "petsc_biot": [
+              "snes_type=newtonls",
+              "snes_linesearch_type=bt",
+              "snes_max_it=40",
+              "ksp_type=gmres",
+              "pc_type=ilu",
+              "ksp_gmres_restart=50"
+            ],
+            "petsc_ch": [],
+            "require_convergence": true,
+            "solver_backend": "snes",
+            "split_iters": 12,
+            "split_monitor": false,
+            "split_tol": 5e-06
+          }
+        }
+      },
+      "timings": {
+        "wall_time_seconds": 5.96222431701608
+      },
+      "warnings": []
+    }
+  ],
+  "runs_csv": "runs.csv",
+  "status": "pass",
+  "title": "Simulation Report: fixed2-snes-gmres-ilu-restart50-visual",
+  "warn_count": 0
+}

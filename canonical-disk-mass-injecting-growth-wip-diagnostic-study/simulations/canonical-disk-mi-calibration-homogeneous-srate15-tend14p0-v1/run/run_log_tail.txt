@@ -1,0 +1,31 @@
+cwd=/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq
+command=conda run -n chb-dolfinx-snes python scripts/run.py --config /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/config/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0.toml --startup-from /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0_init/startup_bundle.json --output /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/stage
+returncode=1
+
+stdout:
+[chb] preset=None rigid-body-policy=nullspace-only
+step 659: nonconverged (ch=True, biot=False, split=0.0); retrying with dt=5.000e-04
+step 659: nonconverged (ch=True, biot=False, split=3.4210326303346372e-06); retrying with dt=2.500e-04
+step 662: nonconverged (ch=True, biot=False, split=4.423483300654484e-06); retrying with dt=1.250e-04
+step 666: nonconverged (ch=True, biot=False, split=1.7399060812066745e-06); retrying with dt=6.250e-05
+step 668: nonconverged (ch=True, biot=False, split=2.4584966359721135e-06); retrying with dt=3.125e-05
+step 668: nonconverged (ch=True, biot=False, split=0.0); retrying with dt=1.563e-05
+step 669: nonconverged (ch=True, biot=False, split=1.372907511676104e-06); retrying with dt=7.813e-06
+step 669: nonconverged (ch=True, biot=False, split=2.4061226274635165e-06); retrying with dt=3.906e-06
+step 677: nonconverged (ch=True, biot=False, split=4.923418218212426e-06); retrying with dt=1.953e-06
+step 677: nonconverged (ch=True, biot=False, split=2.751049397392542e-07); stopping without advancing the accepted trajectory.
+
+
+
+stderr:
+Traceback (most recent call last):
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/scripts/run.py", line 14, in <module>
+    raise SystemExit(main(["run", *(__import__("sys").argv[1:])]))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/src/chblg/cli.py", line 111, in main
+    runtime_main(
+  File "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/mass-increasing-deformation-prereq/src/chb/spheroid_simulation.py", line 812, in main
+    raise RuntimeError(runtime_state.abort_error)
+RuntimeError: Nonconvergence at step 677 (ch=True, biot=False, split=2.751049397392542e-07).
+
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/run.py --config /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/config/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0.toml --startup-from /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0_init/startup_bundle.json --output /tmp/chblg-mi-homogeneous-srate15-stage/canonical-disk-mi-calibration-homogeneous-srate15-tend14p0-homogeneous-srate15p0-tend14p0/stage` failed. (See above for error)
