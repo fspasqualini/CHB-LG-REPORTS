@@ -19,23 +19,23 @@
       "slug": "canonical-disk-growth-campaign",
       "summary": "Promoted fixed-mesh canonical disk growth campaign with long-horizon saturation extensions.",
       "tier": "full",
-      "title": "Reference Disk Kinematic Growth"
+      "title": "Canonical Disk Growth Campaign"
     },
     {
       "href": "canonical-disk-growth-mechanism-decomposition/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
       "slug": "canonical-disk-growth-mechanism-decomposition",
-      "summary": "Public growth-mechanism decomposition surface built from the resolved microlumen modality packages.",
+      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
       "tier": "full",
-      "title": "Canonical Disk Growth Mechanism Decomposition"
+      "title": "Canonical Disk Mass-Preserving Deformation Decomposition"
     },
     {
       "href": "canonical-disk-mass-increasing-deformation/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_mechanism_decomposition/manifest.toml",
       "slug": "canonical-disk-mass-increasing-deformation",
-      "summary": "Public mass-preserving deformation decomposition surface built from the resolved microlumen modality packages.",
+      "summary": "Public mass-increasing deformation study surface built from the source-driven canonical disk modality packages.",
       "tier": "full",
-      "title": "Reference Disk Kinematic Growth Mechanism Comparison"
+      "title": "Canonical Disk Mass-Increasing Deformation"
     },
     {
       "href": "canonical-sphere-coarsening/index.html",
