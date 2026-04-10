@@ -1,8 +1,0 @@
-{
-  "index_html": "fixed2-snes-biot-lu-visual_index.html",
-  "report_role": "achieved",
-  "run_dir": "run",
-  "sim_name": "fixed2-snes-biot-lu-visual",
-  "source_config": "config/input_config.json",
-  "startup_dir": "startup"
-}
