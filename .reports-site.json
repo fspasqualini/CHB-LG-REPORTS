@@ -64,7 +64,7 @@
     },
     {
       "href": "reference-sphere-source-driven-growth/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/mass-injecting-growth-sphere/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-growth-sphere/manifest.toml",
       "slug": "reference-sphere-source-driven-growth",
       "summary": "Top-level sphere source-driven growth surface built from the long-horizon pf-only review runs and their comparison bundles.",
       "tier": "full",

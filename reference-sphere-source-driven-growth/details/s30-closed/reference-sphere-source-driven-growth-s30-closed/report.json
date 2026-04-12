@@ -66,8 +66,8 @@
   "deltas_csv": null,
   "execution_status": "complete",
   "fail_count": 0,
-  "generated_at": "2026-04-12T09:39:57.147567+00:00",
-  "git_commit": "892bac0",
+  "generated_at": "2026-04-12T10:51:22.179121+00:00",
+  "git_commit": "1df6beb",
   "intro_text": "This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.",
   "run_roles": [
     "achieved"

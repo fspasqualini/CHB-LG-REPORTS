@@ -6,79 +6,216 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>Reference Disk Source-Driven Growth: Continuation</title>
   <style>
-    :root { --bg:#f5f1ea; --panel:#fffdf8; --ink:#201c18; --muted:#655b4f; --line:#d6c9b8; --accent:#8d3818; --green:#2c6b3f; }
-    body { margin:0; font-family:"Iowan Old Style","Palatino Linotype",serif; background:linear-gradient(180deg,#fffdf8 0%,var(--bg) 100%); color:var(--ink); }
-    main { max-width:1100px; margin:0 auto; padding:2rem 1.25rem 4rem; }
-    h1,h2 { margin:0 0 0.5rem; font-weight:600; }
-    p,li { line-height:1.5; }
-    a { color:var(--accent); }
-    .hero,.card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:1.1rem 1.2rem; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin:1rem 0 1.4rem; }
-    .eyebrow { color:var(--muted); font-size:0.85rem; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:0.35rem; }
-    .band { display:inline-block; padding:0.18rem 0.55rem; border-radius:999px; font-size:0.85rem; font-weight:600; }
-    .green { background:#e7f3eb; color:var(--green); }
-    code { font-family:"SFMono-Regular",Consolas,monospace; font-size:0.92em; }
+    :root {
+      --bg: #f4f1ea;
+      --panel: #fffdf8;
+      --ink: #1f1d18;
+      --muted: #605b53;
+      --line: #d2c8b6;
+      --accent: #8a3b12;
+    }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", serif;
+      background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+      color: var(--ink);
+    }
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    a { color: var(--accent); }
+    .hero, .section-card, .detail-card {
+      background: color-mix(in oklab, var(--panel) 94%, white 6%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+    }
+    .hero, .section-card { padding: 1.2rem 1.3rem; margin-bottom: 1.25rem; }
+    .eyebrow {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+    .detail-card {
+      padding: 1rem 1.1rem;
+    }
+    .metric-grid {
+      display: grid;
+      gap: 0.4rem 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin: 0.9rem 0;
+    }
+    .metric {
+      padding: 0.55rem 0.65rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.82);
+    }
+    .metric-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 0.15rem;
+    }
+    .notes {
+      margin: 0.8rem 0;
+      padding-left: 1.2rem;
+    }
+    .preview-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin: 0.9rem 0;
+    }
+    .preview {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255, 253, 248, 0.92);
+    }
+    .preview img, .preview video {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f1ede5;
+    }
+    .preview figcaption {
+      padding: 0.55rem 0.7rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <main>
     <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="index.html">Study Index</a></nav>
     <section class="hero">
-      <p class="eyebrow">Top-Level Macro Study</p>
+      <p class="eyebrow">Macro Study</p>
       <h1>Reference Disk Source-Driven Growth: Continuation</h1>
-      <p>
-        This page collects the continuation-side evidence for the
-        source-driven reboot. The continuation branch is retained as a
-        <strong>mapping tool</strong>: it shows that a smooth, high-source
-        branch exists on the simple disk, but it is not the production biology
-        lane and it is not the surface from which the direct-start decision is
-        made.
-      </p>
-      <p>
-        The successful growth reference remains the
-        <a href="../canonical-disk-growth-campaign/index.html">canonical disk
-        kinematic-growth campaign</a>. This continuation surface is only the
-        source-driven branch map that sits beside that reference.
-      </p>
+    <p>
+      Continuation is retained as a branch map for the source-driven reboot. It
+      demonstrates that smooth, high-source simple-disk branches exist while
+      keeping the decision-facing interpretation on the direct-start lane.
+    </p>
+    <p>
+      Current interpretation: continuation is context, not the primary
+      interpretation lane. The forward modeling choice remains direct start
+      with <code>pf-only</code> and conservative early-time <code>dt</code>.
+    </p>
+      <p><a href="details/index.html">Browse nested detail pages</a></p>
     </section>
-
-    <section class="grid">
-      <article class="card">
-        <p class="eyebrow">What It Proves</p>
-        <p>
-          Supported continuation runs cleanly from <code>s=2</code> through
-          <code>s=75</code>, with mechanically healthy
-          <span class="band green">green</span> histories and
-          <code>min_J</code> staying near 1.0 on the tracked branch.
-        </p>
-      </article>
-      <article class="card">
-        <p class="eyebrow">What It Does Not Prove</p>
-        <p>
-          It does not replace direct-start biology. The reboot evidence shows
-          that continuation and direct start select different branches, so this
-          study should be read as context and branch mapping only.
-        </p>
-      </article>
-      <article class="card">
-        <p class="eyebrow">Decision Impact</p>
-        <p>
-          Continuation remains useful for diagnosing branch accessibility, but
-          the forward modeling decision was made from the direct-start studies:
-          <code>pf-only</code> with conservative early-time
-          <code>dt</code>.
-        </p>
-      </article>
+    <section class="section-card">
+      <p class="eyebrow">Included Runs</p>
+      <h2>Long-Horizon Runs</h2>
+      <div class="grid">
+        
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=10 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=10 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.101</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.990</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.039</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=15 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=15 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.102</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>1.046</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.039</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=2 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=2 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.006</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.841</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.031</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=30 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=30 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.102</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>1.047</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.039</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=5 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=5 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.057</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.925</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.039</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              <ul class="notes"><li>Recovered above min_J = 0.95 after the onset dip.</li></ul>
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=75 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Continuation s=75 Supported.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.105</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>1.046</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.039</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>n/a</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              
+              
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+      </div>
     </section>
-
-    <section class="card">
-      <p class="eyebrow">Nested Evidence</p>
-      <ul>
-        <li><a href="details/index.html">Browse nested continuation substudies</a></li>
-        <li><a href="details/source-continuation-ladder/index.html">Source continuation ladder</a></li>
-        <li><a href="../mass-injecting-growth-direct-start/index.html">Open the direct-start macro study</a></li>
-        <li><a href="../canonical-disk-growth-campaign/index.html">Open the kinematic-growth reference study</a></li>
-      </ul>
+    <section class="section-card">
+      <p class="eyebrow">Included Comparisons</p>
+      <h2>Comparisons</h2>
+      <div class="grid">
+        
+            <article class="card detail-card">
+              <p class="eyebrow">Comparison</p>
+              <h3>Reference Disk Source-Driven Growth: Continuation Ladder — Continuation s=2 Supported vs Continuation s=5 Supported</h3>
+              <p>Supported checkpoint continuation ladder for the simple canonical disk. Focus: Mass Injecting Source Continuation Ladder.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Pairwise delta rows</span><strong>80</strong></div><div class="metric"><span class="metric-label">Report status</span><strong>Pass</strong></div><div class="metric"><span class="metric-label">Warnings</span><strong>0</strong></div>
+              </div>
+              <ul class="notes"><li>mig cont s2 supported: domain n/a, lumen 1.006, min_J_min 0.841.</li><li>mig cont s5 supported: domain n/a, lumen 1.057, min_J_min 0.925.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/min_J.png" alt="Preview for min_J.png"><figcaption><a href="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/min_J.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/max_pf.png" alt="Preview for max_pf.png"><figcaption><a href="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/max_pf.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/area_ratio.png" alt="Preview for area_ratio.png"><figcaption><a href="macro_media/source-continuation-ladder-mass-injecting-source-continuation-ladder/area_ratio.png">Open image</a></figcaption></figure></div>
+              
+              <p><a href="details/source-continuation-ladder/index.html">Open detail page</a></p>
+            </article>
+            
+      </div>
     </section>
   </main>
 </body>

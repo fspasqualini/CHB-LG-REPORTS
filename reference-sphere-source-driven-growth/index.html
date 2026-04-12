@@ -5,11 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <title>Reference Sphere Source-Driven Growth</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --panel: #fffdf8;
+      --ink: #1f1d18;
+      --muted: #605b53;
+      --line: #d2c8b6;
+      --accent: #8a3b12;
+    }
+    body {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", serif;
+      background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+      color: var(--ink);
+    }
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+    a { color: var(--accent); }
+    .hero, .section-card, .detail-card {
+      background: color-mix(in oklab, var(--panel) 94%, white 6%);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+    }
+    .hero, .section-card { padding: 1.2rem 1.3rem; margin-bottom: 1.25rem; }
+    .eyebrow {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+    .detail-card {
+      padding: 1rem 1.1rem;
+    }
+    .metric-grid {
+      display: grid;
+      gap: 0.4rem 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin: 0.9rem 0;
+    }
+    .metric {
+      padding: 0.55rem 0.65rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.82);
+    }
+    .metric-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 0.15rem;
+    }
+    .notes {
+      margin: 0.8rem 0;
+      padding-left: 1.2rem;
+    }
+    .preview-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin: 0.9rem 0;
+    }
+    .preview {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255, 253, 248, 0.92);
+    }
+    .preview img, .preview video {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f1ede5;
+    }
+    .preview figcaption {
+      padding: 0.55rem 0.7rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <main>
     <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="index.html">Study Index</a></nav>
-    <h1>Reference Sphere Source-Driven Growth</h1>
+    <section class="hero">
+      <p class="eyebrow">Macro Study</p>
+      <h1>Reference Sphere Source-Driven Growth</h1>
     <p>
       This macro study promotes the long-horizon sphere transfer of the
       carried-forward direct-start <code>pf-only</code> lane. It packages the
@@ -31,6 +121,100 @@
       direct-start collapse. The disk pathology comparison is included to make
       that transfer question explicit rather than implicit.
     </p>
+      <p><a href="details/index.html">Browse nested detail pages</a></p>
+    </section>
+    <section class="section-card">
+      <p class="eyebrow">Included Runs</p>
+      <h2>Long-Horizon Runs</h2>
+      <div class="grid">
+        
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Sphere Source-Driven Growth: s30 Closed</h3>
+              <p>Long-horizon sphere pf-only direct-start run at s=30 with the closed hydraulic boundary.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>Amber</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>Amber</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>1.155</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.082</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.700</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>0.862</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>0.003</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.064</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>481</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              <ul class="notes"><li>Recovered above min_J = 0.95 after the onset dip.</li><li>Accepted-step history entered an amber mechanical-history band; inspect min_J and max_pf histories before drawing conclusions.</li><li>Numerical/controller cost entered an amber band; the run is interpretable but not yet production-clean.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s30-closed/toy_montage_3d_equator_slice_norm.png" alt="Preview for toy_montage_3d_equator_slice_norm.png"><figcaption><a href="macro_media/s30-closed/toy_montage_3d_equator_slice_norm.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-closed/toy_montage_3d_equator_slice_growth.png" alt="Preview for toy_montage_3d_equator_slice_growth.png"><figcaption><a href="macro_media/s30-closed/toy_montage_3d_equator_slice_growth.png">Open image</a></figcaption></figure></div>
+              <div class="preview-grid"><figure class="preview"><video controls preload="none" src="macro_media/s30-closed/fields_grid_3d_equator_slice_norm.mp4"></video><figcaption><a href="macro_media/s30-closed/fields_grid_3d_equator_slice_norm.mp4">Open video</a></figcaption></figure><figure class="preview"><video controls preload="none" src="macro_media/s30-closed/fields_grid_3d_equator_slice_growth.mp4"></video><figcaption><a href="macro_media/s30-closed/fields_grid_3d_equator_slice_growth.mp4">Open video</a></figcaption></figure></div>
+              <p><a href="details/s30-closed/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Sphere Source-Driven Growth: s30 Leaky</h3>
+              <p>Long-horizon sphere pf-only direct-start run at s=30 with the leaky hydraulic boundary.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>Amber</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>Amber</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>1.154</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.082</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.700</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>0.862</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>0.003</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.064</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>481</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              <ul class="notes"><li>Recovered above min_J = 0.95 after the onset dip.</li><li>Accepted-step history entered an amber mechanical-history band; inspect min_J and max_pf histories before drawing conclusions.</li><li>Numerical/controller cost entered an amber band; the run is interpretable but not yet production-clean.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s30-leaky/toy_montage_3d_equator_slice_norm.png" alt="Preview for toy_montage_3d_equator_slice_norm.png"><figcaption><a href="macro_media/s30-leaky/toy_montage_3d_equator_slice_norm.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-leaky/toy_montage_3d_equator_slice_growth.png" alt="Preview for toy_montage_3d_equator_slice_growth.png"><figcaption><a href="macro_media/s30-leaky/toy_montage_3d_equator_slice_growth.png">Open image</a></figcaption></figure></div>
+              <div class="preview-grid"><figure class="preview"><video controls preload="none" src="macro_media/s30-leaky/fields_grid_3d_equator_slice_norm.mp4"></video><figcaption><a href="macro_media/s30-leaky/fields_grid_3d_equator_slice_norm.mp4">Open video</a></figcaption></figure><figure class="preview"><video controls preload="none" src="macro_media/s30-leaky/fields_grid_3d_equator_slice_growth.mp4"></video><figcaption><a href="macro_media/s30-leaky/fields_grid_3d_equator_slice_growth.mp4">Open video</a></figcaption></figure></div>
+              <p><a href="details/s30-leaky/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Run</p>
+              <h3>Reference Sphere Source-Driven Growth: s75 Closed</h3>
+              <p>Long-horizon sphere pf-only direct-start run at s=75 with the closed hydraulic boundary.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Mechanical history</span><strong>Green</strong></div><div class="metric"><span class="metric-label">Numerical cost</span><strong>Amber</strong></div><div class="metric"><span class="metric-label">Domain measure ratio</span><strong>1.145</strong></div><div class="metric"><span class="metric-label">Lumen volume ratio</span><strong>1.078</strong></div><div class="metric"><span class="metric-label">Worst min_J</span><strong>0.891</strong></div><div class="metric"><span class="metric-label">J_1% minimum</span><strong>0.916</strong></div><div class="metric"><span class="metric-label">Low-J extent max</span><strong>0.000</strong></div><div class="metric"><span class="metric-label">Peak max_pf</span><strong>1.060</strong></div><div class="metric"><span class="metric-label">Accepted steps</span><strong>361</strong></div><div class="metric"><span class="metric-label">Failed attempts</span><strong>0</strong></div>
+              </div>
+              <ul class="notes"><li>Recovered above min_J = 0.95 after the onset dip.</li><li>Numerical/controller cost entered an amber band; the run is interpretable but not yet production-clean.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s75-closed/toy_montage_3d_equator_slice_norm.png" alt="Preview for toy_montage_3d_equator_slice_norm.png"><figcaption><a href="macro_media/s75-closed/toy_montage_3d_equator_slice_norm.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s75-closed/toy_montage_3d_equator_slice_growth.png" alt="Preview for toy_montage_3d_equator_slice_growth.png"><figcaption><a href="macro_media/s75-closed/toy_montage_3d_equator_slice_growth.png">Open image</a></figcaption></figure></div>
+              <div class="preview-grid"><figure class="preview"><video controls preload="none" src="macro_media/s75-closed/fields_grid_3d_equator_slice_norm.mp4"></video><figcaption><a href="macro_media/s75-closed/fields_grid_3d_equator_slice_norm.mp4">Open video</a></figcaption></figure><figure class="preview"><video controls preload="none" src="macro_media/s75-closed/fields_grid_3d_equator_slice_growth.mp4"></video><figcaption><a href="macro_media/s75-closed/fields_grid_3d_equator_slice_growth.mp4">Open video</a></figcaption></figure></div>
+              <p><a href="details/s75-closed/index.html">Open detail page</a></p>
+            </article>
+            
+      </div>
+    </section>
+    <section class="section-card">
+      <p class="eyebrow">Included Comparisons</p>
+      <h2>Comparisons</h2>
+      <div class="grid">
+        
+            <article class="card detail-card">
+              <p class="eyebrow">Comparison</p>
+              <h3>Reference Sphere Source-Driven Growth: s30 Closed vs s30 Leaky</h3>
+              <p>Advisory peer comparison between the long-horizon sphere s=30 closed and leaky pf-only runs.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Pairwise delta rows</span><strong>17</strong></div><div class="metric"><span class="metric-label">Report status</span><strong>Warn</strong></div><div class="metric"><span class="metric-label">Warnings</span><strong>4</strong></div>
+              </div>
+              <ul class="notes"><li>mass injecting sphere s30 closed: domain 1.155, lumen 1.082, min_J_min 0.700.</li><li>mass injecting sphere s30 leaky: domain 1.154, lumen 1.082, min_J_min 0.700.</li><li>Domain growth delta (mass injecting sphere s30 closed -&gt; mass injecting sphere s30 leaky): -0.001.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s30-closed-vs-s30-leaky/min_J.png" alt="Preview for min_J.png"><figcaption><a href="macro_media/s30-closed-vs-s30-leaky/min_J.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-closed-vs-s30-leaky/max_pf.png" alt="Preview for max_pf.png"><figcaption><a href="macro_media/s30-closed-vs-s30-leaky/max_pf.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-closed-vs-s30-leaky/area_ratio.png" alt="Preview for area_ratio.png"><figcaption><a href="macro_media/s30-closed-vs-s30-leaky/area_ratio.png">Open image</a></figcaption></figure></div>
+              
+              <p><a href="details/s30-closed-vs-s30-leaky/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Comparison</p>
+              <h3>Reference Sphere Source-Driven Growth: s30 vs s75 Closed</h3>
+              <p>Advisory peer comparison between the long-horizon sphere s=30 and s=75 closed pf-only runs.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Pairwise delta rows</span><strong>17</strong></div><div class="metric"><span class="metric-label">Report status</span><strong>Warn</strong></div><div class="metric"><span class="metric-label">Warnings</span><strong>3</strong></div>
+              </div>
+              <ul class="notes"><li>mass injecting sphere s30 closed: domain 1.155, lumen 1.082, min_J_min 0.700.</li><li>mass injecting sphere s75 closed: domain 1.145, lumen 1.078, min_J_min 0.891.</li><li>Domain growth delta (mass injecting sphere s30 closed -&gt; mass injecting sphere s75 closed): -0.010.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s30-vs-s75-closed/min_J.png" alt="Preview for min_J.png"><figcaption><a href="macro_media/s30-vs-s75-closed/min_J.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-vs-s75-closed/max_pf.png" alt="Preview for max_pf.png"><figcaption><a href="macro_media/s30-vs-s75-closed/max_pf.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s30-vs-s75-closed/area_ratio.png" alt="Preview for area_ratio.png"><figcaption><a href="macro_media/s30-vs-s75-closed/area_ratio.png">Open image</a></figcaption></figure></div>
+              
+              <p><a href="details/s30-vs-s75-closed/index.html">Open detail page</a></p>
+            </article>
+            
+            <article class="card detail-card">
+              <p class="eyebrow">Comparison</p>
+              <h3>Reference Sphere Source-Driven Growth: Sphere s75 vs Disk s75 Pathology</h3>
+              <p>Advisory peer comparison between the controller-clean long-horizon sphere s=75 run and the earlier pathological disk s=75 direct-start run.</p>
+              <div class="metric-grid">
+                <div class="metric"><span class="metric-label">Pairwise delta rows</span><strong>17</strong></div><div class="metric"><span class="metric-label">Report status</span><strong>Fail</strong></div><div class="metric"><span class="metric-label">Warnings</span><strong>6</strong></div>
+              </div>
+              <ul class="notes"><li>mass injecting sphere s75 closed: domain 1.145, lumen 1.078, min_J_min 0.891.</li><li>mig direct s75: domain 0.181, lumen 0.144, min_J_min 0.014.</li><li>Domain growth delta (mass injecting sphere s75 closed -&gt; mig direct s75): -0.964.</li></ul>
+              <div class="preview-grid"><figure class="preview"><img src="macro_media/s75-vs-disk-s75-pathology/min_J.png" alt="Preview for min_J.png"><figcaption><a href="macro_media/s75-vs-disk-s75-pathology/min_J.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s75-vs-disk-s75-pathology/max_pf.png" alt="Preview for max_pf.png"><figcaption><a href="macro_media/s75-vs-disk-s75-pathology/max_pf.png">Open image</a></figcaption></figure><figure class="preview"><img src="macro_media/s75-vs-disk-s75-pathology/area_ratio.png" alt="Preview for area_ratio.png"><figcaption><a href="macro_media/s75-vs-disk-s75-pathology/area_ratio.png">Open image</a></figcaption></figure></div>
+              
+              <p><a href="details/s75-vs-disk-s75-pathology/index.html">Open detail page</a></p>
+            </article>
+            
+      </div>
+    </section>
   </main>
 </body>
 </html>
