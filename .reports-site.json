@@ -48,7 +48,7 @@
     },
     {
       "href": "reference-disk-source-driven-growth-continuation/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/mass-injecting-growth-continuation/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-growth-continuation/manifest.toml",
       "slug": "reference-disk-source-driven-growth-continuation",
       "summary": "Top-level continuation macro study showing the supported continuation branch as a map of the mass-injecting growth surface, not as production biology.",
       "tier": "full",
@@ -56,7 +56,7 @@
     },
     {
       "href": "reference-disk-source-driven-growth-direct-start/index.html",
-      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/mass-injecting-growth-direct-start/manifest.toml",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/.worktrees/investigate-mass-injecting-growth-reboot/studies/mass-injecting-growth-direct-start/manifest.toml",
       "slug": "reference-disk-source-driven-growth-direct-start",
       "summary": "Top-level direct-start macro study showing the screened mass-injecting modalities and the decision to move forward with pf-only plus conservative early-time dt.",
       "tier": "full",
