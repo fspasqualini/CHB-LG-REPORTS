@@ -1,0 +1,8 @@
+{
+  "index_html": "mass-injecting-sphere-s75-closed_index.html",
+  "report_role": "achieved",
+  "run_dir": "run",
+  "sim_name": "mass-injecting-sphere-s75-closed",
+  "source_config": "config/input_config.toml",
+  "startup_dir": "startup"
+}
