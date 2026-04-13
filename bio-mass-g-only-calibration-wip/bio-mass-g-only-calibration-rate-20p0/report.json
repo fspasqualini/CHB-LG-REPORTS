@@ -8,13 +8,24 @@
         "lumen_components_csv": "raw/current/bio_mass_g_only_calibration_rate_20p0/lumen_components.csv",
         "lumen_seed_family_summary_json": "raw/current/bio_mass_g_only_calibration_rate_20p0/lumen_seed_family_summary.json",
         "metrics_csv": "raw/current/bio_mass_g_only_calibration_rate_20p0/metrics.csv",
-        "montages": [],
+        "montages": [
+          "media/bio_mass_g_only_calibration_rate_20p0/montages/toy_montage_norm.png"
+        ],
         "post_summary_json": "raw/current/bio_mass_g_only_calibration_rate_20p0/post_summary.json",
-        "representative_frames": [],
+        "representative_frames": [
+          "media/bio_mass_g_only_calibration_rate_20p0/representative_frames/frames_norm/geometry/step_000000.png"
+        ],
         "run_config_json": "raw/current/bio_mass_g_only_calibration_rate_20p0/run_config.json",
         "simulation_summary_json": "raw/current/bio_mass_g_only_calibration_rate_20p0/simulation_summary.json",
         "summary_json": "raw/current/bio_mass_g_only_calibration_rate_20p0/summary.json",
-        "videos": []
+        "videos": [
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/fields_grid5_norm.mp4",
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/videos_norm/geometry.mp4",
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/videos_norm/p.mp4",
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/videos_norm/pf.mp4",
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/videos_norm/theta.mp4",
+          "media/bio_mass_g_only_calibration_rate_20p0/videos/videos_norm/u.mp4"
+        ]
       },
       "label": "bio-mass-g-only-calibration-rate-20p0"
     }
@@ -33,8 +44,8 @@
   "deltas_csv": null,
   "execution_status": "complete",
   "fail_count": 0,
-  "generated_at": "2026-04-13T12:01:40.751026+00:00",
-  "git_commit": "90c51e1",
+  "generated_at": "2026-04-13T14:17:47.925895+00:00",
+  "git_commit": "f32ed39",
   "intro_text": "This report summarizes one run for execution and human-in-the-loop sanity review. Use the execution checks, histories, and artifacts as the primary truth surface.",
   "run_roles": [
     "achieved"
@@ -42,15 +53,29 @@
   "runs": [
     {
       "artifacts": {
-        "component_runtime_jsonl": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/component_runtime.jsonl",
-        "division_site_scaffold_summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/division_site_scaffold_summary.json",
-        "lumen_components_csv": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/lumen_components.csv",
-        "lumen_seed_family_summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/lumen_seed_family_summary.json",
-        "metrics_csv": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/metrics.csv",
-        "post_summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/post_summary.json",
-        "run_config_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/run_config.json",
-        "source_run_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run",
-        "summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/summary.json"
+        "component_runtime_jsonl": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/component_runtime.jsonl",
+        "division_site_scaffold_summary_json": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/division_site_scaffold_summary.json",
+        "lumen_components_csv": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/lumen_components.csv",
+        "lumen_seed_family_summary_json": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/lumen_seed_family_summary.json",
+        "metrics_csv": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/metrics.csv",
+        "montages": [
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/toy_montage_norm.png"
+        ],
+        "post_summary_json": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/post_summary.json",
+        "representative_frames": [
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/frames_norm/geometry/step_000000.png"
+        ],
+        "run_config_json": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/run_config.json",
+        "source_run_dir": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run",
+        "summary_json": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/summary.json",
+        "videos": [
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/fields_grid5_norm.mp4",
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/videos_norm/geometry.mp4",
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/videos_norm/p.mp4",
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/videos_norm/pf.mp4",
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/videos_norm/theta.mp4",
+          "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run/videos_norm/u.mp4"
+        ]
       },
       "backend_metadata": {
         "backend": "snes",
@@ -60,8 +85,11 @@
         "configured_pf_rate": 0.0,
         "configured_theta_per_g": 0.0,
         "configured_theta_rate": 0.0,
+        "division_site_active_count": 0,
+        "division_site_active_indices": [],
         "division_site_coordinate_frame": "reference",
         "division_site_count": 8,
+        "division_site_dormant_count": 8,
         "division_site_preset": "canonical_disk_midring_eight",
         "division_site_ring_radius_reference": 0.31112698372204045,
         "division_sites_active": false,
@@ -194,10 +222,12 @@
         "source_pf": 0.0,
         "source_pressure_independent": true,
         "source_region": "all",
-        "source_run_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run",
+        "source_run_dir": "output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/bio-mass-g-only-calibration-rate-20p0/run",
         "source_theta": 0.0,
         "target_constituent": "tissue",
-        "targeted_source_channel": "g"
+        "targeted_source_channel": "g",
+        "theta_seed_radius": 0.0,
+        "theta_source_profile": "uniform"
       },
       "checks": [
         {
@@ -5356,7 +5386,7 @@
           "edge_tol": 0.01,
           "ell": 0.15,
           "form_quadrature_degree": 4,
-          "frames": false,
+          "frames": true,
           "fs_lumen": 0.0,
           "fs_power": 1.0,
           "fs_tissue": 0.0,
@@ -5381,6 +5411,7 @@
           "lumen_radii": "0.15,0.15,0.15,0.15",
           "lumen_radius": 0.15,
           "lumen_threshold": 0.5,
+          "make_movie": true,
           "mesh_algorithm": 6,
           "mesh_h": 0.05,
           "mesh_random_factor": 0.0,
@@ -5630,8 +5661,8 @@
           },
           "output": {
             "disable_xdmf_output": false,
-            "frames": false,
-            "make_movie": false,
+            "frames": true,
+            "make_movie": true,
             "montage_frames": 5,
             "output_dir": "output",
             "run_name": "bio-mass-g-only-calibration-rate-20p0",
@@ -5952,8 +5983,8 @@
           },
           "output": {
             "disable_xdmf_output": false,
-            "frames": false,
-            "make_movie": false,
+            "frames": true,
+            "make_movie": true,
             "montage_frames": 5,
             "output_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/bio-mass-g-only-calibration-WIP/scenarios/rate_20p0/run",
             "run_name": "bio-mass-g-only-calibration-rate-20p0",

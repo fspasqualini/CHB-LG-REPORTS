@@ -23,25 +23,53 @@
   },
   "visuals": {
     "bio-mass-g-only-calibration-rate-0p2": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-0p2/bio-mass-g-only-calibration-rate-0p2_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-0p2/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-0p2/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-0p2/bio-mass-g-only-calibration-rate-0p2_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-0p2/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-0p2/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-0p5": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-0p5/bio-mass-g-only-calibration-rate-0p5_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-0p5/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-0p5/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-0p5/bio-mass-g-only-calibration-rate-0p5_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-0p5/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-0p5/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-10p0": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-10p0/bio-mass-g-only-calibration-rate-10p0_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-10p0/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-10p0/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-10p0/bio-mass-g-only-calibration-rate-10p0_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-10p0/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-10p0/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-1p0": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-1p0/bio-mass-g-only-calibration-rate-1p0_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-1p0/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-1p0/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-1p0/bio-mass-g-only-calibration-rate-1p0_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-1p0/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-1p0/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-20p0": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-20p0/bio-mass-g-only-calibration-rate-20p0_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-20p0/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-20p0/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-20p0/bio-mass-g-only-calibration-rate-20p0_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-20p0/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-20p0/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-2p5": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-2p5/bio-mass-g-only-calibration-rate-2p5_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-2p5/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-2p5/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-2p5/bio-mass-g-only-calibration-rate-2p5_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-2p5/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-2p5/geometry.mp4"
     },
     "bio-mass-g-only-calibration-rate-5p0": {
-      "report": "visuals/bio-mass-g-only-calibration-rate-5p0/bio-mass-g-only-calibration-rate-5p0_index.html"
+      "frame_1": "visuals/bio-mass-g-only-calibration-rate-5p0/step_000000.png",
+      "montage_1": "visuals/bio-mass-g-only-calibration-rate-5p0/toy_montage_norm.png",
+      "report": "visuals/bio-mass-g-only-calibration-rate-5p0/bio-mass-g-only-calibration-rate-5p0_index.html",
+      "video_1": "visuals/bio-mass-g-only-calibration-rate-5p0/fields_grid5_norm.mp4",
+      "video_2": "visuals/bio-mass-g-only-calibration-rate-5p0/geometry.mp4"
     }
   }
 }
