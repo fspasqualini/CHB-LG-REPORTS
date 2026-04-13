@@ -4,6 +4,7 @@
     "bio-mass-g-only-calibration-wip",
     "bio-mass-growth-wip",
     "bio-mass-growth-wip-historical-autonomous-pf-only-proxy",
+    "bio-mass-theta-only-compliance-probe",
     "bio-mass-theta-only-seeded-WIP",
     "bio-mass-theta-only-threshold-study",
     "canonical-disk-growth-campaign",
@@ -42,6 +43,14 @@
       "summary": "Full historical WIP autonomous pf-only proxy surface combining short-horizon matrix runs with long-horizon continuation attempts.",
       "tier": "full",
       "title": "Bio-Mass Growth WIP: Historical Autonomous pf-only Proxy"
+    },
+    {
+      "href": "bio-mass-theta-only-compliance-probe/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/bio-mass-theta-only-compliance-probe/manifest.toml",
+      "slug": "bio-mass-theta-only-compliance-probe",
+      "summary": "Promoted canonical-disk theta-only loading/compliance probe with lumen-region control and tissue stress diagnostics.",
+      "tier": "full",
+      "title": "Bio-Mass Theta-Only Compliance Probe"
     },
     {
       "href": "bio-mass-theta-only-seeded-WIP/index.html",
