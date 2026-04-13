@@ -1,0 +1,47 @@
+{
+  "comparison_name": "bio-mass-g-only-calibration-rate-ladder",
+  "quantitative_comparison_csv": "quantitative_comparison.csv",
+  "quantitative_comparison_json": "quantitative_comparison.json",
+  "report_dir": "report",
+  "sim_names": [
+    "bio-mass-g-only-calibration-rate-0p2",
+    "bio-mass-g-only-calibration-rate-0p5",
+    "bio-mass-g-only-calibration-rate-1p0",
+    "bio-mass-g-only-calibration-rate-2p5",
+    "bio-mass-g-only-calibration-rate-5p0",
+    "bio-mass-g-only-calibration-rate-10p0",
+    "bio-mass-g-only-calibration-rate-20p0"
+  ],
+  "sim_roles": {
+    "bio-mass-g-only-calibration-rate-0p2": "peer",
+    "bio-mass-g-only-calibration-rate-0p5": "peer",
+    "bio-mass-g-only-calibration-rate-10p0": "peer",
+    "bio-mass-g-only-calibration-rate-1p0": "peer",
+    "bio-mass-g-only-calibration-rate-20p0": "peer",
+    "bio-mass-g-only-calibration-rate-2p5": "peer",
+    "bio-mass-g-only-calibration-rate-5p0": "peer"
+  },
+  "visuals": {
+    "bio-mass-g-only-calibration-rate-0p2": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-0p2/bio-mass-g-only-calibration-rate-0p2_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-0p5": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-0p5/bio-mass-g-only-calibration-rate-0p5_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-10p0": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-10p0/bio-mass-g-only-calibration-rate-10p0_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-1p0": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-1p0/bio-mass-g-only-calibration-rate-1p0_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-20p0": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-20p0/bio-mass-g-only-calibration-rate-20p0_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-2p5": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-2p5/bio-mass-g-only-calibration-rate-2p5_index.html"
+    },
+    "bio-mass-g-only-calibration-rate-5p0": {
+      "report": "visuals/bio-mass-g-only-calibration-rate-5p0/bio-mass-g-only-calibration-rate-5p0_index.html"
+    }
+  }
+}

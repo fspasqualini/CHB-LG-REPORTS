@@ -1,6 +1,7 @@
 {
   "managed_root_entries": [
     ".nojekyll",
+    "bio-mass-g-only-calibration-wip",
     "bio-mass-growth-wip",
     "canonical-disk-growth-campaign",
     "canonical-disk-mass-increasing-deformation",
@@ -15,6 +16,14 @@
     "water-transport"
   ],
   "studies": [
+    {
+      "href": "bio-mass-g-only-calibration-wip/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/bio-mass-g-only-calibration-WIP/manifest.toml",
+      "slug": "bio-mass-g-only-calibration-wip",
+      "summary": "Reserved WIP study surface for the g-only constituent-addition calibration ladder with dormant material division-site scaffold metadata.",
+      "tier": "full",
+      "title": "Bio-Mass g-Only Calibration WIP"
+    },
     {
       "href": "bio-mass-growth-wip/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/bio-mass-growth-WIP/manifest.toml",

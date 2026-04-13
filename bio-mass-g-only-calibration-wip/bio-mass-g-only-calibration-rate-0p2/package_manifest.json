@@ -1,0 +1,8 @@
+{
+  "index_html": "bio-mass-g-only-calibration-rate-0p2_index.html",
+  "report_role": "achieved",
+  "run_dir": "run",
+  "sim_name": "bio-mass-g-only-calibration-rate-0p2",
+  "source_config": "config/input_config.toml",
+  "startup_dir": "startup"
+}
