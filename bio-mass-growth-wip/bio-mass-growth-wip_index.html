@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Bio-Mass Growth WIP</title>
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --panel: #fffaf0;
+      --ink: #221d16;
+      --muted: #5c554d;
+      --line: #d9ccb8;
+      --accent: #8a3b12;
+      --warn: #7b2e26;
+    }
+    body { margin: 0; background: linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%); color: var(--ink); font-family: "Iowan Old Style", "Palatino Linotype", serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 1rem 1.15rem; margin-bottom: 1rem; }
+    .eyebrow { margin: 0; color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    h1, h2 { margin-top: 0.25rem; }
+    a { color: var(--accent); }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    ul { margin-top: 0.5rem; }
+    .warn { color: var(--warn); }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="index.html">Study Index</a></nav>
+    <section class="card">
+      <p class="eyebrow">WIP Study Surface</p>
+      <h1>Bio-Mass Growth WIP</h1>
+      <p>This surface packages the autonomous no-pressure <code>pf-only</code> short-horizon matrix and the later <code>t_end = 0.12</code> continuation attempts, including interrupted lumen continuations that entered severe compression.</p>
+      <p><a href="WIP_NOTES.md">Open the full WIP notes</a></p>
+    </section>
+    <section class="card">
+      <p class="eyebrow">Current constitutive blockers</p>
+      <ul>
+        <li>The current lane uses growth_mode = "no-growth" and source_theta = 0, so it does not contain a constitutive relaxed-body growth law or a direct storage-mass source. Autonomous forcing acts only through pf.</li><li>The outer boundary carries a wall penalty with wall_strength = 8.0 and wall_pref = -1.0, which energetically favors tissue-like phase at the rim and makes lumen-like edge takeover expensive.</li><li>The hydraulic mode is closed, so pressure cannot relax through leakage; source forcing can therefore accumulate into internal compression instead of pressure-relieved enlargement.</li><li>The disk edge is not mechanically clamped in displacement. The blockage to clean outward expansion is constitutive and energetic, not a hard u Dirichlet boundary condition.</li>
+      </ul>
+      <p class="warn"><strong>Interpretation:</strong> under these conditions, autonomous <code>pf-only</code> forcing should not be read as a clean free-expansion law. It is a phase/composition forcing lane whose closure can convert prolonged source loading into compression.</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <p class="eyebrow">Comparisons</p>
+        <h2>Comparison Reports</h2>
+        <ul><li><a href="bio-mass-growth-wip-short-horizon-all/report/bio-mass-growth-wip-short-horizon-all_index.html">bio-mass-growth-wip-short-horizon-all</a></li>
+<li><a href="bio-mass-growth-wip-long-horizon-all/report/bio-mass-growth-wip-long-horizon-all_index.html">bio-mass-growth-wip-long-horizon-all</a></li>
+<li><a href="bio-mass-growth-wip-s20-lumen-horizon-ladder/report/bio-mass-growth-wip-s20-lumen-horizon-ladder_index.html">bio-mass-growth-wip-s20-lumen-horizon-ladder</a></li>
+<li><a href="bio-mass-growth-wip-s20-tissue-horizon-ladder/report/bio-mass-growth-wip-s20-tissue-horizon-ladder_index.html">bio-mass-growth-wip-s20-tissue-horizon-ladder</a></li>
+<li><a href="bio-mass-growth-wip-s30-lumen-horizon-ladder/report/bio-mass-growth-wip-s30-lumen-horizon-ladder_index.html">bio-mass-growth-wip-s30-lumen-horizon-ladder</a></li>
+<li><a href="bio-mass-growth-wip-s30-tissue-horizon-ladder/report/bio-mass-growth-wip-s30-tissue-horizon-ladder_index.html">bio-mass-growth-wip-s30-tissue-horizon-ladder</a></li>
+<li><a href="bio-mass-growth-wip-s20-long-horizon-sign-contrast/report/bio-mass-growth-wip-s20-long-horizon-sign-contrast_index.html">bio-mass-growth-wip-s20-long-horizon-sign-contrast</a></li>
+<li><a href="bio-mass-growth-wip-s30-long-horizon-sign-contrast/report/bio-mass-growth-wip-s30-long-horizon-sign-contrast_index.html">bio-mass-growth-wip-s30-long-horizon-sign-contrast</a></li></ul>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Runs</p>
+        <h2>Packaged Simulation Reports</h2>
+        <ul><li><a href="mig-source-s10-pf-only-autonomous-lumen-t020/mig-source-s10-pf-only-autonomous-lumen-t020_index.html">mig-source-s10-pf-only-autonomous-lumen-t020</a></li>
+<li><a href="mig-source-s10-pf-only-autonomous-tissue-t020/mig-source-s10-pf-only-autonomous-tissue-t020_index.html">mig-source-s10-pf-only-autonomous-tissue-t020</a></li>
+<li><a href="mig-source-s10-pf-only-autonomous-lumen-t030/mig-source-s10-pf-only-autonomous-lumen-t030_index.html">mig-source-s10-pf-only-autonomous-lumen-t030</a></li>
+<li><a href="mig-source-s10-pf-only-autonomous-tissue-t030/mig-source-s10-pf-only-autonomous-tissue-t030_index.html">mig-source-s10-pf-only-autonomous-tissue-t030</a></li>
+<li><a href="mig-source-s10-pf-only-autonomous-lumen-t040/mig-source-s10-pf-only-autonomous-lumen-t040_index.html">mig-source-s10-pf-only-autonomous-lumen-t040</a></li>
+<li><a href="mig-source-s10-pf-only-autonomous-tissue-t040/mig-source-s10-pf-only-autonomous-tissue-t040_index.html">mig-source-s10-pf-only-autonomous-tissue-t040</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-lumen-t020/mig-source-s20-pf-only-autonomous-lumen-t020_index.html">mig-source-s20-pf-only-autonomous-lumen-t020</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-tissue-t020/mig-source-s20-pf-only-autonomous-tissue-t020_index.html">mig-source-s20-pf-only-autonomous-tissue-t020</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-lumen-t030/mig-source-s20-pf-only-autonomous-lumen-t030_index.html">mig-source-s20-pf-only-autonomous-lumen-t030</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-tissue-t030/mig-source-s20-pf-only-autonomous-tissue-t030_index.html">mig-source-s20-pf-only-autonomous-tissue-t030</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-lumen-t040/mig-source-s20-pf-only-autonomous-lumen-t040_index.html">mig-source-s20-pf-only-autonomous-lumen-t040</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-tissue-t040/mig-source-s20-pf-only-autonomous-tissue-t040_index.html">mig-source-s20-pf-only-autonomous-tissue-t040</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-lumen-t020/mig-source-s30-pf-only-autonomous-lumen-t020_index.html">mig-source-s30-pf-only-autonomous-lumen-t020</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-tissue-t020/mig-source-s30-pf-only-autonomous-tissue-t020_index.html">mig-source-s30-pf-only-autonomous-tissue-t020</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-lumen-t030/mig-source-s30-pf-only-autonomous-lumen-t030_index.html">mig-source-s30-pf-only-autonomous-lumen-t030</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-tissue-t030/mig-source-s30-pf-only-autonomous-tissue-t030_index.html">mig-source-s30-pf-only-autonomous-tissue-t030</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-lumen-t040/mig-source-s30-pf-only-autonomous-lumen-t040_index.html">mig-source-s30-pf-only-autonomous-lumen-t040</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-tissue-t040/mig-source-s30-pf-only-autonomous-tissue-t040_index.html">mig-source-s30-pf-only-autonomous-tissue-t040</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-tissue-t120/mig-source-s20-pf-only-autonomous-tissue-t120_index.html">mig-source-s20-pf-only-autonomous-tissue-t120</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-tissue-t120/mig-source-s30-pf-only-autonomous-tissue-t120_index.html">mig-source-s30-pf-only-autonomous-tissue-t120</a></li>
+<li><a href="mig-source-s20-pf-only-autonomous-lumen-t120-aborted/mig-source-s20-pf-only-autonomous-lumen-t120-aborted_index.html">mig-source-s20-pf-only-autonomous-lumen-t120-aborted</a></li>
+<li><a href="mig-source-s30-pf-only-autonomous-lumen-t120-aborted/mig-source-s30-pf-only-autonomous-lumen-t120-aborted_index.html">mig-source-s30-pf-only-autonomous-lumen-t120-aborted</a></li></ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

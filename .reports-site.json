@@ -1,6 +1,7 @@
 {
   "managed_root_entries": [
     ".nojekyll",
+    "bio-mass-growth-wip",
     "canonical-disk-growth-campaign",
     "canonical-disk-mass-increasing-deformation",
     "canonical-disk-mass-preserving-deformation-decomposition",
@@ -14,6 +15,14 @@
     "water-transport"
   ],
   "studies": [
+    {
+      "href": "bio-mass-growth-wip/index.html",
+      "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/bio-mass-growth-WIP/manifest.toml",
+      "slug": "bio-mass-growth-wip",
+      "summary": "Full WIP autonomous bio-mass growth review surface combining short-horizon matrix runs with long-horizon continuation attempts.",
+      "tier": "full",
+      "title": "Bio-Mass Growth WIP"
+    },
     {
       "href": "canonical-disk-growth-campaign/index.html",
       "manifest_path": "/home/drosscomputer/Projects/CHB-LG-LEAN/studies/canonical_disk_growth_campaign/manifest.toml",

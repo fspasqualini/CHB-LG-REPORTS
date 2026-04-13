@@ -1,0 +1,117 @@
+[run]
+dt = 0.0005
+t_end = 0.03
+component_steering = false
+checkpoint_every = 0
+checkpoint_at_end = true
+
+[geometry]
+shape = "disk"
+radius = 1.0
+mesh_h = 0.05
+u_degree = 2
+scalar_degree = 1
+quadrature_degree = 4
+
+[[geometry.seeds]]
+center = [-0.45, 0.0]
+radius = 0.15
+
+[[geometry.seeds]]
+center = [0.45, 0.0]
+radius = 0.15
+
+[[geometry.seeds]]
+center = [0.0, 0.45]
+radius = 0.15
+
+[[geometry.seeds]]
+center = [0.0, -0.45]
+radius = 0.15
+
+[startup]
+mode = "analytic"
+relax_steps = 0
+relax_dt = 0.001
+pressure_gauge = "keep_offset"
+growth_mode = "no-growth"
+
+[physics]
+ell = 0.15
+gamma = 1.0
+mobility = 0.5
+permeability = 0.5
+growth_phase = "tissue"
+g0 = 1.0
+g_rate = 2.5
+g_max = 1.2
+hydration_on = true
+theta_eq_tissue = 0.03
+theta_eq_lumen = 0.02
+theta_eq_power = 1.0
+osmotic_on = false
+pi0 = 0.0
+pi_power = 1.0
+solid_prestretch_on = false
+fs_tissue = 0.0
+fs_lumen = 0.0
+fs_power = 1.0
+storage_modulus_tissue = 1.0
+storage_modulus_lumen = 0.1
+biot_alpha_tissue = 1.0
+biot_alpha_lumen = 0.1
+mu_elastic_coupling = 1.0
+mu_storage_coupling = 1.0
+mu_osmotic_coupling = 1.0
+wall_strength = 8.0
+wall_pref = -1.0
+p_offset = 0.0
+p_offset_lumen = false
+source_mode = "autonomous_pf"
+source_pf = 30
+source_theta = 0
+source_region = "homogeneous"
+
+[solver]
+biot_split = "monolithic"
+split_iters = 12
+split_tol = 5.0e-6
+aitken = true
+outer_relaxation = 0.2
+dt_retry = true
+dt_min = 1.0e-6
+dt_scale = 0.5
+dt_max_retries = 5
+dt_recovery_enable = true
+dt_recovery_window_blocks = 2
+dt_recovery_snap_mode = "nearest-grid"
+dt_recovery_grid_tol = 1.0e-10
+amr_enable = false
+amr_every = 2
+amr_threshold = 0.05
+amr_max_events = 2
+amr_mode = "reference"
+amr_mass_correction = false
+petsc_biot = ["snes_type=newtonls", "snes_linesearch_type=bt", "snes_max_it=40"]
+
+[output]
+run_name = "canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off"
+output_dir = "output"
+write_every = 1
+lumen_threshold = 0.5
+frames = true
+montage_frames = 5
+make_movie = false
+
+[boundary_conditions.hydraulic]
+mode = "closed"
+tag = 2
+kappa = 0
+p_ext = 0
+use_effective_potential = false
+pressure = 0
+
+[scenario]
+name = "canonical disk source pf only autonomous closed direct start s30 t030 lumen dt5e4 steering off"
+model_setup = "Autonomous no-pressure pf-only direct-start matrix lane on the simple closed canonical disk with component steering disabled, movies off, and all other solver and physics settings aligned with the tracked autonomous seed."
+expected_dynamics = "Autonomous pf-only lumen-directed sign-matrix lane at |s|=30 and t_end=0.03, used to bracket strict-clean reference candidates and nonlinear onset without the raw-pressure multiplier."

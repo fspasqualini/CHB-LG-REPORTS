@@ -1,0 +1,110 @@
+{
+  "command_results": [
+    {
+      "command": [
+        "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/analyze_lumen_components.py",
+        "--run-dir",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+        "--threshold",
+        "0.5",
+        "--mode",
+        "scientific"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "wrote /home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off/lumen_components.csv\n"
+    },
+    {
+      "command": [
+        "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/render_frames_xdmf.py",
+        "--output-dir",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+        "--frames-dir",
+        "frames_norm",
+        "--fields",
+        "pf",
+        "p",
+        "theta",
+        "u",
+        "geometry"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/montage_from_frames.py",
+        "--output-dir",
+        "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+        "--frames-dir",
+        "frames_norm",
+        "--fields",
+        "pf",
+        "p",
+        "theta",
+        "u",
+        "geometry",
+        "--frames",
+        "5",
+        "--filename",
+        "toy_montage_norm.png"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "commands": [
+    [
+      "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/analyze_lumen_components.py",
+      "--run-dir",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+      "--threshold",
+      "0.5",
+      "--mode",
+      "scientific"
+    ],
+    [
+      "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/render_frames_xdmf.py",
+      "--output-dir",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+      "--frames-dir",
+      "frames_norm",
+      "--fields",
+      "pf",
+      "p",
+      "theta",
+      "u",
+      "geometry"
+    ],
+    [
+      "/home/drosscomputer/miniconda3/envs/chb-dolfinx-snes/bin/python",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/internal/scripts/montage_from_frames.py",
+      "--output-dir",
+      "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+      "--frames-dir",
+      "frames_norm",
+      "--fields",
+      "pf",
+      "p",
+      "theta",
+      "u",
+      "geometry",
+      "--frames",
+      "5",
+      "--filename",
+      "toy_montage_norm.png"
+    ]
+  ],
+  "errors": [],
+  "lumen_seed_family_summary_json": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off/lumen_seed_family_summary.json",
+  "run_dir": "/home/drosscomputer/Projects/CHB-LG-LEAN/output/mass-injecting-growth-review/mass-injecting-autonomous-pf-only-sign-matrix-2026-04-13/scenarios/s30_pf_only_autonomous_lumen_t030/run/canonical_disk_source_pf_only_autonomous_closed_direct_start_s30_t030_lumen_dt5e4_steering_off",
+  "status": "ok",
+  "warnings": []
+}
