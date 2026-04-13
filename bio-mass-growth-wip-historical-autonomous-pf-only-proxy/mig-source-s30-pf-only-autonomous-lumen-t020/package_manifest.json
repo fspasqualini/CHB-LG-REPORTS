@@ -1,0 +1,8 @@
+{
+  "index_html": "mig-source-s30-pf-only-autonomous-lumen-t020_index.html",
+  "report_role": "achieved",
+  "run_dir": "run",
+  "sim_name": "mig-source-s30-pf-only-autonomous-lumen-t020",
+  "source_config": "config/input_config.toml",
+  "startup_dir": "startup"
+}

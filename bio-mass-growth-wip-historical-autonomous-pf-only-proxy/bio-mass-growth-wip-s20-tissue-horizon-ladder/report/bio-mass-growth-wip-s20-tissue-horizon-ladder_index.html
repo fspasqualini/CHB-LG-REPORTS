@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Comparison Report: bio-mass-growth-wip-s20-tissue-horizon-ladder</title>
+  <style>
+:root {
+  --bg: #f4f1ea;
+  --panel: #fffdf8;
+  --ink: #1f1d18;
+  --muted: #605b53;
+  --line: #d2c8b6;
+  --accent: #8a3b12;
+  --pass: #2f6f4f;
+  --warn: #a76412;
+  --fail: #a12f2f;
+}
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  background: radial-gradient(circle at top, #fffdf8 0%, var(--bg) 55%, #e6dece 100%);
+  color: var(--ink);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+}
+p, li, td, th {
+  line-height: 1.45;
+}
+a {
+  color: var(--accent);
+}
+.hero, .cards-2, .cards-3, .plot-grid, .media-grid {
+  display: grid;
+  gap: 1rem;
+}
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.cards-3, .plot-grid, .media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  background: color-mix(in oklab, var(--panel) 94%, white 6%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(86, 73, 46, 0.08);
+  padding: 1rem 1.1rem;
+}
+.kpi {
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.muted {
+  color: var(--muted);
+}
+.status-pass { color: var(--pass); font-weight: 600; }
+.status-warn { color: var(--warn); font-weight: 600; }
+.status-fail { color: var(--fail); font-weight: 600; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 0.55rem 0.4rem;
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+}
+ul.clean {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+code {
+  font-family: "SFMono-Regular", ui-monospace, monospace;
+  font-size: 0.92em;
+}
+.tag {
+  display: inline-block;
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(138, 59, 18, 0.08);
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+</style>
+</head>
+<body>
+  <main>
+    <nav class="return-links" data-chblg-return-links style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:0 auto 1rem;max-width:1280px;padding:1rem 1.25rem 0"><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../../index.html">Main Index</a><a class="return-link" style="display:inline-block;padding:0.35rem 0.7rem;border-radius:999px;border:1px solid #d2c8b6;background:rgba(255,253,248,0.92);text-decoration:none;color:#8a3b12" href="../../index.html">Study Index</a></nav>
+    <section class="hero">
+      <div class="card">
+        <h1>Comparison Report: bio-mass-growth-wip-s20-tissue-horizon-ladder</h1>
+        <p class="muted">Generated 2026-04-13T07:10:52.024163+00:00 from commit 60ac813.</p>
+<p>This report compares completed runs side by side without baseline semantics. Treat the numerical differences as descriptive unless explicit tolerances were intended for this comparison.</p>
+      </div>
+      <div class="card">
+        <h2>Status</h2>
+        <p class="kpi status-warn">warn</p>
+        <p class="muted">4 run(s), 0 fail signal(s), 3 warning signal(s).</p>
+      </div>
+    </section>
+
+    <section class="cards-2">
+      <div class="card">
+        <h2>Comparison Context</h2>
+        <p><span class="status-pass">Peer Comparison</span></p>
+        <p class="muted">Current runs: 4. Baselines: 0.</p>
+        <p class="muted">Default policy: correctness drift fails, performance drift warns.</p>
+      </div>
+      <div class="card">
+        <h2>Execution</h2>
+        <p><span class="status-pass">complete</span></p>
+        <p class="muted">Comparison validity:
+          <span class="status-pass">
+            direct
+          </span>
+        </p>
+      </div>
+    </section>
+
+    
+
+    <section class="cards-2">
+      <div class="card">
+        <h2>Warnings</h2>
+        <ul class="clean"><li>None</li></ul>
+      </div>
+      <div class="card">
+        <h2>Interpretation</h2>
+        <p class="muted">
+          Read execution status first. If execution is incomplete, numerical deltas are descriptive only and should not be treated as validated physics drift.
+          For baseline comparisons, timing and scenario-dependent differences may be expected even when correctness checks pass.
+        </p>
+      </div>
+    </section>
+
+    <section class="cards-2">
+      <h2>Scenario Reading</h2>
+      
+            <div class="card">
+              <h3>canonical disk source pf only autonomous closed direct start s20 t020 tissue dt5e4 steering off <span class="muted">(peer)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">autonomous_biomass</span><span class="tag">source_mode:autonomous_pf</span><span class="tag">source_pf</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> Autonomous no-pressure pf-only direct-start matrix lane on the simple closed canonical disk with component steering disabled, movies off, and all other solver and physics settings aligned with the tracked autonomous seed.</p>
+              <p><strong>Expected dynamics.</strong> Autonomous pf-only tissue-directed sign-matrix lane at |s|=20 and t_end=0.02, used to bracket strict-clean reference candidates and nonlinear onset without the raw-pressure multiplier.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> Not provided.</p>
+              <p class="muted"><strong>Source mode.</strong> autonomous_pf</p>
+              <p class="muted"><strong>Pressure-independent source.</strong> yes</p>
+              <p class="muted"><strong>Targeted source channel.</strong> pf</p>
+              <p class="muted"><strong>Configured pf rate.</strong> -20</p>
+              <p class="muted"><strong>Configured theta rate.</strong> 0</p>
+              <p class="muted"><strong>Target constituent.</strong> tissue</p>
+              <p class="muted"><strong>Source pf.</strong> -20</p>
+              <p class="muted"><strong>Source theta.</strong> 0</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> No source-driven observable caveat recorded.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>canonical disk source pf only autonomous closed direct start s20 t030 tissue dt5e4 steering off <span class="muted">(peer)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">autonomous_biomass</span><span class="tag">source_mode:autonomous_pf</span><span class="tag">source_pf</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> Autonomous no-pressure pf-only direct-start matrix lane on the simple closed canonical disk with component steering disabled, movies off, and all other solver and physics settings aligned with the tracked autonomous seed.</p>
+              <p><strong>Expected dynamics.</strong> Autonomous pf-only tissue-directed sign-matrix lane at |s|=20 and t_end=0.03, used to bracket strict-clean reference candidates and nonlinear onset without the raw-pressure multiplier.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> Not provided.</p>
+              <p class="muted"><strong>Source mode.</strong> autonomous_pf</p>
+              <p class="muted"><strong>Pressure-independent source.</strong> yes</p>
+              <p class="muted"><strong>Targeted source channel.</strong> pf</p>
+              <p class="muted"><strong>Configured pf rate.</strong> -20</p>
+              <p class="muted"><strong>Configured theta rate.</strong> 0</p>
+              <p class="muted"><strong>Target constituent.</strong> tissue</p>
+              <p class="muted"><strong>Source pf.</strong> -20</p>
+              <p class="muted"><strong>Source theta.</strong> 0</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> No source-driven observable caveat recorded.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>canonical disk source pf only autonomous closed direct start s20 t040 tissue dt5e4 steering off <span class="muted">(peer)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">autonomous_biomass</span><span class="tag">source_mode:autonomous_pf</span><span class="tag">source_pf</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> Autonomous no-pressure pf-only direct-start matrix lane on the simple closed canonical disk with component steering disabled, movies off, and all other solver and physics settings aligned with the tracked autonomous seed.</p>
+              <p><strong>Expected dynamics.</strong> Autonomous pf-only tissue-directed sign-matrix lane at |s|=20 and t_end=0.04, used to bracket strict-clean reference candidates and nonlinear onset without the raw-pressure multiplier.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> Not provided.</p>
+              <p class="muted"><strong>Source mode.</strong> autonomous_pf</p>
+              <p class="muted"><strong>Pressure-independent source.</strong> yes</p>
+              <p class="muted"><strong>Targeted source channel.</strong> pf</p>
+              <p class="muted"><strong>Configured pf rate.</strong> -20</p>
+              <p class="muted"><strong>Configured theta rate.</strong> 0</p>
+              <p class="muted"><strong>Target constituent.</strong> tissue</p>
+              <p class="muted"><strong>Source pf.</strong> -20</p>
+              <p class="muted"><strong>Source theta.</strong> 0</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> No source-driven observable caveat recorded.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>canonical disk source pf only autonomous closed direct start s20 t120 tissue dt5e-4 steering off <span class="muted">(peer)</span></h3>
+              <p class="muted"><strong>Mechanisms:</strong> <span class="tag">hydraulic:closed</span><span class="tag">preferred_hydration</span><span class="tag">source_driven</span><span class="tag">autonomous_biomass</span><span class="tag">source_mode:autonomous_pf</span><span class="tag">source_pf</span><span class="tag">source_region:all</span></p>
+              <p>Preferred hydration driving storage and deformation responses.</p>
+              <p><strong>Model setup.</strong> Autonomous no-pressure pf-only long-horizon continuation lane on the simple closed canonical disk, with topology-aware component steering disabled while all other solver and physics settings remain aligned.</p>
+              <p><strong>Expected dynamics.</strong> Autonomous pf-only tissue-directed long-horizon lane at |s|=20 and t_end=0.12, used to test whether the no-pressure branch remains stable or recovers after early-time compression excursions.</p>
+              <p class="muted"><strong>Hydraulic mode.</strong> Not provided.</p>
+              <p class="muted"><strong>Source mode.</strong> autonomous_pf</p>
+              <p class="muted"><strong>Pressure-independent source.</strong> yes</p>
+              <p class="muted"><strong>Targeted source channel.</strong> pf</p>
+              <p class="muted"><strong>Configured pf rate.</strong> -20</p>
+              <p class="muted"><strong>Configured theta rate.</strong> 0</p>
+              <p class="muted"><strong>Target constituent.</strong> tissue</p>
+              <p class="muted"><strong>Source pf.</strong> -20</p>
+              <p class="muted"><strong>Source theta.</strong> 0</p>
+              <p class="muted"><strong>Source region.</strong> all</p>
+              <p class="muted"><strong>Observable semantics.</strong> No source-driven observable caveat recorded.</p>
+              <p class="muted"><strong>Read first:</strong> area_ratio, max_u, theta_eq_range, storage_strain_range</p>
+              <p class="muted"><strong>Where to observe it.</strong></p>
+              <ul class="clean"><li>Use the trend plots to inspect area_ratio, max_u, and the derived range metrics.</li><li>Use the montage/frame artifacts to see whether deformation localizes near the lumen or the outer wall.</li><li>Interpret `mass` as a lumen-phase measure and `ratio` as left/right lumen balance; neither is a direct total-mass or generic growth observable.</li></ul>
+            </div>
+            
+    </section>
+
+    
+
+    <section class="card">
+      <h2>Run Table</h2>
+      <table><thead><tr><th>Label</th><th>Role</th><th>Scenario</th><th>Backend</th><th>Geometry</th><th>Solver</th><th>Restart</th><th>Status</th><th>Wall Time</th><th>DoF</th><th>Cells</th><th>Mass</th><th>Ratio</th><th>min_J</th><th>Mechanical History</th><th>Numerical Cost</th></tr></thead><tbody><tr><td>mig-source-s20-pf-only-autonomous-tissue-t020</td><td>peer</td><td>canonical disk source pf only autonomous closed direct start s20 t020 tissue dt5e4 steering off</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>66.9075</td><td>18342</td><td>2972</td><td>-0.0444861</td><td>-2.30301e+10</td><td>1.04953</td><td><span class="status-pass">green</span></td><td><span class="status-pass">green</span></td></tr><tr><td>mig-source-s20-pf-only-autonomous-tissue-t030</td><td>peer</td><td>canonical disk source pf only autonomous closed direct start s20 t030 tissue dt5e4 steering off</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>98.3225</td><td>18342</td><td>2972</td><td>-0.358515</td><td>-1.79488e+11</td><td>1.05688</td><td><span class="status-pass">green</span></td><td><span class="status-pass">green</span></td></tr><tr><td>mig-source-s20-pf-only-autonomous-tissue-t040</td><td>peer</td><td>canonical disk source pf only autonomous closed direct start s20 t040 tissue dt5e4 steering off</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>128.575</td><td>18342</td><td>2972</td><td>-0.672544</td><td>-3.36374e+11</td><td>1.02694</td><td><span class="status-pass">green</span></td><td><span class="status-pass">green</span></td></tr><tr><td>mig-source-s20-pf-only-autonomous-tissue-t120</td><td>peer</td><td>canonical disk source pf only autonomous closed direct start s20 t120 tissue dt5e-4 steering off</td><td>snes</td><td>disk</td><td>monolithic</td><td>startup</td><td><span class="status-pass">pass</span></td><td>897.462</td><td>18342</td><td>2972</td><td>-3.18478</td><td>-1.59238e+12</td><td>0.461666</td><td><span class="status-warn">amber</span></td><td><span class="status-warn">amber</span></td></tr></tbody></table>
+    </section>
+
+    <section class="cards-3">
+      <h2>Mechanical History</h2>
+      
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t020 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Worst min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Final min_J.</strong> 1.04953</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.8.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.5.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.2.</strong> 0</p>
+              <p class="muted"><strong>Peak max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak p_eff range.</strong> 0.0182885 at t=0.007</p>
+              <p class="muted"><strong>Accepted source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>Accepted source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>mechanically clean accepted-step history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t030 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Worst min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Final min_J.</strong> 1.05688</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.8.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.5.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.2.</strong> 0</p>
+              <p class="muted"><strong>Peak max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak p_eff range.</strong> 0.0182885 at t=0.007</p>
+              <p class="muted"><strong>Accepted source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>Accepted source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>mechanically clean accepted-step history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t040 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Worst min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Final min_J.</strong> 1.02694</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.8.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.5.</strong> 0</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.2.</strong> 0</p>
+              <p class="muted"><strong>Peak max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak p_eff range.</strong> 0.0209865 at t=0.04</p>
+              <p class="muted"><strong>Accepted source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>Accepted source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>mechanically clean accepted-step history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t120 <span class="muted">(peer)</span></h3>
+              <p><span class="status-warn">amber</span></p>
+              <p class="muted"><strong>Worst min_J.</strong> 0.461666 at t=0.12</p>
+              <p class="muted"><strong>Final min_J.</strong> 0.461666</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.8.</strong> 0.049</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.5.</strong> 0.0065</p>
+              <p class="muted"><strong>Time below min_J &lt; 0.2.</strong> 0</p>
+              <p class="muted"><strong>Peak max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak p_eff range.</strong> 0.347357 at t=0.12</p>
+              <p class="muted"><strong>Accepted source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>Accepted source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>min_J dipped below 0.8</li></ul>
+            </div>
+            
+    </section>
+
+    <section class="cards-3">
+      <h2>Numerical Cost</h2>
+      
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t020 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Accepted steps.</strong> 41</p>
+              <p class="muted"><strong>Attempt rows.</strong> 41</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Smallest accepted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Smallest attempted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Worst all-attempt min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Peak all-attempt max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak all-attempt p_eff range.</strong> 0.0182885 at t=0.007</p>
+              <p class="muted"><strong>All-attempt source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>All-attempt source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>numerically inexpensive controller history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t030 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Accepted steps.</strong> 61</p>
+              <p class="muted"><strong>Attempt rows.</strong> 61</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Smallest accepted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Smallest attempted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Worst all-attempt min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Peak all-attempt max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak all-attempt p_eff range.</strong> 0.0182885 at t=0.007</p>
+              <p class="muted"><strong>All-attempt source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>All-attempt source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>numerically inexpensive controller history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t040 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">green</span></p>
+              <p class="muted"><strong>Accepted steps.</strong> 81</p>
+              <p class="muted"><strong>Attempt rows.</strong> 81</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Smallest accepted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Smallest attempted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Worst all-attempt min_J.</strong> 0.859582 at t=0.0015</p>
+              <p class="muted"><strong>Peak all-attempt max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak all-attempt p_eff range.</strong> 0.0209865 at t=0.04</p>
+              <p class="muted"><strong>All-attempt source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>All-attempt source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>numerically inexpensive controller history</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t120 <span class="muted">(peer)</span></h3>
+              <p><span class="status-warn">amber</span></p>
+              <p class="muted"><strong>Accepted steps.</strong> 241</p>
+              <p class="muted"><strong>Attempt rows.</strong> 241</p>
+              <p class="muted"><strong>Failed attempts.</strong> 0</p>
+              <p class="muted"><strong>Smallest accepted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Smallest attempted dt.</strong> 0.0005</p>
+              <p class="muted"><strong>Worst all-attempt min_J.</strong> 0.461666 at t=0.12</p>
+              <p class="muted"><strong>Peak all-attempt max_pf.</strong> 0.563666 at t=0</p>
+              <p class="muted"><strong>Peak all-attempt p_eff range.</strong> 0.347357 at t=0.12</p>
+              <p class="muted"><strong>All-attempt source_pf range.</strong> -20 to -20; sign change=false</p>
+              <p class="muted"><strong>All-attempt source_theta range.</strong> 0 to 0; sign change=false</p>
+              <p class="muted"><strong>Interpretation cues.</strong></p>
+              <ul class="clean"><li>numerical/controller cost requires caution</li></ul>
+            </div>
+            
+    </section>
+
+    <section class="cards-3">
+      <h2>Low-J Extent</h2>
+      
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t020 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">clear</span></p>
+              <p class="muted"><strong>Peak reference fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Peak deformed fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Reference J_1%.</strong> 0.885985 at t=0.0015</p>
+              <p class="muted"><strong>Reference J_5%.</strong> 0.929007 at t=0.0005</p>
+              <p class="muted"><strong>Deformed J_1%.</strong> 0.887909 at t=0.0015</p>
+              <p class="muted"><strong>Deformed J_5%.</strong> 0.930951 at t=0.0005</p>
+              <p class="muted"><strong>Interpretation.</strong> Advisory only: this is an extent/hotspot screen, not a hard admissibility stopper.</p>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t030 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">clear</span></p>
+              <p class="muted"><strong>Peak reference fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Peak deformed fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Reference J_1%.</strong> 0.885985 at t=0.0015</p>
+              <p class="muted"><strong>Reference J_5%.</strong> 0.929007 at t=0.0005</p>
+              <p class="muted"><strong>Deformed J_1%.</strong> 0.887909 at t=0.0015</p>
+              <p class="muted"><strong>Deformed J_5%.</strong> 0.930951 at t=0.0005</p>
+              <p class="muted"><strong>Interpretation.</strong> Advisory only: this is an extent/hotspot screen, not a hard admissibility stopper.</p>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t040 <span class="muted">(peer)</span></h3>
+              <p><span class="status-pass">clear</span></p>
+              <p class="muted"><strong>Peak reference fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Peak deformed fraction below J &lt; 0.8.</strong> 0 at t=0</p>
+              <p class="muted"><strong>Reference J_1%.</strong> 0.885985 at t=0.0015</p>
+              <p class="muted"><strong>Reference J_5%.</strong> 0.929007 at t=0.0005</p>
+              <p class="muted"><strong>Deformed J_1%.</strong> 0.887909 at t=0.0015</p>
+              <p class="muted"><strong>Deformed J_5%.</strong> 0.930951 at t=0.0005</p>
+              <p class="muted"><strong>Interpretation.</strong> Advisory only: this is an extent/hotspot screen, not a hard admissibility stopper.</p>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t120 <span class="muted">(peer)</span></h3>
+              <p><span class="status-warn">warning</span></p>
+              <p class="muted"><strong>Peak reference fraction below J &lt; 0.8.</strong> 0.922868 at t=0.12</p>
+              <p class="muted"><strong>Peak deformed fraction below J &lt; 0.8.</strong> 0.883976 at t=0.12</p>
+              <p class="muted"><strong>Reference J_1%.</strong> 0.46174 at t=0.12</p>
+              <p class="muted"><strong>Reference J_5%.</strong> 0.462025 at t=0.12</p>
+              <p class="muted"><strong>Deformed J_1%.</strong> 0.461752 at t=0.12</p>
+              <p class="muted"><strong>Deformed J_5%.</strong> 0.462153 at t=0.12</p>
+              <p class="muted"><strong>Interpretation.</strong> Advisory only: this is an extent/hotspot screen, not a hard admissibility stopper.</p>
+            </div>
+            
+    </section>
+
+    <section class="cards-3">
+      <h2>Status Checks</h2>
+      
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t020 <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t030 <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t040 <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t120 <span class="muted">(peer)</span></h3>
+              <ul class="clean"><li><span class="status-pass">pass</span> Accepted metrics rows present</li><li><span class="status-pass">pass</span> Run advanced beyond the initial state</li><li><span class="status-pass">pass</span> Run reached target time</li><li><span class="status-pass">pass</span> Final accepted step converged</li><li><span class="status-pass">pass</span> Final min_J is positive</li><li><span class="status-pass">pass</span> Post-processing completed</li><li><span class="status-warn">warn</span> Accepted-step history entered an amber mechanical-history band; inspect min_J and max_pf histories before drawing conclusions.</li><li><span class="status-warn">warn</span> Numerical/controller cost entered an amber band; the run is interpretable but not yet production-clean.</li><li><span class="status-warn">warn</span> Low-J extent warning: more than 1% of the domain entered J &lt; 0.8 in the accepted-step history. Treat this as an advisory hotspot/extent signal rather than a hard admissibility failure.</li></ul>
+            </div>
+            
+    </section>
+
+    <section class="card">
+      <h2>Trends</h2>
+      <div class="plot-grid">
+        <div><h3>Total Volume Ratio</h3><img src="plots/total_volume_ratio.png" alt="Total Volume Ratio"></div><div><h3>Lumen Volume Ratio</h3><img src="plots/lumen_volume_ratio.png" alt="Lumen Volume Ratio"></div><div><h3>Tissue Volume Ratio</h3><img src="plots/tissue_volume_ratio.png" alt="Tissue Volume Ratio"></div><div><h3>Area Ratio</h3><img src="plots/area_ratio.png" alt="Area Ratio"></div><div><h3>Max Displacement</h3><img src="plots/max_u.png" alt="Max Displacement"></div><div><h3>Min_J</h3><img src="plots/min_J.png" alt="Min_J"></div><div><h3>Min_Je</h3><img src="plots/min_Je.png" alt="Min_Je"></div><div><h3>Max_Pf</h3><img src="plots/max_pf.png" alt="Max_Pf"></div><div><h3>Reference Fraction Below J &lt; 0.8</h3><img src="plots/J_fraction_ref_below_0_8.png" alt="Reference Fraction Below J &lt; 0.8"></div><div><h3>Deformed Fraction Below J &lt; 0.8</h3><img src="plots/J_fraction_def_below_0_8.png" alt="Deformed Fraction Below J &lt; 0.8"></div><div><h3>Reference J_1%</h3><img src="plots/J_p01_ref.png" alt="Reference J_1%"></div><div><h3>Reference J_5%</h3><img src="plots/J_p05_ref.png" alt="Reference J_5%"></div><div><h3>Deformed J_1%</h3><img src="plots/J_p01_def.png" alt="Deformed J_1%"></div><div><h3>Deformed J_5%</h3><img src="plots/J_p05_def.png" alt="Deformed J_5%"></div><div><h3>Lumen Ratio</h3><img src="plots/ratio.png" alt="Lumen Ratio"></div><div><h3>Total Energy (P-Form)</h3><img src="plots/total_energy.png" alt="Total Energy (P-Form)"></div><div><h3>Theta-Form Energy</h3><img src="plots/energy_total_theta.png" alt="Theta-Form Energy"></div><div><h3>Cross-Form Energy</h3><img src="plots/energy_total_cross.png" alt="Cross-Form Energy"></div><div><h3>Lumen-Phase Measure</h3><img src="plots/mass.png" alt="Lumen-Phase Measure"></div><div><h3>Split Iterations</h3><img src="plots/split_iterations.png" alt="Split Iterations"></div><div><h3>Mesh Cells</h3><img src="plots/mesh_num_cells.png" alt="Mesh Cells"></div><div><h3>Flow Potential Range</h3><img src="plots/flow_potential_range.png" alt="Flow Potential Range"></div><div><h3>Effective Pressure Range</h3><img src="plots/p_eff_range.png" alt="Effective Pressure Range"></div><div><h3>Theta_Eq Range</h3><img src="plots/theta_eq_range.png" alt="Theta_Eq Range"></div><div><h3>Storage Strain Range</h3><img src="plots/storage_strain_range.png" alt="Storage Strain Range"></div><div><h3>Wall Time</h3><img src="plots/wall_time.png" alt="Wall Time"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Artifacts</h2>
+      <div class="media-grid">
+        
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t020</h3>
+              <div class="media-grid"><img src="media/mig_source_s20_pf_only_autonomous_tissue_t020/montages/toy_montage_norm.png" alt="mig-source-s20-pf-only-autonomous-tissue-t020 montage preview"></div>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t020/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t020/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t030</h3>
+              <div class="media-grid"><img src="media/mig_source_s20_pf_only_autonomous_tissue_t030/montages/toy_montage_norm.png" alt="mig-source-s20-pf-only-autonomous-tissue-t030 montage preview"></div>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t030/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t030/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t040</h3>
+              <div class="media-grid"><img src="media/mig_source_s20_pf_only_autonomous_tissue_t040/montages/toy_montage_norm.png" alt="mig-source-s20-pf-only-autonomous-tissue-t040 montage preview"></div>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t040/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t040/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+            </div>
+            
+            <div class="card">
+              <h3>mig-source-s20-pf-only-autonomous-tissue-t120</h3>
+              <div class="media-grid"><img src="media/mig_source_s20_pf_only_autonomous_tissue_t120/montages/toy_montage_norm.png" alt="mig-source-s20-pf-only-autonomous-tissue-t120 montage preview"></div>
+              <ul class="clean"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t120/montages/toy_montage_norm.png">toy_montage_norm.png</a></li><li><a href="media/mig_source_s20_pf_only_autonomous_tissue_t120/representative_frames/frames_norm/geometry/step_000000.png">step_000000.png</a></li></ul>
+            </div>
+            
+      </div>
+    </section>
+
+    
+  </main>
+</body>
+</html>

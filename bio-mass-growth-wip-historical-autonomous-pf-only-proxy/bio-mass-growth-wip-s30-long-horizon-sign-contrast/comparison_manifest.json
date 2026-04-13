@@ -1,0 +1,24 @@
+{
+  "comparison_name": "bio-mass-growth-wip-s30-long-horizon-sign-contrast",
+  "quantitative_comparison_csv": "quantitative_comparison.csv",
+  "quantitative_comparison_json": "quantitative_comparison.json",
+  "report_dir": "report",
+  "sim_names": [
+    "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+    "mig-source-s30-pf-only-autonomous-tissue-t120"
+  ],
+  "sim_roles": {
+    "mig-source-s30-pf-only-autonomous-lumen-t120-aborted": "peer",
+    "mig-source-s30-pf-only-autonomous-tissue-t120": "peer"
+  },
+  "visuals": {
+    "mig-source-s30-pf-only-autonomous-lumen-t120-aborted": {
+      "report": "visuals/mig-source-s30-pf-only-autonomous-lumen-t120-aborted/mig-source-s30-pf-only-autonomous-lumen-t120-aborted_index.html"
+    },
+    "mig-source-s30-pf-only-autonomous-tissue-t120": {
+      "frame_1": "visuals/mig-source-s30-pf-only-autonomous-tissue-t120/step_000000.png",
+      "montage_1": "visuals/mig-source-s30-pf-only-autonomous-tissue-t120/toy_montage_norm.png",
+      "report": "visuals/mig-source-s30-pf-only-autonomous-tissue-t120/mig-source-s30-pf-only-autonomous-tissue-t120_index.html"
+    }
+  }
+}
