@@ -1,0 +1,21 @@
+reference_label,candidate_label,metric,label,reference_value,candidate_value,abs_delta,rel_delta,severity
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.mass_final,Final lumen-phase measure,2.8916857533789866,-5.068951416062648,-7.960637169441634,-2.7529399279086557,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.ratio_final,Final left/right lumen balance,0.9998063637381968,-2534426591164.0957,-2534426591165.0957,-2534917443102.758,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.lumen_total_volume,Lumen total volume,,0.0,,,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.lumen_total_volume_def,Lumen deformed volume,,0.0,,,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.lumen_n_components,Lumen component count,,0,,,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.min_J,Final min_J,0.05259762996153212,0.23860392329038807,0.18600629332885596,3.5364006603509286,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.total_volume_ratio_final,Final total volume ratio,0.8105737711678015,0.3811126049720973,-0.4294611661957042,-0.5298236650033412,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.lumen_volume_ratio_final,Final lumen volume ratio,0.7639045340265616,0.0,-0.7639045340265616,-1.0,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.tissue_volume_ratio_final,Final tissue volume ratio,0.9759036333068929,0.3811126049720973,-0.5947910283347956,-0.6094772147935547,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.area_ratio_final,Final area ratio,0.8105737711678015,0.3811126049720973,-0.4294611661957042,-0.5298236650033412,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.domain_measure_ratio_final,Final domain measure ratio,0.8105737711678015,0.3811126049720973,-0.4294611661957042,-0.5298236650033412,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.min_pf,Final min_pf,-0.8885796515529368,-5.649699755485897,-4.76112010393296,5.35812416547254,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,observables.max_pf,Final max_pf,1.7163411801455652,-1.2517260200541969,-2.968067200199762,-1.7292990662544356,fail
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,timings.wall_time_seconds,Wall time,,1044.4443844270427,,,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,degrees_of_freedom.total,Total DoF,,18342,,,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,iteration_counts.split_iterations_total,Split iterations total,749,1652,903.0,1.205607476635514,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,iteration_counts.ch_snes_its_total,CH SNES iterations total,99,241,142.0,1.4343434343434343,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,iteration_counts.biot_iterations_total,Biot iterations total,174,461,287.0,1.6494252873563218,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,geometry_metrics.mesh_num_cells_final,Final mesh cells,,2972,,,warn
+mig-source-s30-pf-only-autonomous-lumen-t120-aborted,mig-source-s30-pf-only-autonomous-tissue-t120,geometry_metrics.mesh_num_vertices_final,Final mesh vertices,,1550,,,warn

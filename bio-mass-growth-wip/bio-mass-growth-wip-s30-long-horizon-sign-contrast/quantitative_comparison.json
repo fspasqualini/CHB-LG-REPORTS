@@ -1,0 +1,224 @@
+{
+  "rows": [
+    {
+      "abs_delta": -7.960637169441634,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": -5.068951416062648,
+      "label": "Final lumen-phase measure",
+      "metric": "observables.mass_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 2.8916857533789866,
+      "rel_delta": -2.7529399279086557,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -2534426591165.0957,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": -2534426591164.0957,
+      "label": "Final left/right lumen balance",
+      "metric": "observables.ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.9998063637381968,
+      "rel_delta": -2534917443102.758,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.0,
+      "label": "Lumen total volume",
+      "metric": "observables.lumen_total_volume",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.0,
+      "label": "Lumen deformed volume",
+      "metric": "observables.lumen_total_volume_def",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0,
+      "label": "Lumen component count",
+      "metric": "observables.lumen_n_components",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": 0.18600629332885596,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.23860392329038807,
+      "label": "Final min_J",
+      "metric": "observables.min_J",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.05259762996153212,
+      "rel_delta": 3.5364006603509286,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -0.4294611661957042,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.3811126049720973,
+      "label": "Final total volume ratio",
+      "metric": "observables.total_volume_ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.8105737711678015,
+      "rel_delta": -0.5298236650033412,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -0.7639045340265616,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.0,
+      "label": "Final lumen volume ratio",
+      "metric": "observables.lumen_volume_ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.7639045340265616,
+      "rel_delta": -1.0,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -0.5947910283347956,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.3811126049720973,
+      "label": "Final tissue volume ratio",
+      "metric": "observables.tissue_volume_ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.9759036333068929,
+      "rel_delta": -0.6094772147935547,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -0.4294611661957042,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.3811126049720973,
+      "label": "Final area ratio",
+      "metric": "observables.area_ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.8105737711678015,
+      "rel_delta": -0.5298236650033412,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -0.4294611661957042,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 0.3811126049720973,
+      "label": "Final domain measure ratio",
+      "metric": "observables.domain_measure_ratio_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 0.8105737711678015,
+      "rel_delta": -0.5298236650033412,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -4.76112010393296,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": -5.649699755485897,
+      "label": "Final min_pf",
+      "metric": "observables.min_pf",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": -0.8885796515529368,
+      "rel_delta": 5.35812416547254,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": -2.968067200199762,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": -1.2517260200541969,
+      "label": "Final max_pf",
+      "metric": "observables.max_pf",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 1.7163411801455652,
+      "rel_delta": -1.7292990662544356,
+      "severity": "fail"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 1044.4443844270427,
+      "label": "Wall time",
+      "metric": "timings.wall_time_seconds",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 18342,
+      "label": "Total DoF",
+      "metric": "degrees_of_freedom.total",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": 903.0,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 1652,
+      "label": "Split iterations total",
+      "metric": "iteration_counts.split_iterations_total",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 749,
+      "rel_delta": 1.205607476635514,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": 142.0,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 241,
+      "label": "CH SNES iterations total",
+      "metric": "iteration_counts.ch_snes_its_total",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 99,
+      "rel_delta": 1.4343434343434343,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": 287.0,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 461,
+      "label": "Biot iterations total",
+      "metric": "iteration_counts.biot_iterations_total",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": 174,
+      "rel_delta": 1.6494252873563218,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 2972,
+      "label": "Final mesh cells",
+      "metric": "geometry_metrics.mesh_num_cells_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "warn"
+    },
+    {
+      "abs_delta": null,
+      "candidate_label": "mig-source-s30-pf-only-autonomous-tissue-t120",
+      "candidate_value": 1550,
+      "label": "Final mesh vertices",
+      "metric": "geometry_metrics.mesh_num_vertices_final",
+      "reference_label": "mig-source-s30-pf-only-autonomous-lumen-t120-aborted",
+      "reference_value": null,
+      "rel_delta": null,
+      "severity": "warn"
+    }
+  ]
+}
